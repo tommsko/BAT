@@ -16,6 +16,7 @@ from src.resolvers.protein_residue_struct.protein_residue_structure_resolver imp
 from src.resolvers.protein_struct.protein_structure_resolver import (
     ProteinStructureResolver,
 )
+from src.resolvers.nucleic_acid.nucleic_acid import NucleicAcidResolver
 
 
 def get_resolvers(
@@ -36,6 +37,7 @@ def get_resolvers(
         ProteinResidueSequenceResolver(cache, configuration),
         ProteinResidueStructureResolver(cache, configuration),
         # protein, but alphafind (.pdb export)
+        NucleicAcidResolver(cache, configuration),
         AtomResolver(cache, configuration, try_fix_elements=True),
         AtomResolver(
             cache,
