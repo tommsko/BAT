@@ -93,6 +93,12 @@ def _run_blast_local(
     output_path: str = _mk_random_filename("zip", tmp_dir_path)
 
     try:
+
+        if len(sequence) < config.getint('BLAST', 'local_instance_run_short_search_if_under_X_residues'):
+            short_search: list[str] = ['-task', 'blastp-short'] if not is_nucleotide else ['-task', 'blastn-short']
+        else:
+            short_search: list[str] = []
+
         result = subprocess.run(
             [
                 config.get("BLAST", "local_instance_blastp_exec") if not is_nucleotide
@@ -104,7 +110,7 @@ def _run_blast_local(
                 else config.get("BLAST", "local_instance_database_nt"),
                 "-out",
                 output_path,
-            ],
+            ] + short_search,
             input=sequence,
             text=True,
             stdout=subprocess.DEVNULL,
@@ -192,7 +198,9 @@ def _run_blast(
     if config.getboolean("BLAST", "use_local_instance", fallback=False):
         return _process_blast_results(_run_blast_local(sequence, tmp_path_dir, config, is_nucleotide))
     else:
-        return _process_blast_results(_run_blast_online(sequence, tmp_path_dir, config, database="pdb", is_nucleotide=is_nucleotide))
+        return _process_blast_results(_run_blast_online(sequence, tmp_path_dir, config,
+                                                        database="pdb" if not is_nucleotide else "pdbnt",
+                                                        is_nucleotide=is_nucleotide))
 
 
 def _filter_blast_results(
