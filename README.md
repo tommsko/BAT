@@ -31,20 +31,29 @@ Optionally, but highly recommended: build local databases
 
 Install blast+ (https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html) and make sure it is available in PATH
 
-Build BLAST database
+Build BLAST protein database (PDB)
 ```bash
-  cd <blast_database_location>
+  cd <blastp_database_location>
   wget https://files.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt.gz
   gunzip pdb_seqres.txt.gz
   makeblastdb -in pdb_seqres.txt -dbtype prot -title pdb -out pdb -parse_seqids
+```
+
+Build BLAST nucleotide database (PDB)
+```bash
+  cd <blastn_database_location>
+  wget https://ftp.ncbi.nlm.nih.gov/blast/db/pdbnt.tar.gz
+  tar -xvzf pdbnt.tar.gz
 ```
 
 Update `config.ini` such that the following values are set
 ```ini
 [BLAST]
 use_local_instance: yes
-local_instance_blastp_exec: <blastp executable_path>
-local_instance_database: <blast_database_location>/pdb
+local_instance_blastp_exec: <blastp_executable_path>
+local_instance_blastn_exec: <blastn_executable_path>
+local_instance_database_prot: <blastp_database_location>/pdb
+local_instance_database_nt: <blastn_database_location>/pdb
 ```
 ## Features/Examples
 
