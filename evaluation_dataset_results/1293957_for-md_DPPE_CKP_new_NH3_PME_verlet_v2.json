@@ -1,0 +1,51 @@
+{
+    "name": "1293957_for-md_DPPE_CKP_new_NH3_PME_verlet_v2",
+    "atoms": 17365,
+    "residues": 3783,
+    "segments": 2,
+    "fragments": 3783,
+    "segment_resolution": {
+        "seg_1_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_DPPE": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "QFMZQPDHXULLKC-UHFFFAOYSA-N",
+                    50
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem_ligand_name"
+            ]
+        }
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "name": "7010110_etidocaine_POPC_CHARMM_298K_Cl_countra_140mM_177600waters_413",
+    "atoms": 581800,
+    "residues": 178688,
+    "segments": 4,
+    "fragments": 178688,
+    "segment_resolution": {
+        "seg_2_TIP3": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_3_CLA": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "CL"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_POPC": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "WTJKGGKOPKCXLL-MRCUWXFGSA-N",
+                "WTJKGGKOPKCXLL-UHFFFAOYSA-N",
+                "SNKAWJBJQDLSFF-AOMFJDGTSA-N",
+                "RRVPPYNAZJRZFR-VYOBOKEXSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_etidocaine": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "LMWQQUMMGGIGJQ-UHFFFAOYSA-N",
+                "VTUSIVBDOCDNHS-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

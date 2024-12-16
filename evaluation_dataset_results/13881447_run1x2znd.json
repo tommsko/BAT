@@ -1,0 +1,72 @@
+{
+    "name": "13881447_run1x2znd",
+    "atoms": 47694,
+    "residues": 10948,
+    "segments": 3,
+    "fragments": 10948,
+    "segment_resolution": {
+        "seg_0_DMPC": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "KILNVBDSWZSGLL-KXQOOQHDSA-N",
+                "KILNVBDSWZSGLL-LHEWISCISA-N",
+                "NRJAVPSFFCBXDT-UHFFFAOYSA-N",
+                "MLKLDGSYMHFAOC-UHFFFAOYSA-N",
+                "IJFVSSZAOYLHEE-SSEXGKCCSA-N",
+                "ZJDHNOMEMNFHIF-UHFFFAOYSA-N",
+                "CITHEXJVPOWHKC-UHFFFAOYSA-N",
+                "CITHEXJVPOWHKC-UUWRZZSWSA-N",
+                "YHIXRNNWDBPKPW-JOCHJYFZSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_BOG": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "HEGSGKPQLMEBJL-RKQHYHRCSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem_ligand_name"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_TIP3": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

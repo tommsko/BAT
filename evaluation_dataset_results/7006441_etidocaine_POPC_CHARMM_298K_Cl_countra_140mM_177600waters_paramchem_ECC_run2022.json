@@ -1,0 +1,80 @@
+{
+    "name": "7006441_etidocaine_POPC_CHARMM_298K_Cl_countra_140mM_177600waters_paramchem_ECC_run2022",
+    "atoms": 581800,
+    "residues": 178688,
+    "segments": 4,
+    "fragments": 178688,
+    "segment_resolution": {
+        "seg_2_TIP3": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_ETI": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "HVTICUPFWKNHNG-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem_ligand_name"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_3_CL_2s": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "CL"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_POPC": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "WTJKGGKOPKCXLL-MRCUWXFGSA-N",
+                "WTJKGGKOPKCXLL-UHFFFAOYSA-N",
+                "SNKAWJBJQDLSFF-AOMFJDGTSA-N",
+                "RRVPPYNAZJRZFR-VYOBOKEXSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

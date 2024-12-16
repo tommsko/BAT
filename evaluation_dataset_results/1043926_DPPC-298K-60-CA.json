@@ -1,0 +1,123 @@
+{
+    "name": "1043926_DPPC-298K-60-CA",
+    "atoms": 229788,
+    "residues": 43018,
+    "segments": 4,
+    "fragments": 82576,
+    "segment_resolution": {
+        "seg_1_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_CA_2s": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ca",
+                    100
+                ],
+                [
+                    "Ar",
+                    100
+                ],
+                [
+                    "K",
+                    98
+                ],
+                [
+                    "Cl",
+                    88
+                ],
+                [
+                    "Sc",
+                    89
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_3_CL_2s": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Cl",
+                    100
+                ],
+                [
+                    "S",
+                    90
+                ],
+                [
+                    "K",
+                    91
+                ],
+                [
+                    "P",
+                    87
+                ],
+                [
+                    "Ar",
+                    89
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_0_DPPC": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "NRJAVPSFFCBXDT-UHFFFAOYSA-N",
+                "ZJDHNOMEMNFHIF-UHFFFAOYSA-N",
+                "CITHEXJVPOWHKC-UUWRZZSWSA-N",
+                "CITHEXJVPOWHKC-UHFFFAOYSA-N",
+                "YHIXRNNWDBPKPW-JOCHJYFZSA-N",
+                "KILNVBDSWZSGLL-LHEWISCISA-N",
+                "KILNVBDSWZSGLL-KXQOOQHDSA-N",
+                "KILNVBDSWZSGLL-UHFFFAOYSA-N",
+                "IJFVSSZAOYLHEE-SSEXGKCCSA-N",
+                "MLKLDGSYMHFAOC-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

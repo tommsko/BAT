@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>src.resolvers.base.fragment_resolver API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.resolvers.base.fragment_resolver</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="src.resolvers.base.fragment_resolver.IdentifierResolutionError"><code class="flex name class">
+<span>class <span class="ident">IdentifierResolutionError</span></span>
+<span>(</span><span>generation_step, cause)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class IdentifierResolutionError(Exception):
+    def __init__(self, generation_step, cause):
+        super().__init__(f&#34;[RES.IDENT] Error while {generation_step}: {cause}&#34;)
+        self.generation_step = generation_step
+        self.cause = cause</code></pre>
+</details>
+<div class="desc"><p>Common base class for all non-exit exceptions.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>builtins.Exception</li>
+<li>builtins.BaseException</li>
+</ul>
+</dd>
+<dt id="src.resolvers.base.fragment_resolver.ResolverBase"><code class="flex name class">
+<span>class <span class="ident">ResolverBase</span></span>
+<span>(</span><span>resolver_name: str,<br>resolver_kind: <a title="src.resolvers.base.fragment_resolver.ResolverKind" href="#src.resolvers.base.fragment_resolver.ResolverKind">ResolverKind</a>,<br>ident_name: str,<br>cache: <a title="src.resolvers.base.resolver_database.ResolverCache" href="resolver_database.html#src.resolvers.base.resolver_database.ResolverCache">ResolverCache</a>,<br>configuration: configparser.ConfigParser)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ResolverBase:
+    &#34;&#34;&#34;
+    Abstract class for fragment resolver. The workflow for resolvers is as follows:
+    input: MDAnalysis&#39; fragment (one molecule)
+     ... .is_applicable() - can this resolver parse this fragment? (a quick check, but signature generation might fail)
+     ... .get_signature() - translates atomic fragment into its string signature
+     ... .get_identifiers() - attempts to identity match signature into standardized identifier(s)
+     ... .get_similar_identifiers() - attempts to similarity match signature into standardized identifier(s)
+     ... .generate_debug_data() - generates representation of the atomic fragment in paradigm of the resolver
+     !! Due to built-in timeout with signals, calling get_identifiers or get_similar_identifiers is not thread safe !!
+     !! run only one concurrent instance in a single process !!
+    &#34;&#34;&#34;
+
+    def __init__(
+        self,
+        resolver_name: str,
+        resolver_kind: ResolverKind,
+        ident_name: str,
+        cache: ResolverCache,
+        configuration: configparser.ConfigParser,
+    ) -&gt; None:
+        &#34;&#34;&#34;
+        Initializes base resolver
+        :param resolver_name: name of the resolver (for caching purposes)
+        :param resolver_kind: type of the resolver
+        :param ident_name: name of the identifier (for result purposes)
+        :param cache: cache for the resolver
+        :param configuration: global configuration for the application
+        &#34;&#34;&#34;
+        self.resolver_name: str = resolver_name
+        self.resolver_kind: ResolverKind = resolver_kind
+        self.ident_name: str = ident_name
+        self.cache: ResolverCache = cache
+        self.config: configuration.ConfigParser = configuration
+
+        self.allow_resolution: bool = False  # &#39;activates&#39; the resolver
+        self.allow_partial_resolution: bool = (
+            False  # on non-identity hit, still returns partial results and scores
+        )
+        self.resolve_through_cache: bool = False  # allows using cache for resolution
+        self.resolve_through_search: bool = (
+            False  # allows using online or offline databases for resolution
+        )
+        self.allow_debug_output: bool = (
+            False  # allows resolver during debug simulation export
+        )
+        self.fetch_idents_timeout_sec: int | None = (
+            None  # maximum time for fetching identifiers, None for unlimited
+        )
+        self._load_config(configuration)
+
+    def _load_config(self, configuration: configparser.ConfigParser) -&gt; None:
+        &#34;&#34;&#34;
+        Loads resolver settings based on configuration provided
+        :param configuration: loaded ConfigParser() instance
+        :return: None
+        &#34;&#34;&#34;
+        if not configuration.has_section(self.resolver_name):
+            log.error(
+                f&#34;Resolver {self.resolver_name} is not in the configuration! Disabled by default&#34;
+            )
+            return
+
+        if configuration.has_option(self.resolver_name, &#34;enabled&#34;):
+            self.allow_resolution = configuration.getboolean(
+                self.resolver_name, &#34;enabled&#34;
+            )
+
+        if configuration.has_option(self.resolver_name, &#34;enabled_similarity&#34;):
+            self.allow_partial_resolution = configuration.getboolean(
+                self.resolver_name, &#34;enabled_similarity&#34;
+            )
+
+        if configuration.has_option(self.resolver_name, &#34;from_cache&#34;):
+            self.resolve_through_cache = configuration.getboolean(
+                self.resolver_name, &#34;from_cache&#34;
+            )
+
+        if configuration.has_option(self.resolver_name, &#34;from_search&#34;):
+            self.resolve_through_search = configuration.getboolean(
+                self.resolver_name, &#34;from_search&#34;
+            )
+
+        if configuration.has_option(self.resolver_name, &#34;allow_export&#34;):
+            self.allow_debug_output = configuration.getboolean(
+                self.resolver_name, &#34;allow_export&#34;
+            )
+
+        if configuration.has_option(self.resolver_name, &#34;timeout_sec&#34;):
+            self.fetch_idents_timeout_sec = configuration.getint(
+                self.resolver_name, &#34;timeout_sec&#34;
+            )
+            if self.fetch_idents_timeout_sec == 0:
+                self.fetch_idents_timeout_sec = None
+
+    def is_applicable(
+        self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
+    ) -&gt; bool:
+        &#34;&#34;&#34;
+        Decides whether the resolver can be used on the given fragment
+        :param fragment: AtomGroup representing a molecule
+        :param simulation: of which fragment is part of
+        :return: True if resolver can be used on a given fragment
+        &#34;&#34;&#34;
+        if not self.allow_resolution:
+            return False
+        return self._is_applicable(simulation, fragment)
+
+    def _is_applicable(
+        self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
+    ) -&gt; bool:
+        &#34;&#34;&#34;
+        Decides whether the resolver can be used on the given fragment.
+        To be implemented by resolvers
+        :param fragment: AtomGroup representing a molecule
+        :param simulation: of which fragment is part of
+        :return: True if resolver can be used on a given fragment
+        &#34;&#34;&#34;
+        raise NotImplementedError
+
+    def get_signature(
+        self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
+    ) -&gt; str:
+        &#34;&#34;&#34;
+        Translates fragment into its string fingerprint
+        To be implemented by resolvers
+        :param fragment: AtomGroup representing a molecule
+        :param simulation: of which fragment is part of
+        :return: string fingerprint of the fragment given the resolver
+        :raises: SignatureGenerationError if fingerprint cannot be created
+        &#34;&#34;&#34;
+        raise NotImplementedError
+
+    def get_identifiers(self, signature: str) -&gt; list[str]:
+        &#34;&#34;&#34;
+        Fetches &lt;&lt;identity-level&gt;&gt; identifiers associated with the given fingerprint
+        :param signature: string fingerprint of the fragment given the resolver
+        :return: list of standardized identifiers of the fingerprint
+        :raises: IdentifierNotFoundError if no identifier couldn&#39;t be found
+        &#34;&#34;&#34;
+        if self.resolve_through_cache:
+            cached_identifiers: list[str] = self.cache.fetch_identity_identifiers(
+                self.resolver_name, signature
+            )
+            if cached_identifiers:
+                return cached_identifiers
+
+        if self.resolve_through_search:
+
+            search_timeout_error = IdentifierResolutionError(
+                &#34;resolving identifiers&#34;, &#34;fetching identity matches timed out&#34;
+            )
+            with timeout(
+                seconds=self.fetch_idents_timeout_sec, error=search_timeout_error
+            ):
+                fetched_identifiers: list[str] = self.try_fetch_identifiers_exact_match(
+                    signature
+                )
+
+            if fetched_identifiers:
+                self.cache.save_identity_identifiers(
+                    self.resolver_name, signature, fetched_identifiers
+                )
+                return fetched_identifiers
+
+        raise IdentifierResolutionError(
+            &#34;resolving identifiers&#34;,
+            &#34;no identifiers found for identity match of the fingerprint&#34;,
+        )
+
+    def get_similar_identifiers(self, signature: str) -&gt; list[tuple[str, float]]:
+        &#34;&#34;&#34;
+        Fetches similar identifiers associated with the given fingerprint
+        :param signature: string fingerprint of the fragment given the resolver
+        :return: list of standardized identifiers of the fingerprint and their scores
+        :raises: IdentifierNotFoundError if no identifier couldn&#39;t be found or this functionality is disabled
+        &#34;&#34;&#34;
+        if not self.allow_partial_resolution:
+            raise IdentifierResolutionError(
+                &#34;resolving similar identifiers&#34;, &#34;functionality is disabled&#34;
+            )
+
+        if self.resolve_through_cache:
+            cached_identifiers: list[tuple[str, float]] = (
+                self.cache.fetch_similarity_identifiers(self.resolver_name, signature)
+            )
+            if cached_identifiers:
+                return cached_identifiers
+
+        if self.resolve_through_search:
+            search_timeout_error = IdentifierResolutionError(
+                &#34;resolving identifiers&#34;, &#34;fetching similarity matches timed out&#34;
+            )
+            with timeout(
+                seconds=self.fetch_idents_timeout_sec, error=search_timeout_error
+            ):
+                fetched_identifiers: list[tuple[str, float]] = (
+                    self.try_fetch_identifiers_relaxed_match(signature)
+                )
+
+            if fetched_identifiers:
+                return fetched_identifiers
+
+            raise IdentifierResolutionError(
+                &#34;resolving identifiers&#34;,
+                &#34;no identifiers found for similar match of the fingerprint&#34;,
+            )
+
+    def try_fetch_identifiers_exact_match(self, signature: str) -&gt; list[str]:
+        &#34;&#34;&#34;
+        Attempts to resolve signature into standardized identifiers, requiring identity match of the fingerprint
+        To be implemented by resolvers
+        :param signature: to be translated into identifiers
+        :return: list of standardized identifiers of the fingerprint
+        :raises IdentifierResolutionError: on internal failure during fetching
+        &#34;&#34;&#34;
+        raise NotImplementedError
+
+    def try_fetch_identifiers_relaxed_match(
+        self, signature: str
+    ) -&gt; list[tuple[str, float]]:
+        &#34;&#34;&#34;
+        Attempts to resolve signature into standardized identifiers, based on similarity match(es)
+        To be implemented by resolvers
+        :param signature: to be translated into identifiers
+        :return: list of standardized identifiers of the fingerprint and their scores
+        :raises IdentifierResolutionError: on internal failure during fetching
+        &#34;&#34;&#34;
+        raise NotImplementedError
+
+    def generate_debug_data(
+        self,
+        simulation: SimulationFile,
+        fragment: MDAnalysis.AtomGroup,
+        out_path: str,
+        out_name: str,
+    ) -&gt; bool:
+        &#34;&#34;&#34;
+        If resolver is applicable and can generate signature,
+        generates representation of the fragment AtomGroup in resolver&#39;s paradigm
+        To be implemented by resolvers
+        :param out_path: directory where to save generated representations
+        :param out_name: basename of the file to save representations to (will be suffixed with kind of export)
+        :param simulation: of which fragment is part of
+        :param fragment: AtomGroup representing a molecule
+        :return: True if export went without problems
+        &#34;&#34;&#34;
+        raise NotImplementedError</code></pre>
+</details>
+<div class="desc"><p>Abstract class for fragment resolver. The workflow for resolvers is as follows:
+input: MDAnalysis' fragment (one molecule)
+&hellip; .is_applicable() - can this resolver parse this fragment? (a quick check, but signature generation might fail)
+&hellip; .get_signature() - translates atomic fragment into its string signature
+&hellip; .get_identifiers() - attempts to identity match signature into standardized identifier(s)
+&hellip; .get_similar_identifiers() - attempts to similarity match signature into standardized identifier(s)
+&hellip; .generate_debug_data() - generates representation of the atomic fragment in paradigm of the resolver
+!! Due to built-in timeout with signals, calling get_identifiers or get_similar_identifiers is not thread safe !!
+!! run only one concurrent instance in a single process !!</p>
+<p>Initializes base resolver
+:param resolver_name: name of the resolver (for caching purposes)
+:param resolver_kind: type of the resolver
+:param ident_name: name of the identifier (for result purposes)
+:param cache: cache for the resolver
+:param configuration: global configuration for the application</p></div>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="src.resolvers.atom.atom_resolver.AtomResolver" href="../atom/atom_resolver.html#src.resolvers.atom.atom_resolver.AtomResolver">AtomResolver</a></li>
+<li><a title="src.resolvers.chem.chem_resolver.ChemResolver" href="../chem/chem_resolver.html#src.resolvers.chem.chem_resolver.ChemResolver">ChemResolver</a></li>
+<li><a title="src.resolvers.chem_ligand_name.chem_ligand_name.ChemLigandNameResolver" href="../chem_ligand_name/chem_ligand_name.html#src.resolvers.chem_ligand_name.chem_ligand_name.ChemLigandNameResolver">ChemLigandNameResolver</a></li>
+<li><a title="src.resolvers.fingerprint.fingerprint_resolver.FingerprintResolver" href="../fingerprint/fingerprint_resolver.html#src.resolvers.fingerprint.fingerprint_resolver.FingerprintResolver">FingerprintResolver</a></li>
+<li><a title="src.resolvers.nucleic_acid.nucleic_acid.NucleicAcidResolver" href="../nucleic_acid/nucleic_acid.html#src.resolvers.nucleic_acid.nucleic_acid.NucleicAcidResolver">NucleicAcidResolver</a></li>
+<li><a title="src.resolvers.protein.protein_resolver.ProteinResolver" href="../protein/protein_resolver.html#src.resolvers.protein.protein_resolver.ProteinResolver">ProteinResolver</a></li>
+<li><a title="src.resolvers.protein_residue_seq.protein_residue_seq_resolver.ProteinResidueSequenceResolver" href="../protein_residue_seq/protein_residue_seq_resolver.html#src.resolvers.protein_residue_seq.protein_residue_seq_resolver.ProteinResidueSequenceResolver">ProteinResidueSequenceResolver</a></li>
+<li><a title="src.resolvers.protein_residue_struct.protein_residue_structure_resolver.ProteinResidueStructureResolver" href="../protein_residue_struct/protein_residue_structure_resolver.html#src.resolvers.protein_residue_struct.protein_residue_structure_resolver.ProteinResidueStructureResolver">ProteinResidueStructureResolver</a></li>
+<li><a title="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver" href="../protein_struct/protein_structure_resolver.html#src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver">ProteinStructureResolver</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="src.resolvers.base.fragment_resolver.ResolverBase.generate_debug_data"><code class="name flex">
+<span>def <span class="ident">generate_debug_data</span></span>(<span>self,<br>simulation: <a title="src.utils.file_loader.SimulationFile" href="../../utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>,<br>fragment: MDAnalysis.core.groups.AtomGroup,<br>out_path: str,<br>out_name: str) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate_debug_data(
+    self,
+    simulation: SimulationFile,
+    fragment: MDAnalysis.AtomGroup,
+    out_path: str,
+    out_name: str,
+) -&gt; bool:
+    &#34;&#34;&#34;
+    If resolver is applicable and can generate signature,
+    generates representation of the fragment AtomGroup in resolver&#39;s paradigm
+    To be implemented by resolvers
+    :param out_path: directory where to save generated representations
+    :param out_name: basename of the file to save representations to (will be suffixed with kind of export)
+    :param simulation: of which fragment is part of
+    :param fragment: AtomGroup representing a molecule
+    :return: True if export went without problems
+    &#34;&#34;&#34;
+    raise NotImplementedError</code></pre>
+</details>
+<div class="desc"><p>If resolver is applicable and can generate signature,
+generates representation of the fragment AtomGroup in resolver's paradigm
+To be implemented by resolvers
+:param out_path: directory where to save generated representations
+:param out_name: basename of the file to save representations to (will be suffixed with kind of export)
+:param simulation: of which fragment is part of
+:param fragment: AtomGroup representing a molecule
+:return: True if export went without problems</p></div>
+</dd>
+<dt id="src.resolvers.base.fragment_resolver.ResolverBase.get_identifiers"><code class="name flex">
+<span>def <span class="ident">get_identifiers</span></span>(<span>self, signature: str) ‑> list[str]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_identifiers(self, signature: str) -&gt; list[str]:
+    &#34;&#34;&#34;
+    Fetches &lt;&lt;identity-level&gt;&gt; identifiers associated with the given fingerprint
+    :param signature: string fingerprint of the fragment given the resolver
+    :return: list of standardized identifiers of the fingerprint
+    :raises: IdentifierNotFoundError if no identifier couldn&#39;t be found
+    &#34;&#34;&#34;
+    if self.resolve_through_cache:
+        cached_identifiers: list[str] = self.cache.fetch_identity_identifiers(
+            self.resolver_name, signature
+        )
+        if cached_identifiers:
+            return cached_identifiers
+
+    if self.resolve_through_search:
+
+        search_timeout_error = IdentifierResolutionError(
+            &#34;resolving identifiers&#34;, &#34;fetching identity matches timed out&#34;
+        )
+        with timeout(
+            seconds=self.fetch_idents_timeout_sec, error=search_timeout_error
+        ):
+            fetched_identifiers: list[str] = self.try_fetch_identifiers_exact_match(
+                signature
+            )
+
+        if fetched_identifiers:
+            self.cache.save_identity_identifiers(
+                self.resolver_name, signature, fetched_identifiers
+            )
+            return fetched_identifiers
+
+    raise IdentifierResolutionError(
+        &#34;resolving identifiers&#34;,
+        &#34;no identifiers found for identity match of the fingerprint&#34;,
+    )</code></pre>
+</details>
+<div class="desc"><p>Fetches &lt;<identity-level>&gt; identifiers associated with the given fingerprint
+:param signature: string fingerprint of the fragment given the resolver
+:return: list of standardized identifiers of the fingerprint
+:raises: IdentifierNotFoundError if no identifier couldn't be found</p></div>
+</dd>
+<dt id="src.resolvers.base.fragment_resolver.ResolverBase.get_signature"><code class="name flex">
+<span>def <span class="ident">get_signature</span></span>(<span>self,<br>simulation: <a title="src.utils.file_loader.SimulationFile" href="../../utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>,<br>fragment: MDAnalysis.core.groups.AtomGroup) ‑> str</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_signature(
+    self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
+) -&gt; str:
+    &#34;&#34;&#34;
+    Translates fragment into its string fingerprint
+    To be implemented by resolvers
+    :param fragment: AtomGroup representing a molecule
+    :param simulation: of which fragment is part of
+    :return: string fingerprint of the fragment given the resolver
+    :raises: SignatureGenerationError if fingerprint cannot be created
+    &#34;&#34;&#34;
+    raise NotImplementedError</code></pre>
+</details>
+<div class="desc"><p>Translates fragment into its string fingerprint
+To be implemented by resolvers
+:param fragment: AtomGroup representing a molecule
+:param simulation: of which fragment is part of
+:return: string fingerprint of the fragment given the resolver
+:raises: SignatureGenerationError if fingerprint cannot be created</p></div>
+</dd>
+<dt id="src.resolvers.base.fragment_resolver.ResolverBase.get_similar_identifiers"><code class="name flex">
+<span>def <span class="ident">get_similar_identifiers</span></span>(<span>self, signature: str) ‑> list[tuple[str, float]]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_similar_identifiers(self, signature: str) -&gt; list[tuple[str, float]]:
+    &#34;&#34;&#34;
+    Fetches similar identifiers associated with the given fingerprint
+    :param signature: string fingerprint of the fragment given the resolver
+    :return: list of standardized identifiers of the fingerprint and their scores
+    :raises: IdentifierNotFoundError if no identifier couldn&#39;t be found or this functionality is disabled
+    &#34;&#34;&#34;
+    if not self.allow_partial_resolution:
+        raise IdentifierResolutionError(
+            &#34;resolving similar identifiers&#34;, &#34;functionality is disabled&#34;
+        )
+
+    if self.resolve_through_cache:
+        cached_identifiers: list[tuple[str, float]] = (
+            self.cache.fetch_similarity_identifiers(self.resolver_name, signature)
+        )
+        if cached_identifiers:
+            return cached_identifiers
+
+    if self.resolve_through_search:
+        search_timeout_error = IdentifierResolutionError(
+            &#34;resolving identifiers&#34;, &#34;fetching similarity matches timed out&#34;
+        )
+        with timeout(
+            seconds=self.fetch_idents_timeout_sec, error=search_timeout_error
+        ):
+            fetched_identifiers: list[tuple[str, float]] = (
+                self.try_fetch_identifiers_relaxed_match(signature)
+            )
+
+        if fetched_identifiers:
+            return fetched_identifiers
+
+        raise IdentifierResolutionError(
+            &#34;resolving identifiers&#34;,
+            &#34;no identifiers found for similar match of the fingerprint&#34;,
+        )</code></pre>
+</details>
+<div class="desc"><p>Fetches similar identifiers associated with the given fingerprint
+:param signature: string fingerprint of the fragment given the resolver
+:return: list of standardized identifiers of the fingerprint and their scores
+:raises: IdentifierNotFoundError if no identifier couldn't be found or this functionality is disabled</p></div>
+</dd>
+<dt id="src.resolvers.base.fragment_resolver.ResolverBase.is_applicable"><code class="name flex">
+<span>def <span class="ident">is_applicable</span></span>(<span>self,<br>simulation: <a title="src.utils.file_loader.SimulationFile" href="../../utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>,<br>fragment: MDAnalysis.core.groups.AtomGroup) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_applicable(
+    self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
+) -&gt; bool:
+    &#34;&#34;&#34;
+    Decides whether the resolver can be used on the given fragment
+    :param fragment: AtomGroup representing a molecule
+    :param simulation: of which fragment is part of
+    :return: True if resolver can be used on a given fragment
+    &#34;&#34;&#34;
+    if not self.allow_resolution:
+        return False
+    return self._is_applicable(simulation, fragment)</code></pre>
+</details>
+<div class="desc"><p>Decides whether the resolver can be used on the given fragment
+:param fragment: AtomGroup representing a molecule
+:param simulation: of which fragment is part of
+:return: True if resolver can be used on a given fragment</p></div>
+</dd>
+<dt id="src.resolvers.base.fragment_resolver.ResolverBase.try_fetch_identifiers_exact_match"><code class="name flex">
+<span>def <span class="ident">try_fetch_identifiers_exact_match</span></span>(<span>self, signature: str) ‑> list[str]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def try_fetch_identifiers_exact_match(self, signature: str) -&gt; list[str]:
+    &#34;&#34;&#34;
+    Attempts to resolve signature into standardized identifiers, requiring identity match of the fingerprint
+    To be implemented by resolvers
+    :param signature: to be translated into identifiers
+    :return: list of standardized identifiers of the fingerprint
+    :raises IdentifierResolutionError: on internal failure during fetching
+    &#34;&#34;&#34;
+    raise NotImplementedError</code></pre>
+</details>
+<div class="desc"><p>Attempts to resolve signature into standardized identifiers, requiring identity match of the fingerprint
+To be implemented by resolvers
+:param signature: to be translated into identifiers
+:return: list of standardized identifiers of the fingerprint
+:raises IdentifierResolutionError: on internal failure during fetching</p></div>
+</dd>
+<dt id="src.resolvers.base.fragment_resolver.ResolverBase.try_fetch_identifiers_relaxed_match"><code class="name flex">
+<span>def <span class="ident">try_fetch_identifiers_relaxed_match</span></span>(<span>self, signature: str) ‑> list[tuple[str, float]]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def try_fetch_identifiers_relaxed_match(
+    self, signature: str
+) -&gt; list[tuple[str, float]]:
+    &#34;&#34;&#34;
+    Attempts to resolve signature into standardized identifiers, based on similarity match(es)
+    To be implemented by resolvers
+    :param signature: to be translated into identifiers
+    :return: list of standardized identifiers of the fingerprint and their scores
+    :raises IdentifierResolutionError: on internal failure during fetching
+    &#34;&#34;&#34;
+    raise NotImplementedError</code></pre>
+</details>
+<div class="desc"><p>Attempts to resolve signature into standardized identifiers, based on similarity match(es)
+To be implemented by resolvers
+:param signature: to be translated into identifiers
+:return: list of standardized identifiers of the fingerprint and their scores
+:raises IdentifierResolutionError: on internal failure during fetching</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="src.resolvers.base.fragment_resolver.ResolverKind"><code class="flex name class">
+<span>class <span class="ident">ResolverKind</span></span>
+<span>(</span><span>*args, **kwds)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ResolverKind(Enum):
+    PRIMARY = 1  # identity match can be considered ground truth
+    FALLBACK = 2  # identity match can be considered true with very high likelihood</code></pre>
+</details>
+<div class="desc"><p>Create a collection of name/value pairs.</p>
+<p>Example enumeration:</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; class Color(Enum):
+...     RED = 1
+...     BLUE = 2
+...     GREEN = 3
+</code></pre>
+<p>Access them by:</p>
+<ul>
+<li>attribute access:</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Color.RED
+<Color.RED: 1></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>value lookup:</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Color(1)
+<Color.RED: 1></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>name lookup:</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Color['RED']
+<Color.RED: 1></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Enumerations can be iterated over, and know how many members they have:</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; len(Color)
+3
+</code></pre>
+<pre><code class="language-python-repl">&gt;&gt;&gt; list(Color)
+[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]
+</code></pre>
+<p>Methods can be added to enumerations, and members can have their own
+attributes &ndash; see the documentation for details.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="src.resolvers.base.fragment_resolver.ResolverKind.FALLBACK"><code class="name">var <span class="ident">FALLBACK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolvers.base.fragment_resolver.ResolverKind.PRIMARY"><code class="name">var <span class="ident">PRIMARY</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="src.resolvers.base.fragment_resolver.SignatureGenerationError"><code class="flex name class">
+<span>class <span class="ident">SignatureGenerationError</span></span>
+<span>(</span><span>generation_step, cause)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SignatureGenerationError(Exception):
+    def __init__(self, generation_step, cause):
+        super().__init__(f&#34;[RES.SIGN] Error while {generation_step}: {cause}&#34;)
+        self.generation_step = generation_step
+        self.cause = cause</code></pre>
+</details>
+<div class="desc"><p>Common base class for all non-exit exceptions.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>builtins.Exception</li>
+<li>builtins.BaseException</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src.resolvers.base" href="index.html">src.resolvers.base</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="src.resolvers.base.fragment_resolver.IdentifierResolutionError" href="#src.resolvers.base.fragment_resolver.IdentifierResolutionError">IdentifierResolutionError</a></code></h4>
+</li>
+<li>
+<h4><code><a title="src.resolvers.base.fragment_resolver.ResolverBase" href="#src.resolvers.base.fragment_resolver.ResolverBase">ResolverBase</a></code></h4>
+<ul class="">
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.generate_debug_data" href="#src.resolvers.base.fragment_resolver.ResolverBase.generate_debug_data">generate_debug_data</a></code></li>
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.get_identifiers" href="#src.resolvers.base.fragment_resolver.ResolverBase.get_identifiers">get_identifiers</a></code></li>
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.get_signature" href="#src.resolvers.base.fragment_resolver.ResolverBase.get_signature">get_signature</a></code></li>
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.get_similar_identifiers" href="#src.resolvers.base.fragment_resolver.ResolverBase.get_similar_identifiers">get_similar_identifiers</a></code></li>
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.is_applicable" href="#src.resolvers.base.fragment_resolver.ResolverBase.is_applicable">is_applicable</a></code></li>
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.try_fetch_identifiers_exact_match" href="#src.resolvers.base.fragment_resolver.ResolverBase.try_fetch_identifiers_exact_match">try_fetch_identifiers_exact_match</a></code></li>
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.try_fetch_identifiers_relaxed_match" href="#src.resolvers.base.fragment_resolver.ResolverBase.try_fetch_identifiers_relaxed_match">try_fetch_identifiers_relaxed_match</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="src.resolvers.base.fragment_resolver.ResolverKind" href="#src.resolvers.base.fragment_resolver.ResolverKind">ResolverKind</a></code></h4>
+<ul class="">
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverKind.FALLBACK" href="#src.resolvers.base.fragment_resolver.ResolverKind.FALLBACK">FALLBACK</a></code></li>
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverKind.PRIMARY" href="#src.resolvers.base.fragment_resolver.ResolverKind.PRIMARY">PRIMARY</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="src.resolvers.base.fragment_resolver.SignatureGenerationError" href="#src.resolvers.base.fragment_resolver.SignatureGenerationError">SignatureGenerationError</a></code></h4>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

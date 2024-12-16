@@ -34,9 +34,12 @@ def get_resolvers(
         ProteinStructureResolver(
             cache, configuration, try_fix_elements=True, try_fix_names=True
         ),
+        ProteinStructureResolver(
+            cache, configuration, try_fix_elements=True, try_fix_names=True, use_alphafind=True
+        ),
         ProteinResidueSequenceResolver(cache, configuration),
         ProteinResidueStructureResolver(cache, configuration),
-        # protein, but alphafind (.pdb export)
+        ProteinResidueStructureResolver(cache, configuration, use_alphafind=True),
         NucleicAcidResolver(cache, configuration),
         AtomResolver(cache, configuration, try_fix_elements=True),
         AtomResolver(
@@ -46,6 +49,7 @@ def get_resolvers(
             allow_undetermined_elements=True,
         ),
         ChemResolver(cache, configuration, try_fix_elements=True),
+        ChemResolver(cache, configuration, try_fix_elements=True, use_rdkit_bond_determination=True),
         ChemResolver(
             cache, configuration, try_fix_elements=True, try_approximate_bonds=True
         ),

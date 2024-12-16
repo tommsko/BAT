@@ -1,0 +1,67 @@
+{
+    "name": "6943929_CHOL4_large",
+    "atoms": 323584,
+    "residues": 58752,
+    "segments": 3,
+    "fragments": 58752,
+    "segment_resolution": {
+        "seg_1_CHL1": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+                "HVYWMOMLDIMFJA-LZUCFRQPSA-N",
+                "HVYWMOMLDIMFJA-UHFFFAOYSA-N",
+                "HVYWMOMLDIMFJA-RJLWFLQPSA-N",
+                "HVYWMOMLDIMFJA-FNOPAARDSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_TIP3": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_DOPC": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "SNKAWJBJQDLSFF-AOMFJDGTSA-N",
+                "WTJKGGKOPKCXLL-MRCUWXFGSA-N",
+                "SNKAWJBJQDLSFF-UHFFFAOYSA-N",
+                "RRVPPYNAZJRZFR-VYOBOKEXSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "name": "5997385_run",
+    "atoms": 101000,
+    "residues": 25500,
+    "segments": 2,
+    "fragments": 25500,
+    "segment_resolution": {
+        "seg_1_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_POPC": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem",
+                "chem",
+                "chem",
+                "chem",
+                "chem",
+                "chem",
+                "chem",
+                "chem",
+                "chem",
+                "nucleic_acid",
+                "chem",
+                "nucleic_acid",
+                "chem",
+                "nucleic_acid",
+                "chem",
+                "nucleic_acid",
+                "chem",
+                "chem",
+                "nucleic_acid",
+                "chem",
+                "chem",
+                "nucleic_acid",
+                "chem",
+                "chem"
+            ],
+            "resolver": null,
+            "ident_type": null,
+            "resolved_idents": [],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "nucleic_acid",
+                "chem",
+                "chem",
+                "chem_aprox"
+            ],
+            "resolvers_identity": [],
+            "resolvers_similarity": []
+        }
+    }
+}

@@ -1,0 +1,152 @@
+{
+    "name": "825185_pull_28",
+    "atoms": 103375,
+    "residues": 33923,
+    "segments": 5,
+    "fragments": 33766,
+    "segment_resolution": {
+        "seg_1_HA4": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "IFTPBTVIWNNVAJ-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem_ligand_name"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_4_CL": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "CL"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_3_NA": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "NA"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_CD44_link": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence"
+            ],
+            "resolver": "protein-residue-sequence",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "4pz4_B",
+                "4pz4_A",
+                "4pz3_B",
+                "4pz3_A",
+                "2i83_A",
+                "1uuh_B",
+                "1uuh_A",
+                "1poz_A",
+                "2jcp_A",
+                "2jcr_A",
+                "2jcq_A",
+                "5bzt_A",
+                "5bzs_A",
+                "5bzr_A",
+                "5bzq_A",
+                "5bzp_A",
+                "5bzo_A",
+                "5bzn_A",
+                "5bzm_A",
+                "5bzl_A",
+                "5bzk_A",
+                "5bzj_A",
+                "5bzi_A",
+                "5bzh_A",
+                "5bzg_A",
+                "5bze_A",
+                "5sc7_A",
+                "5sc6_A",
+                "5sc5_A",
+                "5sc4_A",
+                "5sc3_A",
+                "5sc2_A",
+                "5sc1_A",
+                "5sc0_A",
+                "5sbz_A",
+                "5sby_A",
+                "5sbx_A",
+                "5sbw_A",
+                "5sbv_A",
+                "5sbu_A",
+                "5sbt_A",
+                "5sbs_A",
+                "5sbr_A",
+                "5sbq_A",
+                "5sbp_A",
+                "5sbo_A",
+                "5sbn_A",
+                "5sbm_A",
+                "5sbl_A",
+                "5sbk_A",
+                "5bzc_A",
+                "4mrd_A",
+                "4np3_A",
+                "4np2_A",
+                "4mrh_A",
+                "4mrg_A",
+                "4mrf_A",
+                "4mre_A",
+                "5bzf_A",
+                "8orx_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein-residue-sequence"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

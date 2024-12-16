@@ -1,0 +1,360 @@
+{
+    "name": "3634884_PC_s",
+    "atoms": 220077,
+    "residues": 163089,
+    "segments": 5,
+    "fragments": 151146,
+    "segment_resolution": {
+        "seg_2_W": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ge",
+                    99
+                ],
+                [
+                    "Ga",
+                    97
+                ],
+                [
+                    "As",
+                    96
+                ],
+                [
+                    "Zn",
+                    91
+                ],
+                [
+                    "Se",
+                    91
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_4_CL-": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ge",
+                    99
+                ],
+                [
+                    "Ga",
+                    97
+                ],
+                [
+                    "As",
+                    96
+                ],
+                [
+                    "Zn",
+                    91
+                ],
+                [
+                    "Se",
+                    91
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_3_NA+": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ge",
+                    99
+                ],
+                [
+                    "Ga",
+                    97
+                ],
+                [
+                    "As",
+                    96
+                ],
+                [
+                    "Zn",
+                    91
+                ],
+                [
+                    "Se",
+                    91
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_1_POPC": {
+            "resolver_generated_signature": [
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "WTJKGGKOPKCXLL-VYOBOKEXSA-N",
+                    50
+                ],
+                [
+                    "WTJKGGKOPKCXLL-PFDVCBLKSA-N",
+                    50
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem_ligand_name"
+            ]
+        },
+        "seg_0_Protein": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence"
+            ],
+            "resolver": "protein-residue-sequence",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "6m85_A",
+                "3spi_A",
+                "3spc_A",
+                "3jyc_A",
+                "3spj_A",
+                "3sph_A",
+                "3spg_A",
+                "5kum_A",
+                "5kuk_A",
+                "6m86_A",
+                "6m84_A",
+                "7zdz_D",
+                "7zdz_C",
+                "7zdz_B",
+                "7zdz_A",
+                "3syc_A",
+                "6xit_D",
+                "6xit_C",
+                "6xit_B",
+                "6xit_A",
+                "6xis_D",
+                "6xis_C",
+                "6xis_B",
+                "6xis_A",
+                "6xev_M",
+                "6xev_I",
+                "6xev_E",
+                "6xev_A",
+                "6xeu_J",
+                "6xeu_G",
+                "6xeu_D",
+                "6xeu_A",
+                "4kfm_A",
+                "3syo_A",
+                "3sya_A",
+                "3syq_B",
+                "3syq_A",
+                "3syp_A",
+                "7w4p_G",
+                "7w4p_E",
+                "7w4p_C",
+                "7w4p_A",
+                "7w4o_G",
+                "7w4o_E",
+                "7w4o_C",
+                "7w4o_A",
+                "8ti2_D",
+                "8ti2_C",
+                "8ti2_B",
+                "8ti2_A",
+                "8ti1_D",
+                "8ti1_C",
+                "8ti1_B",
+                "8ti1_A",
+                "7uqr_D",
+                "7uqr_C",
+                "7uqr_B",
+                "7uqr_A",
+                "7uaa_D",
+                "7uaa_C",
+                "7uaa_B",
+                "7uaa_A",
+                "7u7m_D",
+                "7u7m_C",
+                "7u7m_B",
+                "7u7m_A",
+                "7u6y_D",
+                "7u6y_C",
+                "7u6y_B",
+                "7u6y_A",
+                "7u2x_D",
+                "7u2x_C",
+                "7u2x_B",
+                "7u2x_A",
+                "7u24_D",
+                "7u24_C",
+                "7u24_B",
+                "7u24_A",
+                "7u1s_D",
+                "7u1s_C",
+                "7u1s_B",
+                "7u1s_A",
+                "7u1q_D",
+                "7u1q_C",
+                "7u1q_B",
+                "7u1q_A",
+                "7u1e_D",
+                "7u1e_C",
+                "7u1e_B",
+                "7u1e_A",
+                "7tyt_D",
+                "7tyt_C",
+                "7tyt_B",
+                "7tyt_A",
+                "7tys_D",
+                "7tys_C",
+                "7tys_B",
+                "7tys_A",
+                "7s61_D",
+                "7s61_C",
+                "7s61_B",
+                "7s61_A",
+                "7s60_D",
+                "7s60_C",
+                "7s60_B",
+                "7s60_A",
+                "7s5z_D",
+                "7s5z_C",
+                "7s5z_B",
+                "7s5z_A",
+                "7s5y_D",
+                "7s5y_C",
+                "7s5y_B",
+                "7s5y_A",
+                "7s5x_D",
+                "7s5x_C",
+                "7s5x_B",
+                "7s5x_A",
+                "7s5t_D",
+                "7s5t_C",
+                "7s5t_B",
+                "7s5t_A",
+                "6jb1_G",
+                "6jb1_E",
+                "6jb1_C",
+                "6jb1_A",
+                "5ywc_G",
+                "5ywc_E",
+                "5ywc_C",
+                "5ywc_A",
+                "5ywb_G",
+                "5ywb_E",
+                "5ywb_C",
+                "5ywb_A",
+                "5ywa_G",
+                "5ywa_E",
+                "5ywa_C",
+                "5ywa_A",
+                "5yw9_G",
+                "5yw9_E",
+                "5yw9_C",
+                "5yw9_A",
+                "5yw8_G",
+                "5yw8_E",
+                "5yw8_C",
+                "5yw8_A",
+                "5ykg_G",
+                "5ykg_E",
+                "5ykg_C",
+                "5ykg_A",
+                "5ykf_G",
+                "5ykf_E",
+                "5ykf_C",
+                "5ykf_A",
+                "5yke_G",
+                "5yke_E",
+                "5yke_C",
+                "5yke_A",
+                "6c3p_C",
+                "6c3p_B",
+                "6c3p_D",
+                "6c3p_A",
+                "6c3o_D",
+                "6c3o_B",
+                "6c3o_C",
+                "6c3o_A",
+                "6pza_D",
+                "6pz9_D",
+                "6baa_D",
+                "6baa_C",
+                "6baa_B",
+                "6baa_A",
+                "5twv_G",
+                "5twv_E",
+                "5twv_C",
+                "5twv_A",
+                "7mjq_D",
+                "7mjq_C",
+                "7mjq_B",
+                "7mjq_A",
+                "7mjp_D",
+                "7mjp_C",
+                "7mjp_B",
+                "7mjp_A",
+                "7mjo_D",
+                "7mjo_C",
+                "7mjo_B",
+                "7mjo_A",
+                "7mit_D",
+                "7mit_C",
+                "7mit_B",
+                "7mit_A",
+                "5wua_D",
+                "5wua_C",
+                "5wua_B",
+                "5wua_A",
+                "2qks_B",
+                "2qks_A",
+                "8i5n_D",
+                "8i5n_C",
+                "8i5n_B",
+                "8i5n_A",
+                "8i5m_D",
+                "8i5m_C",
+                "8i5m_B",
+                "8i5m_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein-residue-sequence"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

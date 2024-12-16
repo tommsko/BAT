@@ -1,0 +1,103 @@
+{
+    "name": "8182893_eElab_micelle_50SDS_CHARMM_310K_Na_Neut_OPC_replica2",
+    "atoms": 160249,
+    "residues": 39562,
+    "segments": 4,
+    "fragments": 78983,
+    "segment_resolution": {
+        "seg_0_SDS": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_aprox",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "MOTZDAYCYVMXPC-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem_ligand_name"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_3_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_SOD": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Na",
+                    100
+                ],
+                [
+                    "Mg",
+                    95
+                ],
+                [
+                    "Ne",
+                    88
+                ],
+                [
+                    "F",
+                    83
+                ],
+                [
+                    "Al",
+                    85
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_1_PROA": {
+            "resolver_generated_signature": [
+                "protein",
+                "protein-residue-sequence",
+                "protein-residue-struct",
+                "chem_ligand_name",
+                "fingerprint",
+                "protein",
+                "protein-struct"
+            ],
+            "resolver": "protein-struct",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "7MQA"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein-struct"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

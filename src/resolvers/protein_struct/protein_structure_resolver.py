@@ -14,6 +14,7 @@ from ...utils.repair_simulation import (
     fix_missing_elements,
     fix_missing_names,
 )
+from .alphafind_handle import alphafind_similarity, alphafind_identity
 
 
 class ProteinStructureResolver(ResolverBase):
@@ -30,6 +31,7 @@ class ProteinStructureResolver(ResolverBase):
         configuration: configparser.ConfigParser,
         try_fix_elements: bool = False,
         try_fix_names: bool = False,
+        use_alphafind: bool = False,
     ) -> None:
         """
         Initializes ProteinStructureResolver
@@ -48,6 +50,7 @@ class ProteinStructureResolver(ResolverBase):
 
         self.try_fix_missing_elements: bool = try_fix_elements
         self.try_fix_missing_names: bool = try_fix_names
+        self.use_alphafind: bool = use_alphafind
 
     def _is_applicable(
         self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
@@ -129,9 +132,14 @@ class ProteinStructureResolver(ResolverBase):
             fd.write(signature)
 
         try:
-            exact_structures: list[str] = pdb_fetch_identical_structures(
-                tmp_path, self.config
-            )
+            if self.use_alphafind:
+                exact_structures: list[str] = alphafind_identity(
+                    tmp_path, self.config
+                )
+            else:
+                exact_structures: list[str] = pdb_fetch_identical_structures(
+                    tmp_path, self.config
+                )
             os.unlink(tmp_path)
         except Exception:
             os.unlink(tmp_path)
@@ -157,9 +165,14 @@ class ProteinStructureResolver(ResolverBase):
             fd.write(signature)
 
         try:
-            similar_structures: list[tuple[str, float]] = pdb_fetch_similar_structures(
-                tmp_path, self.config
-            )
+            if self.use_alphafind:
+                similar_structures: list[tuple[str, float]] = alphafind_similarity(
+                    tmp_path, self.config
+                )
+            else:
+                similar_structures: list[tuple[str, float]] = pdb_fetch_similar_structures(
+                    tmp_path, self.config
+                )
             os.unlink(tmp_path)
         except Exception:
             os.unlink(tmp_path)

@@ -1,0 +1,172 @@
+{
+    "name": "11192164_6p_45Q_420K",
+    "atoms": 38259,
+    "residues": 12579,
+    "segments": 4,
+    "fragments": 12213,
+    "segment_resolution": {
+        "seg_2_ION": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ge",
+                    99
+                ],
+                [
+                    "Ga",
+                    97
+                ],
+                [
+                    "As",
+                    96
+                ],
+                [
+                    "Zn",
+                    91
+                ],
+                [
+                    "Se",
+                    91
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_1_PW": {
+            "resolver_generated_signature": [
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint"
+            ],
+            "resolver": "fingerprint",
+            "ident_type": "hash",
+            "resolved_idents": [
+                "ELEMENT:Na"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "fingerprint"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_3_CL": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ge",
+                    99
+                ],
+                [
+                    "Ga",
+                    97
+                ],
+                [
+                    "As",
+                    96
+                ],
+                [
+                    "Zn",
+                    91
+                ],
+                [
+                    "Se",
+                    91
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_0_Protein": {
+            "resolver_generated_signature": [
+                "protein"
+            ],
+            "resolver": "protein",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "8w15_A",
+                "8vlx_A",
+                "7dxj_A",
+                "7dxk_A",
+                "6yej_A",
+                "2ld2_A",
+                "2ld0_A",
+                "4rav_F",
+                "4rav_E",
+                "8r3e_F",
+                "8r3e_E",
+                "8r3e_D",
+                "8r3e_C",
+                "8r3e_B",
+                "8r3e_A",
+                "8r2o_B",
+                "8r2o_A",
+                "6ez8_A",
+                "6rmh_A",
+                "6x9o_A",
+                "6n8c_D",
+                "6n8c_C",
+                "6n8c_B",
+                "6n8c_A",
+                "3iow_C",
+                "3iow_B",
+                "3iow_A",
+                "3iov_C",
+                "3iov_B",
+                "3iov_A",
+                "3iou_C",
+                "3iou_B",
+                "3iou_A",
+                "3iot_C",
+                "3iot_B",
+                "3iot_A",
+                "3ior_C",
+                "3ior_B",
+                "3ior_A",
+                "3io6_B",
+                "3io6_C",
+                "3io6_A",
+                "3io4_C",
+                "3io4_B",
+                "3io4_A",
+                "4fed_C",
+                "4fed_B",
+                "4fed_A",
+                "4fec_C",
+                "4fec_B",
+                "4fec_A",
+                "4feb_C",
+                "4feb_B",
+                "4feb_A",
+                "4fe8_C",
+                "4fe8_B",
+                "4fe8_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

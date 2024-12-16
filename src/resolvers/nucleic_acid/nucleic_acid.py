@@ -36,11 +36,9 @@ class NucleicAcidResolver(ResolverBase):
         """
 
         # if all residues have nucleotide name, it is safe to assume molecule represents the nucleic acid
-        logging.getLogger("base").critical(f"is NA applicable? for {fragment.segments.segids[0]}")
-        logging.getLogger("base").critical(resname.upper() in ('A', 'C', 'T', 'G', 'U') for resname in fragment.resnames)
         return all(
             resname.upper() in ('A', 'C', 'T', 'G', 'U') for resname in fragment.resnames
-        )
+        ) if self.config.getboolean(NucleicAcidResolver.RESOLVER_NAME, 'require_residue_names') else True  # will fail later
 
     def get_signature(
         self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup

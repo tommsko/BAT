@@ -1,0 +1,94 @@
+{
+    "name": "1129456_for-md-CHARMM36-UA_DOPS_303K_v1",
+    "atoms": 22400,
+    "residues": 4736,
+    "segments": 3,
+    "fragments": 4736,
+    "segment_resolution": {
+        "seg_1_TIP3": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_SOD": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "NA"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_DSUA": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "MIQYPPGTNIFAPO-HUUCEWRRSA-N",
+                    "50"
+                ],
+                [
+                    "TZCPCKNHXULUIY-RGULYWFUSA-N",
+                    "49.20634925365447998046875"
+                ],
+                [
+                    "WTBFLCSPLLEDEM-NUGHHVLWSA-N",
+                    "44.927537441253662109375"
+                ],
+                [
+                    "WTBFLCSPLLEDEM-MDZJKYSESA-N",
+                    "44.927537441253662109375"
+                ],
+                [
+                    "WTBFLCSPLLEDEM-AALPAEBJSA-N",
+                    "44.927537441253662109375"
+                ],
+                [
+                    "WTBFLCSPLLEDEM-JIDRGYQWSA-N",
+                    "44.927537441253662109375"
+                ],
+                [
+                    "RIWHHKIQQIRFCQ-GOTSBHOMSA-N",
+                    "43.07692348957061767578125"
+                ],
+                [
+                    "RIWHHKIQQIRFCQ-PKTZIBPZSA-N",
+                    "43.07692348957061767578125"
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem"
+            ]
+        }
+    }
+}

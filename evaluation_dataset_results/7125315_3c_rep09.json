@@ -1,0 +1,53 @@
+{
+    "name": "7125315_3c_rep09",
+    "atoms": 5844,
+    "residues": 475,
+    "segments": 2,
+    "fragments": 475,
+    "segment_resolution": {
+        "seg_1_DMF": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "ZMXDDKWLCZADIW-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem_ligand_name"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_AMA": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "ZFKRUCNEKPIDBK-ZDUSSCGKSA-N",
+                    50
+                ],
+                [
+                    "VJHFTTWXKUEKQP-VCZNENMGSA-N",
+                    50
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem_ligand_name"
+            ]
+        }
+    }
+}

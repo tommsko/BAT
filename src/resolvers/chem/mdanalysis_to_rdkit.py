@@ -332,8 +332,9 @@ def _fragment_to_mol_through_molfile(fragment: MDAnalysis.AtomGroup) -> Mol:
 def _fragment_to_rdkit_molecules(
     fragment: MDAnalysis.AtomGroup,
     atom_indices: dict[int, int],
-    determined_bonds: DetermineUnknownBonds,
+    determined_bonds: DetermineUnknownBonds | None,
     molecule: Mol,
+    ignore_formal_charge: bool = False,
 ) -> dict[int, int]:
     """
     Adds all MDAnalysis atoms to the RDKit's molecule
@@ -341,16 +342,21 @@ def _fragment_to_rdkit_molecules(
     :param atom_indices: mapping of atom indexes to their position in arrays
     :param determined_bonds: pre-determined bond types and atom formal charges
     :param molecule: RDKit's molecule to add atoms to
+    :param ignore_formal_charge: do not set formal charges of atoms
     :return: mapping of MDAnalysis' atom indexes to RDKit's atom indexes
     """
+
+    if not ignore_formal_charge:
+        assert determined_bonds is not None
 
     idx_atom_to_rdkit: dict[int, int] = {}
     for atom_idx in fragment.atoms.ids:
         atom_elem = fragment.atoms.elements[atom_indices[atom_idx]]
         atom = Chem.Atom(atom_elem)
-        atom.SetFormalCharge(
-            determined_bonds.atom_formal_charges[atom_indices[atom_idx]]
-        )
+        if not ignore_formal_charge:
+            atom.SetFormalCharge(
+                determined_bonds.atom_formal_charges[atom_indices[atom_idx]]
+            )
         atom.SetNoImplicit(True)
         idx_atom_to_rdkit[atom_idx] = molecule.AddAtom(atom)
     return idx_atom_to_rdkit
@@ -358,9 +364,10 @@ def _fragment_to_rdkit_molecules(
 
 def _fragment_to_rdkit_bonds(
     fragment: MDAnalysis.AtomGroup,
-    determined_bonds: DetermineUnknownBonds,
+    determined_bonds: DetermineUnknownBonds | None,
     idx_mdanalyis_to_rdkit: dict[int, int],
     molecule: Mol,
+    force_single_bond: bool = False
 ) -> None:
     """
     Adds all MDAnalysis bonds to RDKit's molecule
@@ -368,17 +375,26 @@ def _fragment_to_rdkit_bonds(
     :param determined_bonds: pre-determined bond types and atom formal charges
     :param idx_mdanalyis_to_rdkit: mapping of MDAnalysis' atom indexes to RDKit's atom indexes
     :param molecule: RDKit's molecule to add bonds to
+    :param force_single_bond: if True, all bonds are set to single
     :return: None
     """
+
+    if not force_single_bond:
+        assert determined_bonds is not None
+
     for atom_idx1, atom_idx2 in fragment.bonds.indices:
         atom_idx1_rdkit, atom_idx2_rdkit = (
             idx_mdanalyis_to_rdkit[atom_idx1],
             idx_mdanalyis_to_rdkit[atom_idx2],
         )
-        bond_type = molfile_bond_to_rdkit_bond(
-            determined_bonds.bonds[(atom_idx1, atom_idx2)].value
-        )
-        molecule.AddBond(atom_idx1_rdkit, atom_idx2_rdkit, bond_type)
+
+        if not force_single_bond:
+            bond_type = molfile_bond_to_rdkit_bond(
+                determined_bonds.bonds[(atom_idx1, atom_idx2)].value
+            )
+            molecule.AddBond(atom_idx1_rdkit, atom_idx2_rdkit, bond_type)
+        else:
+            molecule.AddBond(atom_idx1_rdkit, atom_idx2_rdkit, Chem.BondType.SINGLE)
 
 
 def _fragment_to_mol_directly(fragment: MDAnalysis.AtomGroup) -> Mol:
@@ -410,24 +426,57 @@ def _fragment_to_mol_directly(fragment: MDAnalysis.AtomGroup) -> Mol:
 
 
 ################################################################
+
+def _fragment_to_mol_directly_alternate(fragment: MDAnalysis.AtomGroup) -> Mol:
+    """
+    Converts MDAnalysis' molecule into RDKit's molecule directly, using alternate method
+    :param fragment: AtomGroup representing a molecule
+    :return: RDKit's representation of the same molecule, sanitized
+    """
+
+    atom_indices: dict[int, int] = {
+        atom_idx: i for i, atom_idx in enumerate(fragment.atoms.ids)
+    }
+
+    molecule_edit: EditableMol = Chem.EditableMol(Chem.Mol())
+    idx_mdanalyis_to_rdkit: dict[int, int] = _fragment_to_rdkit_molecules(
+        fragment, atom_indices, None, molecule_edit, ignore_formal_charge=True
+    )
+    _fragment_to_rdkit_bonds(
+        fragment, None, idx_mdanalyis_to_rdkit, molecule_edit, force_single_bond=True
+    )
+    molecule: Mol = molecule_edit.GetMol()
+
+    _fix_bonds_rdkit(molecule, add_hydrogens=False)  # hydrogens are already present from simulation
+
+    molecule = Chem.RemoveHs(molecule)
+    Chem.SanitizeMol(molecule)
+
+    return molecule
+
+
+################################################################
 # Main callable methods
 
 
-def _fix_bonds_rdkit(molecule: Mol, max_attempts: int = 10) -> None:
+def _fix_bonds_rdkit(molecule: Mol, max_attempts: int = 10, add_hydrogens: bool = True) -> None:
     """
     Attempts to call DetermineBondOrders, adapting to total charge provided in call's exception
     :param max_attempts: maximum attempts to call DetermineBondOrders
     :param molecule: RDKit's molecule
+    :param add_hydrogens: force add hydrogens to the molecule
     :return: None (throws on failure)
     """
+    if add_hydrogens:
+        molecule = Chem.AddHs(molecule)
 
     attempt: int = 0
-    charge: int = 0
+    charge: int = sum(atom.GetFormalCharge() for atom in molecule.GetAtoms())
     while attempt < max_attempts:
         attempt += 1
         try:
-            rdDetermineBonds.DetermineBonds(
-                molecule, allowChargedFragments=False, embedChiral=True, charge=charge
+            rdDetermineBonds.DetermineBondOrders(
+                molecule, allowChargedFragments=True, embedChiral=False, charge=charge
             )
         except ValueError as e:
             charge = int(str(e).split("input (")[1].split(");")[0])
@@ -439,16 +488,19 @@ def _fix_bonds_rdkit(molecule: Mol, max_attempts: int = 10) -> None:
     )
 
 
-def fragment_to_mol(fragment: MDAnalysis.AtomGroup, try_fix_bonds: bool = False) -> Mol:
+def fragment_to_mol(fragment: MDAnalysis.AtomGroup, try_fix_bonds: bool = False, try_fix_bonds_alt: bool = False) -> Mol:
     """
     Converts MDAnalysis' molecule into RDKit's molecule
     :param fragment: AtomGroup representing a molecule
     :param try_fix_bonds: tries to utilize atomic positions (from .gro file) to determine bonds
+    :param try_fix_bonds_alt: if True, utilizes RDKit to determine bonds by atom's valence
     :return: RDKit's representation of the same molecule, sanitized
     """
-
     if not try_fix_bonds:
-        molecule: Mol = _fragment_to_mol_directly(fragment)
+        if try_fix_bonds_alt:
+            molecule: Mol = _fragment_to_mol_directly_alternate(fragment)
+        else:
+            molecule: Mol = _fragment_to_mol_directly(fragment)
     else:
         if not hasattr(fragment.atoms, "positions"):
             raise SignatureGenerationError(
@@ -461,12 +513,13 @@ def fragment_to_mol(fragment: MDAnalysis.AtomGroup, try_fix_bonds: bool = False)
 
 
 def fragment_to_smiles(
-    fragment: MDAnalysis.AtomGroup, try_fix_bonds: bool = False
+    fragment: MDAnalysis.AtomGroup, try_fix_bonds: bool = False, try_fix_bonds_alt: bool = False
 ) -> str:
     """
     Converts MDAnalysis' molecule into SMILES format (through RDKit intermediate)
     :param fragment: AtomGroup representing a molecule
     :param try_fix_bonds: tries to utilize atomic positions (from .gro file) to determine bonds
+    :param try_fix_bonds_alt: if True, utilizes RDKit to determine bonds by atom's valence
     :return: SMILES representation of the same molecule
     """
-    return Chem.MolToSmiles(fragment_to_mol(fragment, try_fix_bonds))
+    return Chem.MolToSmiles(fragment_to_mol(fragment, try_fix_bonds, try_fix_bonds_alt))

@@ -1,0 +1,74 @@
+{
+    "name": "825048_md-production_crystallographic_B-form_0",
+    "atoms": 104837,
+    "residues": 34361,
+    "segments": 5,
+    "fragments": 34196,
+    "errors": [
+        "ERROR_NOT_FINISHED"
+    ],
+    "segment_resolution": {
+        "seg_4_CL": {
+            "errors": [],
+            "resolver_generated_signature": [
+                "nucleic_acid",
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "CL"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "nucleic_acid",
+                "atom"
+            ],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_HA16": {
+            "errors": [],
+            "resolver_generated_signature": [
+                "nucleic_acid",
+                "chem"
+            ],
+            "resolver": null,
+            "ident_type": null,
+            "resolved_idents": [],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "nucleic_acid",
+                "chem"
+            ],
+            "resolvers_identity": [],
+            "resolvers_similarity": []
+        },
+        "seg_0_CD44_link": {
+            "errors": [],
+            "resolver_generated_signature": [],
+            "resolver": null,
+            "ident_type": null,
+            "resolved_idents": [],
+            "possible_idents": []
+        },
+        "seg_3_NA": {
+            "errors": [],
+            "resolver_generated_signature": [],
+            "resolver": null,
+            "ident_type": null,
+            "resolved_idents": [],
+            "possible_idents": []
+        },
+        "seg_2_SOL": {
+            "errors": [],
+            "resolver_generated_signature": [],
+            "resolver": null,
+            "ident_type": null,
+            "resolved_idents": [],
+            "possible_idents": []
+        }
+    }
+}

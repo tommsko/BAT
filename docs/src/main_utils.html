@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>src.main_utils API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.main_utils</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="src.main_utils.assert_arguments"><code class="name flex">
+<span>def <span class="ident">assert_arguments</span></span>(<span>arguments: argparse.Namespace, requirements: dict[str, str]) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def assert_arguments(
+    arguments: argparse.Namespace, requirements: dict[str, str]
+) -&gt; None:
+    &#34;&#34;&#34;
+    Checks that all necessary arguments are present
+    :param arguments: result of argparse.parse_args()
+    :param requirements: mapping of fields to their descriptions
+    :return: None (raises runtime error on failure)
+    &#34;&#34;&#34;
+    for argument_name, argument_description in requirements.items():
+        if not hasattr(arguments, argument_name):
+            print(f&#34;[b][red]✘ missing argument &#39;{argument_name}&#39;[/red][/b]&#34;)
+            print(f&#34;[b]{argument_name}[/b] - {argument_description}&#34;)
+            raise RuntimeError(f&#34;Missing argument &#39;{argument_name}&#39;&#34;)
+    print(&#34;[b][green]✔ all necessary arguments provided[/green][/b]&#34;)</code></pre>
+</details>
+<div class="desc"><p>Checks that all necessary arguments are present
+:param arguments: result of argparse.parse_args()
+:param requirements: mapping of fields to their descriptions
+:return: None (raises runtime error on failure)</p></div>
+</dd>
+<dt id="src.main_utils.init_loggers"><code class="name flex">
+<span>def <span class="ident">init_loggers</span></span>(<span>verbose: bool | None, very_verbose: bool | None) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def init_loggers(verbose: bool | None, very_verbose: bool | None) -&gt; None:
+    &#34;&#34;&#34;
+    Initializes loggers used by the application
+    :param verbose: argument parameter (from argparse) for verbose mode
+    :param very_verbose: argument parameter (from argparse) for very verbose mode
+    :return: None
+    &#34;&#34;&#34;
+    verbose = verbose if verbose is not None else False
+    very_verbose = very_verbose if very_verbose is not None else False
+
+    def _add_log_handler(
+        log_name: str, very_verbose_level: int, verbose_level: int, normal_level: int
+    ):
+        handler: logging.StreamHandler = logging.StreamHandler()
+        formatter = logging.Formatter(
+            &#34;[%(process)s] [%(name)s] %(asctime)s %(levelname)s %(message)s&#34;
+        )
+        handler.setFormatter(formatter)
+
+        log: logging.Logger = logging.getLogger(log_name)
+        log.handlers.clear()
+        log.addHandler(handler)
+        log.setLevel(
+            very_verbose_level
+            if very_verbose
+            else verbose_level if verbose else normal_level
+        )
+
+    _add_log_handler(
+        &#34;base&#34;,
+        very_verbose_level=logging.DEBUG,
+        verbose_level=logging.INFO,
+        normal_level=logging.INFO,
+    )
+    _add_log_handler(
+        &#34;resolver&#34;,
+        very_verbose_level=logging.DEBUG,
+        verbose_level=logging.INFO,
+        normal_level=logging.ERROR,
+    )
+    print(
+        f&#34;[b][green]✔ loggers initialized (verbose: {verbose}, very verbose: {very_verbose})[/green][/b]&#34;
+    )</code></pre>
+</details>
+<div class="desc"><p>Initializes loggers used by the application
+:param verbose: argument parameter (from argparse) for verbose mode
+:param very_verbose: argument parameter (from argparse) for very verbose mode
+:return: None</p></div>
+</dd>
+<dt id="src.main_utils.load_simulations_filtered"><code class="name flex">
+<span>def <span class="ident">load_simulations_filtered</span></span>(<span>source_directory: str,<br>simulations_filter: list[str] | None,<br>molecule_filter: list[str] | None,<br>config: configparser.ConfigParser) ‑> list[<a title="src.utils.file_loader.SimulationFile" href="utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_simulations_filtered(
+    source_directory: str,
+    simulations_filter: list[str] | None,
+    molecule_filter: list[str] | None,
+    config: configparser.ConfigParser,
+) -&gt; list[SimulationFile]:
+    &#34;&#34;&#34;
+    Quick wrapper to load simulations including filters on them from the arguments given
+    :param source_directory: containing molecular dynamics trajectories (.tpr files)
+    :param simulations_filter: if not None, names of simulations to be loaded (included), otherwise all
+    :param molecule_filter: if not None, names of molecules to be loaded (included), otherwise all
+    :param config: main configuration
+    :return: list of simulations
+    &#34;&#34;&#34;
+    print(&#34;[b]listing simulations in source directory...[/b]&#34;, end=&#34;\r&#34;)
+
+    simulations: list[SimulationFile] = list(
+        reversed(load_simulations_in_directory(source_directory, config))
+    )
+    print(f&#34;[b]found {len(simulations)} simulations...[/b]&#34;, end=&#34;\r&#34;)
+
+    if simulations_filter:
+        print(&#34;[b]filtering based on simulation name...[/b]&#34;, end=&#34;\r&#34;)
+        simulations = [
+            s for s in simulations if s.simulation_name in simulations_filter
+        ]
+    if molecule_filter:
+        print(&#34;[b]filtering based on molecule name...[/b]&#34;, end=&#34;\r&#34;)
+        filter_molecules: set[str] = set(molecule_filter)
+        for sim in simulations:
+            sim.filter_molecules = filter_molecules
+    print(&#34; &#34; * 100, end=&#34;\r&#34;)
+    print(f&#34;[b][green]✔ found {len(simulations)} simulations[/green][/b]&#34;)
+    return simulations</code></pre>
+</details>
+<div class="desc"><p>Quick wrapper to load simulations including filters on them from the arguments given
+:param source_directory: containing molecular dynamics trajectories (.tpr files)
+:param simulations_filter: if not None, names of simulations to be loaded (included), otherwise all
+:param molecule_filter: if not None, names of molecules to be loaded (included), otherwise all
+:param config: main configuration
+:return: list of simulations</p></div>
+</dd>
+<dt id="src.main_utils.print_mode_header"><code class="name flex">
+<span>def <span class="ident">print_mode_header</span></span>(<span>mode_name: str,<br>mode_description: str,<br>argument_names: list[str],<br>arguments: argparse.Namespace) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def print_mode_header(
+    mode_name: str,
+    mode_description: str,
+    argument_names: list[str],
+    arguments: argparse.Namespace,
+) -&gt; None:
+    &#34;&#34;&#34;
+    Prints basic header and list of values provided
+    :param mode_name: name of the mode
+    :param mode_description: its description
+    :param argument_names: arguments used during the mode
+    :param arguments: result of argparse.parse_args()
+    :return: None
+    &#34;&#34;&#34;
+    app_name: str = f&#34;          Biomolecule Annotation Toolkit v. {APP_VERSION}          &#34;
+    print(&#34;[b]&#34; + &#34;  BAT  &#34;.center(len(app_name), &#34;=&#34;) + &#34;[/b]&#34;)
+    print(app_name)
+    print()
+    if (quote := random_quote()) is not None:
+        for line in textwrap.wrap(
+            f&#39;&#34;{quote.strip()}&#34;&#39;, len(app_name), break_long_words=False
+        ):
+            print(&#34;[i]&#34; + line + &#34;[/i]&#34;)
+        print()
+
+    print(&#34;[b]&#34; + f&#34;   {mode_name} mode   &#34;.center(len(app_name), &#34;=&#34;) + &#34;[/b]&#34;)
+    for line in textwrap.wrap(mode_description, len(app_name), break_long_words=False):
+        print(line)
+    print()
+
+    print(&#34;[b]Arguments[/b]&#34;)
+    for argument in argument_names:
+        if hasattr(arguments, argument) and getattr(arguments, argument) is not None:
+            print(f&#34;\t[i]{argument}[/i]:\t{getattr(arguments, argument)}&#34;)
+        else:
+            print(f&#34;\t[i]{argument}[/i]:\t&lt;not specified&gt;&#34;)</code></pre>
+</details>
+<div class="desc"><p>Prints basic header and list of values provided
+:param mode_name: name of the mode
+:param mode_description: its description
+:param argument_names: arguments used during the mode
+:param arguments: result of argparse.parse_args()
+:return: None</p></div>
+</dd>
+<dt id="src.main_utils.random_quote"><code class="name flex">
+<span>def <span class="ident">random_quote</span></span>(<span>from_file: str = 'src/quotes.txt') ‑> str | None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def random_quote(from_file: str = &#34;src/quotes.txt&#34;) -&gt; str | None:
+    &#34;&#34;&#34;
+    If quote file exists, returns one random quote from it
+    :param from_file: path to the file where one line == one quote
+    :return: one random quote, or None
+    &#34;&#34;&#34;
+    if not os.path.exists(from_file):
+        return None
+
+    all_quotes: list[str] = []
+    with open(from_file, &#34;r&#34;) as fd:
+        for line in fd:
+            if not line.startswith(&#34;#&#34;):
+                all_quotes.append(line)
+    return random.choice(all_quotes)</code></pre>
+</details>
+<div class="desc"><p>If quote file exists, returns one random quote from it
+:param from_file: path to the file where one line == one quote
+:return: one random quote, or None</p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src" href="index.html">src</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="src.main_utils.assert_arguments" href="#src.main_utils.assert_arguments">assert_arguments</a></code></li>
+<li><code><a title="src.main_utils.init_loggers" href="#src.main_utils.init_loggers">init_loggers</a></code></li>
+<li><code><a title="src.main_utils.load_simulations_filtered" href="#src.main_utils.load_simulations_filtered">load_simulations_filtered</a></code></li>
+<li><code><a title="src.main_utils.print_mode_header" href="#src.main_utils.print_mode_header">print_mode_header</a></code></li>
+<li><code><a title="src.main_utils.random_quote" href="#src.main_utils.random_quote">random_quote</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+    "name": "7819594_Emptymicelle_60SDS_CHARMM36m_TIP4P-2005_replica0",
+    "atoms": 68152,
+    "residues": 16513,
+    "segments": 3,
+    "fragments": 32906,
+    "segment_resolution": {
+        "seg_0_SDS": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_aprox",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "MOTZDAYCYVMXPC-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem_ligand_name"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_SOL": {
+            "resolver_generated_signature": [
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "BJHIKXHVCXFQLS-OTWZMJIISA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem_ligand_name"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_SOD": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Na",
+                    100
+                ],
+                [
+                    "Mg",
+                    95
+                ],
+                [
+                    "Ne",
+                    88
+                ],
+                [
+                    "F",
+                    83
+                ],
+                [
+                    "Al",
+                    85
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        }
+    }
+}

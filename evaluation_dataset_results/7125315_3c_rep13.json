@@ -1,0 +1,232 @@
+{
+    "name": "7125315_3c_rep13",
+    "atoms": 5844,
+    "residues": 475,
+    "segments": 2,
+    "fragments": 475,
+    "segment_resolution": {
+        "seg_1_DMF": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "ZMXDDKWLCZADIW-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem_ligand_name"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_AMA": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "UVSRJXRAXIQADB-SEYMPETLSA-N",
+                    80
+                ],
+                [
+                    "SBGHLGQCAUYERO-UDURQHNNSA-N",
+                    80
+                ],
+                [
+                    "NNSBMHSHPFPTJW-CURQOYLVSA-N",
+                    80
+                ],
+                [
+                    "LMYDDKFXDBWMDB-PPBIOHBVSA-N",
+                    80
+                ],
+                [
+                    "DNYKEJDSFVWXAS-HYQYSRPHSA-N",
+                    80
+                ],
+                [
+                    "QPSOESVMTXOWMH-YXNCBDNTSA-N",
+                    80
+                ],
+                [
+                    "QORYLZDISIKDMG-QQTLVKQWSA-N",
+                    80
+                ],
+                [
+                    "QKJBAXZNYPKSFT-NIRKTNJJSA-N",
+                    80
+                ],
+                [
+                    "KYFCEAHDXHVPBO-FEYDOKBGSA-N",
+                    80
+                ],
+                [
+                    "LPFUWQGEDQDWAJ-ACAGXCSSSA-N",
+                    80
+                ],
+                [
+                    "KTDWXKIOMJNQNR-XOOYQKGBSA-N",
+                    80
+                ],
+                [
+                    "QZFHKWNPDNKYLR-UATBNBHGSA-N",
+                    80
+                ],
+                [
+                    "WALDIWDNLYDOID-UHFFFAOYSA-N",
+                    80
+                ],
+                [
+                    "FWNVFKJGRBQTNA-SAIUNTKASA-N",
+                    80
+                ],
+                [
+                    "MTYOHABSQASSQD-MOANWUPHSA-N",
+                    80
+                ],
+                [
+                    "WHXATHPJZCNFFM-PMAJEUFOSA-N",
+                    80
+                ],
+                [
+                    "SFPVATQZJXQNJA-BGAQNHIGSA-N",
+                    80
+                ],
+                [
+                    "XMFJWLNUOYZECG-DVUJSBGSSA-O",
+                    80
+                ],
+                [
+                    "YYTWQABGZCSQOS-YHFCTKNISA-N",
+                    80
+                ],
+                [
+                    "PLOUEAMOQHJBIR-RSLGDSHDSA-N",
+                    80
+                ],
+                [
+                    "KHBBKFYGFASVNM-YBFWZVBGSA-N",
+                    80
+                ],
+                [
+                    "TVZWLGMSABVTIJ-WPFGTMEUSA-N",
+                    80
+                ],
+                [
+                    "JSFBEQHZHSYLCH-SVUGTAHHSA-N",
+                    80
+                ],
+                [
+                    "VEYNEORCAXZMRF-GCZYUUIBSA-N",
+                    80
+                ],
+                [
+                    "XMEPRRBQPSLIOR-GBWZQAKSSA-N",
+                    80
+                ],
+                [
+                    "DPHUKCJRWMWYEQ-UVHAUATQSA-N",
+                    80
+                ],
+                [
+                    "POVFGKANTRUJOH-VZJTWNHASA-N",
+                    80
+                ],
+                [
+                    "QLVLMKYPRZGHMW-SUEHIULUSA-N",
+                    80
+                ],
+                [
+                    "QUJDTDMIPSKWLP-DLOVUCFNSA-N",
+                    80
+                ],
+                [
+                    "XNXHCJKKWNWONF-BBACVFHCSA-N",
+                    80
+                ],
+                [
+                    "LITBNERQMIBIKS-IFVPCBRCSA-N",
+                    80
+                ],
+                [
+                    "OCGQSVFDGSNQSB-KFXJWZQISA-N",
+                    80
+                ],
+                [
+                    "FJJOJTPXPZTPCI-RRIXLLTFSA-N",
+                    80
+                ],
+                [
+                    "MOYCGQACNYRMET-FTQRAHBNSA-N",
+                    80
+                ],
+                [
+                    "JGWBDARLFREIFL-GQYFIECQSA-N",
+                    80
+                ],
+                [
+                    "BZDOJHYJUSBYSD-QZIBZCQVSA-N",
+                    80
+                ],
+                [
+                    "CVONOOGQKBNZLF-ILJNECBNSA-N",
+                    80
+                ],
+                [
+                    "RTTDJLFVCWAGNI-UILVTTEASA-N",
+                    80
+                ],
+                [
+                    "RECCWLXXIMNEML-RVTPNFBGSA-N",
+                    80
+                ],
+                [
+                    "FIYAGAHLXNSHNK-VCZZNZRBSA-N",
+                    80
+                ],
+                [
+                    "KEARZVCLQATOGV-ZDYSIWLLSA-N",
+                    80
+                ],
+                [
+                    "XMFJWLNUOYZECG-DVUJSBGSSA-N",
+                    80
+                ],
+                [
+                    "YREFZCCEEMGVCY-ZODXZAEVSA-N",
+                    80
+                ],
+                [
+                    "JKIKIDBNRQLRMS-RRVDDQIISA-N",
+                    80
+                ],
+                [
+                    "IOIRSDPGBTZGLX-QWBRLMSCSA-N",
+                    80
+                ],
+                [
+                    "ADRNNXWBOAYYMN-LGXXKXPYSA-N",
+                    80
+                ],
+                [
+                    "USOABVNPUSGKLF-OQXDGXGVSA-N",
+                    80
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem"
+            ]
+        }
+    }
+}

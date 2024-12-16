@@ -1,0 +1,139 @@
+{
+    "name": "3247322_01-POPC_512_WALP23_10_5up_5down_NaCl_150mM_310K_md",
+    "atoms": 133888,
+    "residues": 21342,
+    "segments": 5,
+    "fragments": 21112,
+    "segment_resolution": {
+        "seg_2_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_4_CL": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "CL"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_POPC": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "WTJKGGKOPKCXLL-MRCUWXFGSA-N",
+                "WTJKGGKOPKCXLL-UHFFFAOYSA-N",
+                "SNKAWJBJQDLSFF-AOMFJDGTSA-N",
+                "RRVPPYNAZJRZFR-VYOBOKEXSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_WALP23": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "FRRBZAWGIXDPEE-GCBQAYLCSA-N",
+                    "44.9999988079071044921875"
+                ],
+                [
+                    "GSXXHPDKQCZBJP-AGEVTBPVSA-N",
+                    "42.85714328289031982421875"
+                ],
+                [
+                    "FVHYBHYYQPXNBK-CGZLHFDMSA-N",
+                    "42.85714328289031982421875"
+                ],
+                [
+                    "DJXDSLNVWJGLIS-IAVJCBSLSA-N",
+                    "42.85714328289031982421875"
+                ],
+                [
+                    "GPWHQRQRGKLMKO-MLCQCVOFSA-N",
+                    "41.55844151973724365234375"
+                ],
+                [
+                    "BLMNEXIOLBBCMK-NPJMLQJUSA-N",
+                    "41.37931168079376220703125"
+                ],
+                [
+                    "CGWCQBMZDDPOBW-KTHKBMNISA-N",
+                    "41.05263054370880126953125"
+                ],
+                [
+                    "OGJYSLUEJONRDB-BCAOEVRMSA-N",
+                    "40.625"
+                ],
+                [
+                    "QXIXYOFXQIPJNH-KBOPZBDESA-N",
+                    "40.20618498325347900390625"
+                ],
+                [
+                    "ZXZKXAONMHNDDB-AGEVTBPVSA-N",
+                    "40.20618498325347900390625"
+                ],
+                [
+                    "VOOYNTOVDDBZIA-SNRMKQJTSA-N",
+                    "40.00000059604644775390625"
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem"
+            ]
+        },
+        "seg_3_NA": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "NA"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

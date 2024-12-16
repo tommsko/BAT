@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>src.resolvers.protein_struct.protein_structure_resolver API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.resolvers.protein_struct.protein_structure_resolver</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver"><code class="flex name class">
+<span>class <span class="ident">ProteinStructureResolver</span></span>
+<span>(</span><span>cache: <a title="src.resolvers.base.resolver_database.ResolverCache" href="../base/resolver_database.html#src.resolvers.base.resolver_database.ResolverCache">ResolverCache</a>,<br>configuration: configparser.ConfigParser,<br>try_fix_elements: bool = False,<br>try_fix_names: bool = False,<br>use_alphafind: bool = False)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ProteinStructureResolver(ResolverBase):
+    &#34;&#34;&#34;
+    ProteinStructureResolver attempts to identify the protein utilizing its 3D structure
+    &#34;&#34;&#34;
+
+    RESOLVER_NAME = &#34;protein-struct&#34;
+    RESOLVER_IDENT = &#34;PDB&#34;
+
+    def __init__(
+        self,
+        cache: ResolverCache,
+        configuration: configparser.ConfigParser,
+        try_fix_elements: bool = False,
+        try_fix_names: bool = False,
+        use_alphafind: bool = False,
+    ) -&gt; None:
+        &#34;&#34;&#34;
+        Initializes ProteinStructureResolver
+        :param cache: main cache
+        :param configuration: main configuration
+        :param try_fix_elements: attempt to fix missing atomic elements
+        :param try_fix_names: attempt to fix missing atomic names
+        &#34;&#34;&#34;
+        super().__init__(
+            ProteinStructureResolver.RESOLVER_NAME,
+            ResolverKind.PRIMARY,
+            ProteinStructureResolver.RESOLVER_IDENT,
+            cache,
+            configuration,
+        )
+
+        self.try_fix_missing_elements: bool = try_fix_elements
+        self.try_fix_missing_names: bool = try_fix_names
+        self.use_alphafind: bool = use_alphafind
+
+    def _is_applicable(
+        self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
+    ) -&gt; bool:
+        &#34;&#34;&#34;
+        Decides whether the ProteinStructureResolver can be used on the given fragment
+        :param fragment: AtomGroup representing a molecule
+        :param simulation: of which fragment is part of
+        :return: True if resolver can be used on a given fragment
+        &#34;&#34;&#34;
+
+        fragment_name: str = fragment.segids[0]
+
+        # firstly, it must be a protein, so all residues must have amino acid names
+        if not all(
+            resname.upper() in KNOWN_AMINO_ACIDS for resname in fragment.resnames
+        ):
+            return False
+
+        # secondly, atomic elements *MUST* be present or resolved (requirement by the PDB)
+        if not simulation.supports_atomic_elements(fragment_name):
+            if (
+                simulation.supports_atomic_masses(fragment_name)
+                and self.try_fix_missing_elements
+                and fix_missing_elements(simulation, fragment)
+            ):
+                ...  # ok!
+            else:
+                return False
+
+        # next, all atoms must have unique names
+        if not simulation.supports_atomic_names(fragment_name):
+            if self.try_fix_missing_names and fix_missing_names(simulation, fragment):
+                ...  # ok!
+            else:
+                return False
+
+        # lastly, atomic positions must be provided
+        return simulation.supports_atomic_positions(fragment_name)
+
+    def get_signature(
+        self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
+    ) -&gt; str:
+        &#34;&#34;&#34;
+        Translates fragment into PDB file
+        :param simulation: of which is fragment part of
+        :param fragment: AtomGroup representing a molecule
+        :return: amino-acid sequence of the fragment
+        :raises: SignatureGenerationError if fingerprint cannot be created
+        &#34;&#34;&#34;
+        if not os.path.exists(self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;)):
+            os.makedirs(self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;))
+
+        output_path: str = _mk_random_filename(
+            &#34;pdb&#34;, self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;, fallback=os.getcwd())
+        )
+        fragment_to_pdb(fragment, output_path, verify=True)
+        with open(output_path, &#34;r&#34;) as fd:
+            signature: str = fd.read()
+        os.unlink(output_path)
+
+        return signature
+
+    def try_fetch_identifiers_exact_match(self, signature: str) -&gt; list[str]:
+        &#34;&#34;&#34;
+        Attempts to resolve signature (.pdb file) into standardized PDB IDs
+        Reported proteins (in the form of PDB IDs) have to have exact match to the fingerprint (structure)
+        :param signature: to be translated into PDB IDs
+        :return: list of standardized PDB IDs of the protein sequence
+        :raises IdentifierResolutionError: if PDB search fails (finding no results is not considered a failure)
+        &#34;&#34;&#34;
+        if not os.path.exists(self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;)):
+            os.makedirs(self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;))
+
+        tmp_path: str = _mk_random_filename(
+            &#34;pdb&#34;, self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;, fallback=os.getcwd())
+        )
+        with open(tmp_path, &#34;w&#34;) as fd:
+            fd.write(signature)
+
+        try:
+            if self.use_alphafind:
+                exact_structures: list[str] = alphafind_identity(
+                    tmp_path, self.config
+                )
+            else:
+                exact_structures: list[str] = pdb_fetch_identical_structures(
+                    tmp_path, self.config
+                )
+            os.unlink(tmp_path)
+        except Exception:
+            os.unlink(tmp_path)
+            raise
+
+        return exact_structures
+
+    def try_fetch_identifiers_relaxed_match(self, signature: str) -&gt; list[[str, float]]:
+        &#34;&#34;&#34;
+        Attempts to resolve signature (.pdb file) into standardized PDB IDs
+        Reported proteins (in the form of PDB IDs) have to have partial match to the fingerprint (protein sequence)
+        :param signature: to be translated into PDB IDs
+        :return: list of standardized PDB IDs of the protein sequence
+        :raises IdentifierResolutionError: if PDB search fails (finding no results is not considered a failure)
+        &#34;&#34;&#34;
+        if not os.path.exists(self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;)):
+            os.makedirs(self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;))
+        tmp_path: str = _mk_random_filename(
+            &#34;pdb&#34;, self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;, fallback=os.getcwd())
+        )
+
+        with open(tmp_path, &#34;w&#34;) as fd:
+            fd.write(signature)
+
+        try:
+            if self.use_alphafind:
+                similar_structures: list[tuple[str, float]] = alphafind_similarity(
+                    tmp_path, self.config
+                )
+            else:
+                similar_structures: list[tuple[str, float]] = pdb_fetch_similar_structures(
+                    tmp_path, self.config
+                )
+            os.unlink(tmp_path)
+        except Exception:
+            os.unlink(tmp_path)
+            raise
+
+        return similar_structures
+
+    def generate_debug_data(
+        self,
+        simulation: SimulationFile,
+        fragment: MDAnalysis.AtomGroup,
+        out_path: str,
+        out_name: str,
+    ) -&gt; bool:
+        &#34;&#34;&#34;
+        Generates .pdb file of the protein
+        :param out_path: directory where to save generated representations
+        :param out_name: basename of the file to save representations to (will be suffixed with kind of export)
+        :param simulation: of which fragment is part of
+        :param fragment: AtomGroup representing a molecule
+        :return: True if export went without problems
+        &#34;&#34;&#34;
+        pdb_content: str = self.get_signature(simulation, fragment)
+        with open(
+            os.path.join(out_path, f&#34;{out_name}_PROTEIN_STRUCT_structure.pdb&#34;), &#34;w&#34;
+        ) as fd:
+            fd.write(pdb_content)
+        return True</code></pre>
+</details>
+<div class="desc"><p>ProteinStructureResolver attempts to identify the protein utilizing its 3D structure</p>
+<p>Initializes ProteinStructureResolver
+:param cache: main cache
+:param configuration: main configuration
+:param try_fix_elements: attempt to fix missing atomic elements
+:param try_fix_names: attempt to fix missing atomic names</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="src.resolvers.base.fragment_resolver.ResolverBase" href="../base/fragment_resolver.html#src.resolvers.base.fragment_resolver.ResolverBase">ResolverBase</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.RESOLVER_IDENT"><code class="name">var <span class="ident">RESOLVER_IDENT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.RESOLVER_NAME"><code class="name">var <span class="ident">RESOLVER_NAME</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.generate_debug_data"><code class="name flex">
+<span>def <span class="ident">generate_debug_data</span></span>(<span>self,<br>simulation: <a title="src.utils.file_loader.SimulationFile" href="../../utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>,<br>fragment: MDAnalysis.core.groups.AtomGroup,<br>out_path: str,<br>out_name: str) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate_debug_data(
+    self,
+    simulation: SimulationFile,
+    fragment: MDAnalysis.AtomGroup,
+    out_path: str,
+    out_name: str,
+) -&gt; bool:
+    &#34;&#34;&#34;
+    Generates .pdb file of the protein
+    :param out_path: directory where to save generated representations
+    :param out_name: basename of the file to save representations to (will be suffixed with kind of export)
+    :param simulation: of which fragment is part of
+    :param fragment: AtomGroup representing a molecule
+    :return: True if export went without problems
+    &#34;&#34;&#34;
+    pdb_content: str = self.get_signature(simulation, fragment)
+    with open(
+        os.path.join(out_path, f&#34;{out_name}_PROTEIN_STRUCT_structure.pdb&#34;), &#34;w&#34;
+    ) as fd:
+        fd.write(pdb_content)
+    return True</code></pre>
+</details>
+<div class="desc"><p>Generates .pdb file of the protein
+:param out_path: directory where to save generated representations
+:param out_name: basename of the file to save representations to (will be suffixed with kind of export)
+:param simulation: of which fragment is part of
+:param fragment: AtomGroup representing a molecule
+:return: True if export went without problems</p></div>
+</dd>
+<dt id="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.get_signature"><code class="name flex">
+<span>def <span class="ident">get_signature</span></span>(<span>self,<br>simulation: <a title="src.utils.file_loader.SimulationFile" href="../../utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>,<br>fragment: MDAnalysis.core.groups.AtomGroup) ‑> str</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_signature(
+    self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
+) -&gt; str:
+    &#34;&#34;&#34;
+    Translates fragment into PDB file
+    :param simulation: of which is fragment part of
+    :param fragment: AtomGroup representing a molecule
+    :return: amino-acid sequence of the fragment
+    :raises: SignatureGenerationError if fingerprint cannot be created
+    &#34;&#34;&#34;
+    if not os.path.exists(self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;)):
+        os.makedirs(self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;))
+
+    output_path: str = _mk_random_filename(
+        &#34;pdb&#34;, self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;, fallback=os.getcwd())
+    )
+    fragment_to_pdb(fragment, output_path, verify=True)
+    with open(output_path, &#34;r&#34;) as fd:
+        signature: str = fd.read()
+    os.unlink(output_path)
+
+    return signature</code></pre>
+</details>
+<div class="desc"><p>Translates fragment into PDB file
+:param simulation: of which is fragment part of
+:param fragment: AtomGroup representing a molecule
+:return: amino-acid sequence of the fragment
+:raises: SignatureGenerationError if fingerprint cannot be created</p></div>
+</dd>
+<dt id="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.try_fetch_identifiers_exact_match"><code class="name flex">
+<span>def <span class="ident">try_fetch_identifiers_exact_match</span></span>(<span>self, signature: str) ‑> list[str]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def try_fetch_identifiers_exact_match(self, signature: str) -&gt; list[str]:
+    &#34;&#34;&#34;
+    Attempts to resolve signature (.pdb file) into standardized PDB IDs
+    Reported proteins (in the form of PDB IDs) have to have exact match to the fingerprint (structure)
+    :param signature: to be translated into PDB IDs
+    :return: list of standardized PDB IDs of the protein sequence
+    :raises IdentifierResolutionError: if PDB search fails (finding no results is not considered a failure)
+    &#34;&#34;&#34;
+    if not os.path.exists(self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;)):
+        os.makedirs(self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;))
+
+    tmp_path: str = _mk_random_filename(
+        &#34;pdb&#34;, self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;, fallback=os.getcwd())
+    )
+    with open(tmp_path, &#34;w&#34;) as fd:
+        fd.write(signature)
+
+    try:
+        if self.use_alphafind:
+            exact_structures: list[str] = alphafind_identity(
+                tmp_path, self.config
+            )
+        else:
+            exact_structures: list[str] = pdb_fetch_identical_structures(
+                tmp_path, self.config
+            )
+        os.unlink(tmp_path)
+    except Exception:
+        os.unlink(tmp_path)
+        raise
+
+    return exact_structures</code></pre>
+</details>
+<div class="desc"><p>Attempts to resolve signature (.pdb file) into standardized PDB IDs
+Reported proteins (in the form of PDB IDs) have to have exact match to the fingerprint (structure)
+:param signature: to be translated into PDB IDs
+:return: list of standardized PDB IDs of the protein sequence
+:raises IdentifierResolutionError: if PDB search fails (finding no results is not considered a failure)</p></div>
+</dd>
+<dt id="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.try_fetch_identifiers_relaxed_match"><code class="name flex">
+<span>def <span class="ident">try_fetch_identifiers_relaxed_match</span></span>(<span>self, signature: str) ‑> list[[str, float]]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def try_fetch_identifiers_relaxed_match(self, signature: str) -&gt; list[[str, float]]:
+    &#34;&#34;&#34;
+    Attempts to resolve signature (.pdb file) into standardized PDB IDs
+    Reported proteins (in the form of PDB IDs) have to have partial match to the fingerprint (protein sequence)
+    :param signature: to be translated into PDB IDs
+    :return: list of standardized PDB IDs of the protein sequence
+    :raises IdentifierResolutionError: if PDB search fails (finding no results is not considered a failure)
+    &#34;&#34;&#34;
+    if not os.path.exists(self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;)):
+        os.makedirs(self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;))
+    tmp_path: str = _mk_random_filename(
+        &#34;pdb&#34;, self.config.get(&#34;PDB&#34;, &#34;temporary_directory&#34;, fallback=os.getcwd())
+    )
+
+    with open(tmp_path, &#34;w&#34;) as fd:
+        fd.write(signature)
+
+    try:
+        if self.use_alphafind:
+            similar_structures: list[tuple[str, float]] = alphafind_similarity(
+                tmp_path, self.config
+            )
+        else:
+            similar_structures: list[tuple[str, float]] = pdb_fetch_similar_structures(
+                tmp_path, self.config
+            )
+        os.unlink(tmp_path)
+    except Exception:
+        os.unlink(tmp_path)
+        raise
+
+    return similar_structures</code></pre>
+</details>
+<div class="desc"><p>Attempts to resolve signature (.pdb file) into standardized PDB IDs
+Reported proteins (in the form of PDB IDs) have to have partial match to the fingerprint (protein sequence)
+:param signature: to be translated into PDB IDs
+:return: list of standardized PDB IDs of the protein sequence
+:raises IdentifierResolutionError: if PDB search fails (finding no results is not considered a failure)</p></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="src.resolvers.base.fragment_resolver.ResolverBase" href="../base/fragment_resolver.html#src.resolvers.base.fragment_resolver.ResolverBase">ResolverBase</a></b></code>:
+<ul class="hlist">
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.get_identifiers" href="../base/fragment_resolver.html#src.resolvers.base.fragment_resolver.ResolverBase.get_identifiers">get_identifiers</a></code></li>
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.get_similar_identifiers" href="../base/fragment_resolver.html#src.resolvers.base.fragment_resolver.ResolverBase.get_similar_identifiers">get_similar_identifiers</a></code></li>
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.is_applicable" href="../base/fragment_resolver.html#src.resolvers.base.fragment_resolver.ResolverBase.is_applicable">is_applicable</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src.resolvers.protein_struct" href="index.html">src.resolvers.protein_struct</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver" href="#src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver">ProteinStructureResolver</a></code></h4>
+<ul class="">
+<li><code><a title="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.RESOLVER_IDENT" href="#src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.RESOLVER_IDENT">RESOLVER_IDENT</a></code></li>
+<li><code><a title="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.RESOLVER_NAME" href="#src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.RESOLVER_NAME">RESOLVER_NAME</a></code></li>
+<li><code><a title="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.generate_debug_data" href="#src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.generate_debug_data">generate_debug_data</a></code></li>
+<li><code><a title="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.get_signature" href="#src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.get_signature">get_signature</a></code></li>
+<li><code><a title="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.try_fetch_identifiers_exact_match" href="#src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.try_fetch_identifiers_exact_match">try_fetch_identifiers_exact_match</a></code></li>
+<li><code><a title="src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.try_fetch_identifiers_relaxed_match" href="#src.resolvers.protein_struct.protein_structure_resolver.ProteinStructureResolver.try_fetch_identifiers_relaxed_match">try_fetch_identifiers_relaxed_match</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

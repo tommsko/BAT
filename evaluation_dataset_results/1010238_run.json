@@ -1,0 +1,48 @@
+{
+    "name": "1010238_run",
+    "atoms": 37231,
+    "residues": 9037,
+    "segments": 2,
+    "fragments": 17891,
+    "segment_resolution": {
+        "seg_1_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_Protein": {
+            "resolver_generated_signature": [
+                "protein"
+            ],
+            "resolver": "protein",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "5lw8_A",
+                "6sly_A",
+                "6i97_E",
+                "6i97_D",
+                "6fip_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

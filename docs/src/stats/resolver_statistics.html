@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>src.stats.resolver_statistics API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.stats.resolver_statistics</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="src.stats.resolver_statistics.tableheaderpack_to_header"><code class="name flex">
+<span>def <span class="ident">tableheaderpack_to_header</span></span>(<span>pack: list[tuple[str, str]]) ‑> list[str]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def tableheaderpack_to_header(pack: TableHeaderPack) -&gt; list[str]:
+    &#34;&#34;&#34;
+    Extract table headers from pack
+    :param pack: TableHeaderPack
+    :return: list of table headers
+    &#34;&#34;&#34;
+    return [header for header, _ in pack]</code></pre>
+</details>
+<div class="desc"><p>Extract table headers from pack
+:param pack: TableHeaderPack
+:return: list of table headers</p></div>
+</dd>
+<dt id="src.stats.resolver_statistics.tableheaderpack_to_stdout"><code class="name flex">
+<span>def <span class="ident">tableheaderpack_to_stdout</span></span>(<span>pack: list[tuple[str, str]]) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def tableheaderpack_to_stdout(pack: TableHeaderPack) -&gt; None:
+    &#34;&#34;&#34;
+    Prints TableHeaderPack in a nice manner
+    :param pack: TableHeaderPack to print
+    :return: None
+    &#34;&#34;&#34;
+    print(&#34;[b]Table description[/b]&#34;)
+    for header, description in pack:
+        print(f&#34;\t[b]{header}[/b] - [i]{description}[/i]&#34;)</code></pre>
+</details>
+<div class="desc"><p>Prints TableHeaderPack in a nice manner
+:param pack: TableHeaderPack to print
+:return: None</p></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="src.stats.resolver_statistics.MoleculeResolutionStats"><code class="flex name class">
+<span>class <span class="ident">MoleculeResolutionStats</span></span>
+<span>(</span><span>loaded_molecules: list[tuple[str, str]],<br>identity_matched_molecules: list[tuple[str, str]],<br>similarity_matched_molecules: list[tuple[str, str]],<br>unmatched_molecules: list[tuple[str, str]],<br>unmatched_molecules_primary_signature: list[tuple[str, str]],<br>unmatched_molecules_fallback_signature: list[tuple[str, str]],<br>unmatched_molecules_no_signature: list[tuple[str, str]])</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@dataclass
+class MoleculeResolutionStats:
+    loaded_molecules: list[tuple[str, str]]
+    identity_matched_molecules: list[tuple[str, str]]
+    similarity_matched_molecules: list[tuple[str, str]]
+    unmatched_molecules: list[tuple[str, str]]
+    unmatched_molecules_primary_signature: list[tuple[str, str]]
+    unmatched_molecules_fallback_signature: list[tuple[str, str]]
+    unmatched_molecules_no_signature: list[tuple[str, str]]</code></pre>
+</details>
+<div class="desc"><p>MoleculeResolutionStats(loaded_molecules: list[tuple[str, str]], identity_matched_molecules: list[tuple[str, str]], similarity_matched_molecules: list[tuple[str, str]], unmatched_molecules: list[tuple[str, str]], unmatched_molecules_primary_signature: list[tuple[str, str]], unmatched_molecules_fallback_signature: list[tuple[str, str]], unmatched_molecules_no_signature: list[tuple[str, str]])</p></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="src.stats.resolver_statistics.MoleculeResolutionStats.identity_matched_molecules"><code class="name">var <span class="ident">identity_matched_molecules</span> : list[tuple[str, str]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.stats.resolver_statistics.MoleculeResolutionStats.loaded_molecules"><code class="name">var <span class="ident">loaded_molecules</span> : list[tuple[str, str]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.stats.resolver_statistics.MoleculeResolutionStats.similarity_matched_molecules"><code class="name">var <span class="ident">similarity_matched_molecules</span> : list[tuple[str, str]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.stats.resolver_statistics.MoleculeResolutionStats.unmatched_molecules"><code class="name">var <span class="ident">unmatched_molecules</span> : list[tuple[str, str]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.stats.resolver_statistics.MoleculeResolutionStats.unmatched_molecules_fallback_signature"><code class="name">var <span class="ident">unmatched_molecules_fallback_signature</span> : list[tuple[str, str]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.stats.resolver_statistics.MoleculeResolutionStats.unmatched_molecules_no_signature"><code class="name">var <span class="ident">unmatched_molecules_no_signature</span> : list[tuple[str, str]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.stats.resolver_statistics.MoleculeResolutionStats.unmatched_molecules_primary_signature"><code class="name">var <span class="ident">unmatched_molecules_primary_signature</span> : list[tuple[str, str]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="src.stats.resolver_statistics.ResolutionStatistics"><code class="flex name class">
+<span>class <span class="ident">ResolutionStatistics</span></span>
+<span>(</span><span>simulations: list[<a title="src.utils.file_loader.SimulationFile" href="../utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>],<br>results_dir: str,<br>configuration: configparser.ConfigParser)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ResolutionStatistics:
+    def __init__(self, simulations: list[SimulationFile], results_dir: str, configuration: configparser.ConfigParser) -&gt; None:
+        self._primary_resolvers: set[str] = set()
+        self._fallback_resolvers: set[str] = set()
+        self._all_resolvers: list[str] = []
+        self._init_resolvers_kind(configuration)
+
+        self._simulation_stats: SimulationStats = SimulationStats([], [], [], [], [])
+        self._molecule_stats: MoleculeResolutionStats = MoleculeResolutionStats([], [], [], [], [], [], [])
+        self._resolver_stats: dict[str, ResolverStatistics] = {
+            resolver_name: ResolverStatistics(0, 0, 0)
+            for resolver_name in self._all_resolvers
+        }
+
+        results_files: list[ResultsFile] = [ResultsFile(sim, results_dir) for sim in simulations]
+        log.info(f&#34;ResolutionStatistics loaded {len(results_files)} files...&#34;)
+        for file in results_files:
+            self._process_file(file)
+        log.info(&#34;ResolutionStatistics aggregated all files...&#34;)
+
+    def _init_resolvers_kind(self, configuration: configparser.ConfigParser) -&gt; None:
+        &#34;&#34;&#34;
+        Populates categories of primary/fallback reasolvers for molecular resolution statistics
+        :param configuration: for initializination of resolvers
+        :return: None
+        &#34;&#34;&#34;
+        cache: ResolverCache = ResolverCache(configuration)
+        resolvers: list[ResolverBase] = get_resolvers(cache, configuration)
+        for resolver in resolvers:
+            if resolver.resolver_name in self._all_resolvers:
+                continue  # same resolver but different settings
+            self._all_resolvers.append(resolver.resolver_name)  # order is important here
+            if resolver.resolver_kind == ResolverKind.PRIMARY:
+                self._primary_resolvers.add(resolver.resolver_name)
+            elif resolver.resolver_kind == ResolverKind.FALLBACK:
+                self._fallback_resolvers.add(resolver.resolver_name)
+            else:
+                assert False, &#34;unknown resolver kind&#34;
+
+    def _process_file(self, file: ResultsFile) -&gt; None:
+        &#34;&#34;&#34;
+        Loads the results file aggregates statistics of molecules&#39; resolution
+        :param file: ResultsFile of the simulation
+        :param sim_stats: where to store simulation (global) resolution statistics
+        :param molecule_stats: where to store molecular resolution statistics
+        :param resolver_stats: where to store molecular resolution statistics per resolver
+        :return: None
+        &#34;&#34;&#34;
+        if not self._process_file_simulation_stats(file):  # loads the results file
+            return  # not even loadable
+        self._process_file_molecule_stats(file)
+        self._process_file_resolver_stats(file)
+
+    def _process_file_simulation_stats(self, file: ResultsFile) -&gt; bool:
+        &#34;&#34;&#34;
+        Loads the results file and populates basic simulation resolution statistics
+        :param file: ResultsFile of the simulation
+        :return: True if file was loaded successfully
+        &#34;&#34;&#34;
+        self._simulation_stats.input_files.append(file.path)
+
+        if file.exists():  # if file does not exist, simulation&#39;s loading failed (anything is saved afterward)
+            self._simulation_stats.loaded_files.append(file.path)
+        else:
+            return False
+
+        if not file.load(failsafe=False, segments_from_results=True, ignore_compatibility=True):
+            return False
+
+        if file.is_fully_resolved():
+            self._simulation_stats.fully_resolved_files.append(file.path)
+        elif file.is_partially_resolved():
+            self._simulation_stats.partially_resolved_files.append(file.path)
+        else:
+            self._simulation_stats.unresolved_files.append(file.path)
+        return True
+
+    def _process_file_molecule_stats(self, file: ResultsFile) -&gt; None:
+        &#34;&#34;&#34;
+        Reads the results file and populates basic molecular resolution statistics
+        :param file: ResultsFile of the simulation
+        :return: None
+        &#34;&#34;&#34;
+        for segment in file.list_segments():
+            molecule: tuple[str, str] = file.path, segment
+            self._molecule_stats.loaded_molecules.append(molecule)
+
+            if file.is_segment_resolved(segment, only_identity_resolved=True):
+                self._molecule_stats.identity_matched_molecules.append(molecule)
+            elif file.is_segment_resolved(segment):
+                self._molecule_stats.similarity_matched_molecules.append(molecule)
+            else:
+                self._molecule_stats.unmatched_molecules.append(molecule)
+                resolvers_generated_signature: list[str] = file.get_resolvers_generated_signature(segment)
+                if any(resolver in self._primary_resolvers for resolver in resolvers_generated_signature):
+                    self._molecule_stats.unmatched_molecules_primary_signature.append(molecule)
+                elif any(resolver in self._fallback_resolvers for resolver in resolvers_generated_signature):
+                    self._molecule_stats.unmatched_molecules_fallback_signature.append(molecule)
+                else:
+                    self._molecule_stats.unmatched_molecules_no_signature.append(molecule)
+
+    def _process_file_resolver_stats(self, file: ResultsFile) -&gt; None:
+        &#34;&#34;&#34;
+        Reads the results file and populates basic resolver statistics
+        :param file: ResultsFile of the simulation
+        :return: None
+        &#34;&#34;&#34;
+        for segment in file.list_segments():
+            for resolver in file.get_resolvers_generated_signature(segment):
+                self._resolver_stats[resolver].signature_generated_cnt += 1
+
+            if not file.is_segment_resolved(segment):
+                continue
+            if file.is_segment_resolved(segment, only_identity_resolved=True):
+                self._resolver_stats[file.get_segment_resolver(segment)].identity_found_cnt += 1
+            elif file.is_segment_resolved(segment):
+                self._resolver_stats[file.get_segment_resolver(segment)].similarity_found_cnt += 1
+
+    def _simulation_stats_stdout(self) -&gt; None:
+        &#34;&#34;&#34;
+        Prints simulation statistics to stdout
+        :return: None
+        &#34;&#34;&#34;
+        print(&#34;[b] === General (whole simulation) resolution statistics === [/b]&#34;)
+        print()
+        tableheaderpack_to_stdout(simulation_stats_table_headers)
+        print()
+
+        loaded_files: int = len(self._simulation_stats.loaded_files)
+        table_headers: list[str] = tableheaderpack_to_header(simulation_stats_table_headers)
+        table_content: list[list[str]] = [[
+            str(len(self._simulation_stats.input_files)),
+            str(loaded_files),
+            str(round(loaded_files / len(self._simulation_stats.input_files) * 100, 3)) + &#34; %&#34;,
+            str(len(self._simulation_stats.fully_resolved_files)),
+            str(round(len(self._simulation_stats.fully_resolved_files) / loaded_files * 100, 3)) + &#34; %&#34;,
+            str(len(self._simulation_stats.partially_resolved_files)),
+            str(round(len(self._simulation_stats.partially_resolved_files) / loaded_files * 100, 3)) + &#34; %&#34;,
+            str(len(self._simulation_stats.unresolved_files)),
+            str(round(len(self._simulation_stats.unresolved_files) / loaded_files * 100, 3)) + &#34; %&#34;,
+        ]]
+        print(tabulate(table_content, table_headers, tablefmt=&#34;simple_grid&#34;))
+
+    def _simulation_stats_json(self) -&gt; dict:
+        &#34;&#34;&#34;
+        Generates dictionary containing simulation statistics
+        :return: dict
+        &#34;&#34;&#34;
+        return {
+            &#39;input_files&#39;: self._simulation_stats.input_files,
+            &#39;loaded_files&#39;: self._simulation_stats.loaded_files,
+            &#39;fully_resolved_files&#39;: self._simulation_stats.fully_resolved_files,
+            &#39;partially_resolved_files&#39;: self._simulation_stats.partially_resolved_files,
+            &#39;unresolved_files&#39;: self._simulation_stats.unresolved_files
+        }
+
+    def _molecular_stats_stdout(self) -&gt; None:
+        &#34;&#34;&#34;
+        Prints molecular resolution statistics to stdout
+        :return: None
+        &#34;&#34;&#34;
+        print(&#34;[b] === Molecular resolution statistics === [/b]&#34;)
+        print()
+        tableheaderpack_to_stdout(molecule_stats_table_headers)
+        print()
+
+        loaded_molecules: int = len(self._molecule_stats.loaded_molecules)
+        table_headers: list[str] = tableheaderpack_to_header(molecule_stats_table_headers)
+        table_content: list[list[str]] = [[
+            str(loaded_molecules),
+            str(len(self._molecule_stats.identity_matched_molecules)),
+            str(round(len(self._molecule_stats.identity_matched_molecules) / loaded_molecules * 100, 3)) + &#34; %&#34;,
+            str(len(self._molecule_stats.similarity_matched_molecules)),
+            str(round(len(self._molecule_stats.similarity_matched_molecules) / loaded_molecules * 100, 3)) + &#34; %&#34;,
+            str(len(self._molecule_stats.unmatched_molecules)),
+            str(round(len(self._molecule_stats.unmatched_molecules) / loaded_molecules * 100, 3)) + &#34; %&#34;,
+            str(len(self._molecule_stats.unmatched_molecules_primary_signature)),
+            str(round(len(self._molecule_stats.unmatched_molecules_primary_signature) / loaded_molecules * 100, 3)) + &#34; %&#34;,
+            str(len(self._molecule_stats.unmatched_molecules_fallback_signature)),
+            str(round(len(self._molecule_stats.unmatched_molecules_fallback_signature) / loaded_molecules * 100, 3)) + &#34; %&#34;,
+            str(len(self._molecule_stats.unmatched_molecules_no_signature)),
+            str(round(len(self._molecule_stats.unmatched_molecules_no_signature) / loaded_molecules * 100, 3)) + &#34; %&#34;,
+        ]]
+        print(tabulate(table_content, table_headers, tablefmt=&#34;simple_grid&#34;))
+
+    def _molecular_stats_json(self) -&gt; dict:
+        &#34;&#34;&#34;
+        Generates dictionary containing molecular resolution statistics
+        :return: dict
+        &#34;&#34;&#34;
+        return {
+            &#39;loaded_molecules&#39;: self._molecule_stats.loaded_molecules,
+            &#39;identity_matched_molecules&#39;: self._molecule_stats.identity_matched_molecules,
+            &#39;similarity_matched_molecules&#39;: self._molecule_stats.similarity_matched_molecules,
+            &#39;unmatched_molecules&#39;: self._molecule_stats.unmatched_molecules,
+            &#39;unmatched_molecules_signatures&#39;: {
+                &#39;with_primary_signature&#39;: self._molecule_stats.unmatched_molecules_primary_signature,
+                &#39;with_fallback_signature&#39;: self._molecule_stats.unmatched_molecules_fallback_signature,
+                &#39;with_no_signature&#39;: self._molecule_stats.unmatched_molecules_no_signature
+            }
+        }
+
+    def _resolver_stats_stdout(self) -&gt; None:
+        &#34;&#34;&#34;
+        Prints resolver performance statistics to stdout
+        :return: None
+        &#34;&#34;&#34;
+        print(&#34;[b] === Resolver performance statistics === [/b]&#34;)
+        print()
+        tableheaderpack_to_stdout(resolver_stats_table_headers)
+        print()
+        print(&#34;[red][b]!!! beware of resolution process !!![/b][/red]&#34;)
+        print(&#34;[red]Resolvers are attempted in order (of the table below, top ~ highest priority), &#34;
+              &#34;meaning if higher-order resolver succeeds, others are not even attempted. Thus signature generated count &#34;
+              &#34;has meaning across the whole table, but other values are only sensibly interpreted in the row only [/red]&#34;)
+        print()
+
+        table_headers: list[str] = tableheaderpack_to_header(resolver_stats_table_headers)
+
+        loaded_molecules: int = len(self._molecule_stats.loaded_molecules)
+        table_content: list[list[str]] = [
+            [resolver,
+             str(self._resolver_stats[resolver].signature_generated_cnt),
+             str(round(self._resolver_stats[resolver].signature_generated_cnt / loaded_molecules * 100, 3)) + &#34; %&#34;,
+             str(self._resolver_stats[resolver].identity_found_cnt),
+             str(round(self._resolver_stats[resolver].identity_found_cnt / loaded_molecules * 100, 3)) + &#34; %&#34;,
+             str(self._resolver_stats[resolver].similarity_found_cnt),
+             str(round(self._resolver_stats[resolver].similarity_found_cnt / loaded_molecules * 100, 3)) + &#34; %&#34;]
+            for resolver in self._all_resolvers
+        ]
+        print(tabulate(table_content, table_headers, tablefmt=&#34;simple_grid&#34;))
+
+    def _resolver_stats_json(self) -&gt; dict:
+        &#34;&#34;&#34;
+        Generates dictionary containing revolver performance statistics
+        :return: dict
+        &#34;&#34;&#34;
+        return {
+            resolver: {
+                &#39;signatures_generated&#39;: self._resolver_stats[resolver].signature_generated_cnt,
+                &#39;identity_match&#39;: self._resolver_stats[resolver].identity_found_cnt,
+                &#39;similarity_match&#39;: self._resolver_stats[resolver].similarity_found_cnt
+            } for resolver in self._all_resolvers
+        }
+
+    def print_stats_stdout(self) -&gt; None:
+        &#34;&#34;&#34;
+        Prints all statistics to stdout
+        :return: None
+        &#34;&#34;&#34;
+        print(&#34;[cyan][b] ===== Resolution statistics ===== [/b][/cyan]&#34;)
+        print()
+        self._simulation_stats_stdout()
+        print()
+        self._molecular_stats_stdout()
+        print()
+        self._resolver_stats_stdout()
+
+    def save_stats_json(self, path: str) -&gt; None:
+        &#34;&#34;&#34;
+        Saves all statistics to JSON file
+        :param path: to the json file
+        :return: None
+        &#34;&#34;&#34;
+        with open(path, &#39;w&#39;) as fd:
+            json.dump({
+                &#39;resolution_statistics&#39;: {
+                    &#39;simulation_statistics&#39;: self._simulation_stats_json(),
+                    &#39;molecular_statistics&#39;: self._molecular_stats_json(),
+                    &#39;resolver_statistics&#39;: self._resolver_stats_json()
+                }
+            }, fd)</code></pre>
+</details>
+<div class="desc"></div>
+<h3>Methods</h3>
+<dl>
+<dt id="src.stats.resolver_statistics.ResolutionStatistics.print_stats_stdout"><code class="name flex">
+<span>def <span class="ident">print_stats_stdout</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def print_stats_stdout(self) -&gt; None:
+    &#34;&#34;&#34;
+    Prints all statistics to stdout
+    :return: None
+    &#34;&#34;&#34;
+    print(&#34;[cyan][b] ===== Resolution statistics ===== [/b][/cyan]&#34;)
+    print()
+    self._simulation_stats_stdout()
+    print()
+    self._molecular_stats_stdout()
+    print()
+    self._resolver_stats_stdout()</code></pre>
+</details>
+<div class="desc"><p>Prints all statistics to stdout
+:return: None</p></div>
+</dd>
+<dt id="src.stats.resolver_statistics.ResolutionStatistics.save_stats_json"><code class="name flex">
+<span>def <span class="ident">save_stats_json</span></span>(<span>self, path: str) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_stats_json(self, path: str) -&gt; None:
+    &#34;&#34;&#34;
+    Saves all statistics to JSON file
+    :param path: to the json file
+    :return: None
+    &#34;&#34;&#34;
+    with open(path, &#39;w&#39;) as fd:
+        json.dump({
+            &#39;resolution_statistics&#39;: {
+                &#39;simulation_statistics&#39;: self._simulation_stats_json(),
+                &#39;molecular_statistics&#39;: self._molecular_stats_json(),
+                &#39;resolver_statistics&#39;: self._resolver_stats_json()
+            }
+        }, fd)</code></pre>
+</details>
+<div class="desc"><p>Saves all statistics to JSON file
+:param path: to the json file
+:return: None</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="src.stats.resolver_statistics.ResolverStatistics"><code class="flex name class">
+<span>class <span class="ident">ResolverStatistics</span></span>
+<span>(</span><span>signature_generated_cnt: int,<br>identity_found_cnt: int,<br>similarity_found_cnt: int)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@dataclass
+class ResolverStatistics:
+    signature_generated_cnt: int
+    identity_found_cnt: int
+    similarity_found_cnt: int</code></pre>
+</details>
+<div class="desc"><p>ResolverStatistics(signature_generated_cnt: int, identity_found_cnt: int, similarity_found_cnt: int)</p></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="src.stats.resolver_statistics.ResolverStatistics.identity_found_cnt"><code class="name">var <span class="ident">identity_found_cnt</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.stats.resolver_statistics.ResolverStatistics.signature_generated_cnt"><code class="name">var <span class="ident">signature_generated_cnt</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.stats.resolver_statistics.ResolverStatistics.similarity_found_cnt"><code class="name">var <span class="ident">similarity_found_cnt</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="src.stats.resolver_statistics.SimulationStats"><code class="flex name class">
+<span>class <span class="ident">SimulationStats</span></span>
+<span>(</span><span>input_files: list[str],<br>loaded_files: list[str],<br>fully_resolved_files: list[str],<br>partially_resolved_files: list[str],<br>unresolved_files: list[str])</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@dataclass
+class SimulationStats:
+    input_files: list[str]
+    loaded_files: list[str]
+    fully_resolved_files: list[str]
+    partially_resolved_files: list[str]
+    unresolved_files: list[str]</code></pre>
+</details>
+<div class="desc"><p>SimulationStats(input_files: list[str], loaded_files: list[str], fully_resolved_files: list[str], partially_resolved_files: list[str], unresolved_files: list[str])</p></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="src.stats.resolver_statistics.SimulationStats.fully_resolved_files"><code class="name">var <span class="ident">fully_resolved_files</span> : list[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.stats.resolver_statistics.SimulationStats.input_files"><code class="name">var <span class="ident">input_files</span> : list[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.stats.resolver_statistics.SimulationStats.loaded_files"><code class="name">var <span class="ident">loaded_files</span> : list[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.stats.resolver_statistics.SimulationStats.partially_resolved_files"><code class="name">var <span class="ident">partially_resolved_files</span> : list[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.stats.resolver_statistics.SimulationStats.unresolved_files"><code class="name">var <span class="ident">unresolved_files</span> : list[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src.stats" href="index.html">src.stats</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="src.stats.resolver_statistics.tableheaderpack_to_header" href="#src.stats.resolver_statistics.tableheaderpack_to_header">tableheaderpack_to_header</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.tableheaderpack_to_stdout" href="#src.stats.resolver_statistics.tableheaderpack_to_stdout">tableheaderpack_to_stdout</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="src.stats.resolver_statistics.MoleculeResolutionStats" href="#src.stats.resolver_statistics.MoleculeResolutionStats">MoleculeResolutionStats</a></code></h4>
+<ul class="">
+<li><code><a title="src.stats.resolver_statistics.MoleculeResolutionStats.identity_matched_molecules" href="#src.stats.resolver_statistics.MoleculeResolutionStats.identity_matched_molecules">identity_matched_molecules</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.MoleculeResolutionStats.loaded_molecules" href="#src.stats.resolver_statistics.MoleculeResolutionStats.loaded_molecules">loaded_molecules</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.MoleculeResolutionStats.similarity_matched_molecules" href="#src.stats.resolver_statistics.MoleculeResolutionStats.similarity_matched_molecules">similarity_matched_molecules</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.MoleculeResolutionStats.unmatched_molecules" href="#src.stats.resolver_statistics.MoleculeResolutionStats.unmatched_molecules">unmatched_molecules</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.MoleculeResolutionStats.unmatched_molecules_fallback_signature" href="#src.stats.resolver_statistics.MoleculeResolutionStats.unmatched_molecules_fallback_signature">unmatched_molecules_fallback_signature</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.MoleculeResolutionStats.unmatched_molecules_no_signature" href="#src.stats.resolver_statistics.MoleculeResolutionStats.unmatched_molecules_no_signature">unmatched_molecules_no_signature</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.MoleculeResolutionStats.unmatched_molecules_primary_signature" href="#src.stats.resolver_statistics.MoleculeResolutionStats.unmatched_molecules_primary_signature">unmatched_molecules_primary_signature</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="src.stats.resolver_statistics.ResolutionStatistics" href="#src.stats.resolver_statistics.ResolutionStatistics">ResolutionStatistics</a></code></h4>
+<ul class="">
+<li><code><a title="src.stats.resolver_statistics.ResolutionStatistics.print_stats_stdout" href="#src.stats.resolver_statistics.ResolutionStatistics.print_stats_stdout">print_stats_stdout</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.ResolutionStatistics.save_stats_json" href="#src.stats.resolver_statistics.ResolutionStatistics.save_stats_json">save_stats_json</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="src.stats.resolver_statistics.ResolverStatistics" href="#src.stats.resolver_statistics.ResolverStatistics">ResolverStatistics</a></code></h4>
+<ul class="">
+<li><code><a title="src.stats.resolver_statistics.ResolverStatistics.identity_found_cnt" href="#src.stats.resolver_statistics.ResolverStatistics.identity_found_cnt">identity_found_cnt</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.ResolverStatistics.signature_generated_cnt" href="#src.stats.resolver_statistics.ResolverStatistics.signature_generated_cnt">signature_generated_cnt</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.ResolverStatistics.similarity_found_cnt" href="#src.stats.resolver_statistics.ResolverStatistics.similarity_found_cnt">similarity_found_cnt</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="src.stats.resolver_statistics.SimulationStats" href="#src.stats.resolver_statistics.SimulationStats">SimulationStats</a></code></h4>
+<ul class="">
+<li><code><a title="src.stats.resolver_statistics.SimulationStats.fully_resolved_files" href="#src.stats.resolver_statistics.SimulationStats.fully_resolved_files">fully_resolved_files</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.SimulationStats.input_files" href="#src.stats.resolver_statistics.SimulationStats.input_files">input_files</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.SimulationStats.loaded_files" href="#src.stats.resolver_statistics.SimulationStats.loaded_files">loaded_files</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.SimulationStats.partially_resolved_files" href="#src.stats.resolver_statistics.SimulationStats.partially_resolved_files">partially_resolved_files</a></code></li>
+<li><code><a title="src.stats.resolver_statistics.SimulationStats.unresolved_files" href="#src.stats.resolver_statistics.SimulationStats.unresolved_files">unresolved_files</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

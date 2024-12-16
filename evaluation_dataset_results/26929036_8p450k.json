@@ -1,0 +1,25 @@
+{
+    "name": "26929036_8p450k",
+    "atoms": 32768,
+    "residues": 8192,
+    "segments": 1,
+    "fragments": 16384,
+    "segment_resolution": {
+        "seg_0_SOL": {
+            "resolver_generated_signature": [
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "BJHIKXHVCXFQLS-OTWZMJIISA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem_ligand_name"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

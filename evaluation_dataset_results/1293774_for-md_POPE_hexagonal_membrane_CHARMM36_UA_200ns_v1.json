@@ -1,0 +1,70 @@
+{
+    "name": "1293774_for-md_POPE_hexagonal_membrane_CHARMM36_UA_200ns_v1",
+    "atoms": 67602,
+    "residues": 15590,
+    "segments": 2,
+    "fragments": 15590,
+    "segment_resolution": {
+        "seg_1_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_PEUA": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "PELYUHWUVHDSSU-OAHLLOKOSA-N",
+                    "49.180328845977783203125"
+                ],
+                [
+                    "NEZDNQCXEZDCBI-UHFFFAOYSA-N",
+                    "48.38709533214569091796875"
+                ],
+                [
+                    "MWRBNPKJOOWZPW-XPWSMXQVSA-N",
+                    "44.1176474094390869140625"
+                ],
+                [
+                    "OUUOPLOZSNTIMT-UHFFFAOYSA-N",
+                    "42.1875"
+                ],
+                [
+                    "WNSRAQZVGJEDNT-UHFFFAOYSA-N",
+                    "42.1875"
+                ],
+                [
+                    "CKKJANZFSSUPLZ-UHFFFAOYSA-N",
+                    "42.1875"
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem"
+            ]
+        }
+    }
+}

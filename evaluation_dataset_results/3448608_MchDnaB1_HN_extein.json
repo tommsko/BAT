@@ -1,0 +1,69 @@
+{
+    "name": "3448608_MchDnaB1_HN_extein",
+    "atoms": 29714,
+    "residues": 9333,
+    "segments": 3,
+    "fragments": 9185,
+    "segment_resolution": {
+        "seg_0_Protein": {
+            "resolver_generated_signature": [
+                "protein"
+            ],
+            "resolver": "protein",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "6rix_B",
+                "6rix_A",
+                "6riy_B",
+                "6riy_A",
+                "6own_C",
+                "6own_B",
+                "6own_A",
+                "6bs8_C",
+                "6bs8_B",
+                "6bs8_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_NA": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "NA"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

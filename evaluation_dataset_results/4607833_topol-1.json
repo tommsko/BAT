@@ -1,0 +1,42 @@
+{
+    "name": "4607833_topol-1",
+    "atoms": 1008,
+    "residues": 1001,
+    "segments": 2,
+    "fragments": 1007,
+    "segment_resolution": {
+        "seg_0_Ar6": {
+            "resolver_generated_signature": [
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "SRNWOUGRCWSEMX-ZQSHOCFMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem_ligand_name"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_Arg": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence",
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "AR"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

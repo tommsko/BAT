@@ -1,0 +1,233 @@
+{
+    "name": "10999382_EmrE-deprotE14A_Xray-cpt-samp-r1",
+    "atoms": 44722,
+    "residues": 8757,
+    "segments": 6,
+    "fragments": 8553,
+    "segment_resolution": {
+        "seg_0_PROA": {
+            "resolver_generated_signature": [
+                "protein"
+            ],
+            "resolver": "protein",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "7t00_B",
+                "7t00_A",
+                "7svx_B",
+                "7svx_A",
+                "7sv9_A",
+                "7sv9_B",
+                "7ssu_B",
+                "7ssu_A",
+                "7mh6_A",
+                "7mh6_B",
+                "7mgx_F",
+                "7mgx_B",
+                "7mgx_E",
+                "7mgx_A",
+                "2i68_B",
+                "2i68_A",
+                "8uwu_B",
+                "8uoz_A",
+                "3b62_D",
+                "3b62_C",
+                "3b62_B",
+                "3b62_A",
+                "3b61_H",
+                "3b61_G",
+                "3b61_F",
+                "3b61_E",
+                "3b61_D",
+                "3b61_C",
+                "3b61_B",
+                "3b61_A",
+                "3b5d_B",
+                "3b5d_A",
+                "8uwu_A",
+                "8uoz_B",
+                "7sfq_B",
+                "7sfq_A",
+                "7jk8_B",
+                "7jk8_A",
+                "8tgy_B",
+                "8tgy_G",
+                "8tgy_E",
+                "8tgy_A",
+                "7szt_D",
+                "7szt_C",
+                "7szt_B",
+                "7szt_A",
+                "6wk9_E",
+                "6wk9_F",
+                "6wk9_A",
+                "6wk9_B",
+                "6wk8_A",
+                "6wk8_B",
+                "6wk5_A",
+                "6wk5_B",
+                "8vxu_D",
+                "8vxu_C",
+                "8vxu_B",
+                "8vxu_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_4_CLA": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "CL"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_5_TIP3": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_3_SOD": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "NA"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_PROB": {
+            "resolver_generated_signature": [
+                "protein"
+            ],
+            "resolver": "protein",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "7t00_B",
+                "7t00_A",
+                "7svx_B",
+                "7svx_A",
+                "7sv9_A",
+                "7sv9_B",
+                "7ssu_B",
+                "7ssu_A",
+                "7mh6_A",
+                "7mh6_B",
+                "7mgx_F",
+                "7mgx_B",
+                "7mgx_E",
+                "7mgx_A",
+                "2i68_B",
+                "2i68_A",
+                "8uwu_B",
+                "8uoz_A",
+                "3b62_D",
+                "3b62_C",
+                "3b62_B",
+                "3b62_A",
+                "3b61_H",
+                "3b61_G",
+                "3b61_F",
+                "3b61_E",
+                "3b61_D",
+                "3b61_C",
+                "3b61_B",
+                "3b61_A",
+                "3b5d_B",
+                "3b5d_A",
+                "8uwu_A",
+                "8uoz_B",
+                "7sfq_B",
+                "7sfq_A",
+                "7jk8_B",
+                "7jk8_A",
+                "8tgy_B",
+                "8tgy_G",
+                "8tgy_E",
+                "8tgy_A",
+                "7szt_D",
+                "7szt_C",
+                "7szt_B",
+                "7szt_A",
+                "6wk9_E",
+                "6wk9_F",
+                "6wk9_A",
+                "6wk9_B",
+                "6wk8_A",
+                "6wk8_B",
+                "6wk5_A",
+                "6wk5_B",
+                "8vxu_D",
+                "8vxu_C",
+                "8vxu_B",
+                "8vxu_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_DMPC": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "KILNVBDSWZSGLL-KXQOOQHDSA-N",
+                "KILNVBDSWZSGLL-LHEWISCISA-N",
+                "NRJAVPSFFCBXDT-UHFFFAOYSA-N",
+                "MLKLDGSYMHFAOC-UHFFFAOYSA-N",
+                "IJFVSSZAOYLHEE-SSEXGKCCSA-N",
+                "ZJDHNOMEMNFHIF-UHFFFAOYSA-N",
+                "CITHEXJVPOWHKC-UHFFFAOYSA-N",
+                "CITHEXJVPOWHKC-UUWRZZSWSA-N",
+                "YHIXRNNWDBPKPW-JOCHJYFZSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

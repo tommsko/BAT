@@ -1,0 +1,66 @@
+{
+    "name": "4607786_topol-1",
+    "atoms": 1006,
+    "residues": 1001,
+    "segments": 2,
+    "fragments": 1005,
+    "segment_resolution": {
+        "seg_0_Ar4": {
+            "resolver_generated_signature": [
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint"
+            ],
+            "resolver": null,
+            "ident_type": null,
+            "resolved_idents": [],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint"
+            ],
+            "resolvers_identity": [],
+            "resolvers_similarity": []
+        },
+        "seg_1_Arg": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence",
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "AR"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

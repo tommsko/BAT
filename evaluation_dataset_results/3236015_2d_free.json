@@ -1,0 +1,27 @@
+{
+    "name": "3236015_2d_free",
+    "atoms": 9000,
+    "residues": 9000,
+    "segments": 1,
+    "fragments": 9000,
+    "segment_resolution": {
+        "seg_0_Arg": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence",
+                "protein-residue-struct",
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "AR"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

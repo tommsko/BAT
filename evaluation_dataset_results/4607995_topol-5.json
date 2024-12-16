@@ -1,0 +1,42 @@
+{
+    "name": "4607995_topol-5",
+    "atoms": 1010,
+    "residues": 1001,
+    "segments": 2,
+    "fragments": 1009,
+    "segment_resolution": {
+        "seg_1_Arg": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence",
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "AR"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_Ar8": {
+            "resolver_generated_signature": [
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "DIUDJPQWCLVKSG-ACHIHNKUSA-P"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem_ligand_name"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

@@ -1,0 +1,183 @@
+{
+    "name": "7784709_MG2_60lipids_POPCDHPC_q038_monomer_CHARMM36m_OPC_37C_replica0",
+    "atoms": 138863,
+    "residues": 33409,
+    "segments": 6,
+    "fragments": 66695,
+    "segment_resolution": {
+        "seg_0_PROA": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "VBHOTDXAQOWLHQ-ABXDCCGRSA-N",
+                    "66.165411472320556640625"
+                ],
+                [
+                    "MGIUUAHJVPPFEV-ABXDCCGRSA-N",
+                    "66.165411472320556640625"
+                ],
+                [
+                    "ILCRDYVLCPIKAZ-ASTCHDESSA-N",
+                    "63.1578922271728515625"
+                ],
+                [
+                    "NBIFJTPJASDUKT-HOXMVUOGSA-N",
+                    "62.5"
+                ],
+                [
+                    "OFIZOVDANLLTQD-ZVNXOKPXSA-N",
+                    "62.4060153961181640625"
+                ],
+                [
+                    "COBQZEJNDMEFGS-LMHTZXMMSA-N",
+                    "61.4814817905426025390625"
+                ],
+                [
+                    "VOJAYQDJCDQESM-JLJQFVSSSA-N",
+                    "61.344540119171142578125"
+                ],
+                [
+                    "KWDWJEGZMVVKPL-UHSVKMDWSA-N",
+                    "61.344540119171142578125"
+                ],
+                [
+                    "RSFRQYYHNJEWIP-HLXDLXKGSA-N",
+                    "61.1111104488372802734375"
+                ],
+                [
+                    "UOYACELNTJSDCI-HJWYANADSA-N",
+                    "60.869562625885009765625"
+                ],
+                [
+                    "YTJSUGGFPFEERS-PEAPCRFPSA-N",
+                    "60.869562625885009765625"
+                ],
+                [
+                    "GHHHWSRBKZFHQY-NVLKOTPXSA-N",
+                    "60.000002384185791015625"
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem"
+            ]
+        },
+        "seg_5_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_POPC": {
+            "resolver_generated_signature": [
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "WTJKGGKOPKCXLL-MRCUWXFGSA-N",
+                "WTJKGGKOPKCXLL-UHFFFAOYSA-N",
+                "SNKAWJBJQDLSFF-AOMFJDGTSA-N",
+                "RRVPPYNAZJRZFR-VYOBOKEXSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_3_SOD": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Na",
+                    100
+                ],
+                [
+                    "Mg",
+                    95
+                ],
+                [
+                    "Ne",
+                    88
+                ],
+                [
+                    "F",
+                    83
+                ],
+                [
+                    "Al",
+                    85
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_4_HPO4": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "NBIIXXVUZAFLBC-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_C6DHPC": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "DVZARZBAWHITHR-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

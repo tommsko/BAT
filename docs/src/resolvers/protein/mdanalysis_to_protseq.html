@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>src.resolvers.protein.mdanalysis_to_protseq API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.resolvers.protein.mdanalysis_to_protseq</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="src.resolvers.protein.mdanalysis_to_protseq.cant_determine_err"><code class="name flex">
+<span>def <span class="ident">cant_determine_err</span></span>(<span>strict: bool, partial: bool) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def cant_determine_err(strict: bool, partial: bool) -&gt; None:
+    &#34;&#34;&#34;
+    Just raises an exception
+    :param strict: protein sequence determination is in strict mode
+    :param partial: protein sequence determination is in partial mode
+    &#34;&#34;&#34;
+    raise SignatureGenerationError(
+        &#34;protein fingerprint resolution&#34;,
+        f&#34;Unable to determine the sequence! (modes: exact=True, strict={strict}, &#34;
+        f&#34;partial={partial})&#34;,
+    )</code></pre>
+</details>
+<div class="desc"><p>Just raises an exception
+:param strict: protein sequence determination is in strict mode
+:param partial: protein sequence determination is in partial mode</p></div>
+</dd>
+<dt id="src.resolvers.protein.mdanalysis_to_protseq.fragment_to_protein_sequence"><code class="name flex">
+<span>def <span class="ident">fragment_to_protein_sequence</span></span>(<span>fragment: MDAnalysis.core.groups.AtomGroup, config: configparser.ConfigParser) ‑> str</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fragment_to_protein_sequence(fragment: MDAnalysis.AtomGroup, config: configparser.ConfigParser) -&gt; str:
+    &#34;&#34;&#34;
+    Tries to translate fragment into sequence of amino-acids
+    :param fragment: AtomGroup representing a molecule (protein specifically)
+    :param config: main configuration
+    :return: string sequence of amino-acids given the fragment
+    :raises: SignatureGenerationError if fragment cannot be translated into protein sequence
+    &#34;&#34;&#34;
+    PROT_SIGN_PARTIAL = config.getboolean(&#39;protein&#39;, &#39;determine_sequence_partial_mode&#39;)
+    PROT_SIGN_STRICT_MODE = config.getboolean(&#39;protein&#39;, &#39;determine_sequence_strict_mode&#39;)
+
+    (
+        atom_indices,
+        atom_adjacency_matrix,
+        residues,
+        residue_indices,
+        residue_adjacency_matrix,
+    ) = _fragment_to_protein_mk_adjacency_matrices(fragment)
+
+    _fragment_to_protein_sequence_verify_sequentiality(
+        residue_adjacency_matrix, atom_adjacency_matrix
+    )
+
+    methionine_indices, non_methionine_indices = _split_residue_indices_methionine(
+        residues
+    )
+
+    methionine_sequences: list[str] = _find_longest_sequences_bfs(
+        methionine_indices, residue_adjacency_matrix, residue_indices, residues
+    )
+    if methionine_sequences:
+        if sel := _filter_sequences(
+            methionine_sequences, require=lambda seq: len(seq) == len(residues)
+        ):
+            sel.sort(key=lambda seq: len(seq), reverse=True)
+            return sel[0]
+
+    log.debug(
+        &#34;... unable to determine protein sequence given exact &amp; strict mode. &#34;
+        &#34;If allowed, continuing exact &amp; non-strict mode&#34;
+    )
+    if PROT_SIGN_STRICT_MODE:
+        cant_determine_err(PROT_SIGN_STRICT_MODE, PROT_SIGN_PARTIAL)
+
+    non_methionine_sequences: list[str] = _find_longest_sequences_bfs(
+        non_methionine_indices, residue_adjacency_matrix, residue_indices, residues
+    )
+    if sel := _filter_sequences(
+        non_methionine_sequences, require=lambda seq: len(seq) == len(residues)
+    ):
+        sel.sort(key=lambda seq: len(seq), reverse=True)
+        return sel[0]
+
+    log.debug(
+        &#34;... unable to determine protein sequence given exact &amp; non-strict mode. &#34;
+        &#34;If allowed, continuing partial &amp; non-strict mode&#34;
+    )
+    if not PROT_SIGN_PARTIAL:
+        cant_determine_err(PROT_SIGN_STRICT_MODE, PROT_SIGN_PARTIAL)
+
+    all_sequences = methionine_sequences + non_methionine_sequences
+
+    all_sequences.sort(key=lambda seq: len(seq), reverse=True)
+    if all_sequences:
+        return all_sequences[0]
+
+    cant_determine_err(PROT_SIGN_STRICT_MODE, PROT_SIGN_PARTIAL)</code></pre>
+</details>
+<div class="desc"><p>Tries to translate fragment into sequence of amino-acids
+:param fragment: AtomGroup representing a molecule (protein specifically)
+:param config: main configuration
+:return: string sequence of amino-acids given the fragment
+:raises: SignatureGenerationError if fragment cannot be translated into protein sequence</p></div>
+</dd>
+<dt id="src.resolvers.protein.mdanalysis_to_protseq.fragment_to_protein_sequence_residue_based"><code class="name flex">
+<span>def <span class="ident">fragment_to_protein_sequence_residue_based</span></span>(<span>fragment: MDAnalysis.core.groups.AtomGroup)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fragment_to_protein_sequence_residue_based(fragment: MDAnalysis.AtomGroup):
+    &#34;&#34;&#34;
+    Makes strong assumption residues were added in the order of protein and extracts the sequence as ordered
+    chain of residues from the simulation
+    :param fragment: AtomGroup representing a molecule (protein specifically)
+    :return: string sequences of amino-acids given the fragment
+    &#34;&#34;&#34;
+    try:
+        residue_atom_indices: list[int] = [
+            indices[0] for indices in fragment.residues.indices
+        ]
+
+        atom_idx_to_indices: dict[int, int] = {
+            idx: i for i, idx in enumerate(fragment.atoms.ids)
+        }
+
+        residue_atom_resnames: list[str] = [
+            KNOWN_AMINO_ACIDS[fragment.resnames[atom_idx_to_indices[i]].upper()]
+            for i in residue_atom_indices
+        ]
+        residues_and_indices: list[tuple[int, str]] = list(
+            zip(residue_atom_indices, residue_atom_resnames)
+        )
+        residues_and_indices.sort(key=lambda x: x[0])  # sort by indices
+        return &#34;&#34;.join(x[1] for x in residues_and_indices)
+    except Exception as exc:
+        raise SignatureGenerationError(
+            &#34;protein fingerprint resolution (residue-based)&#34;,
+            f&#34;fingerprint generation failed: {exc}&#34;,
+        )</code></pre>
+</details>
+<div class="desc"><p>Makes strong assumption residues were added in the order of protein and extracts the sequence as ordered
+chain of residues from the simulation
+:param fragment: AtomGroup representing a molecule (protein specifically)
+:return: string sequences of amino-acids given the fragment</p></div>
+</dd>
+<dt id="src.resolvers.protein.mdanalysis_to_protseq.fragment_to_protein_sequences_unsafe"><code class="name flex">
+<span>def <span class="ident">fragment_to_protein_sequences_unsafe</span></span>(<span>fragment: MDAnalysis.core.groups.AtomGroup) ‑> list[str]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fragment_to_protein_sequences_unsafe(fragment: MDAnalysis.AtomGroup) -&gt; list[str]:
+    &#34;&#34;&#34;
+    It is possible that all residues are bonded together (mixed regular and hydrogen bonds in gromacs simulations).
+    Extracts all possible (longest) sequences given a malformed fragment
+    :param fragment: AtomGroup representing a molecule (protein specifically)
+    :return: string sequences of amino-acids given the fragment
+    :raises: SignatureGenerationError if fragment cannot be translated into protein sequence
+    &#34;&#34;&#34;
+    (
+        atom_indices,
+        atom_adjacency_matrix,
+        residues,
+        residue_indices,
+        residue_adjacency_matrix,
+    ) = _fragment_to_protein_mk_adjacency_matrices(fragment)
+
+    log.critical(
+        f&#34;Attempting *UNSAFE* protein sequence resolution for {len(residues)} residues&#34;
+    )
+
+    all_sequences_found: set[str] | list[str] = set()
+    for residue_from in residue_indices:
+        for min_len in range(len(residues), -1, -1):
+            log.critical(f&#34;...testing from {residue_from}: min_depth: {min_len}&#34;)
+            paths: list[list[int]] = []
+            _dfs(paths, residue_from, residue_adjacency_matrix, required_len=min_len)
+            paths_str: list[str] = [
+                _translate_residue_indices_to_sequence(path, residue_indices, residues)
+                for path in paths
+            ]
+            for sequence in paths_str:
+                all_sequences_found.add(sequence)
+            if paths:
+                break
+
+    all_sequences_found = list(all_sequences_found)
+    all_sequences_found.sort(key=lambda x: len(x), reverse=True)
+    longest_sequence_len: int = len(all_sequences_found[0])
+    return [
+        sequence
+        for sequence in all_sequences_found
+        if len(sequence) == longest_sequence_len
+    ]</code></pre>
+</details>
+<div class="desc"><p>It is possible that all residues are bonded together (mixed regular and hydrogen bonds in gromacs simulations).
+Extracts all possible (longest) sequences given a malformed fragment
+:param fragment: AtomGroup representing a molecule (protein specifically)
+:return: string sequences of amino-acids given the fragment
+:raises: SignatureGenerationError if fragment cannot be translated into protein sequence</p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src.resolvers.protein" href="index.html">src.resolvers.protein</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="src.resolvers.protein.mdanalysis_to_protseq.cant_determine_err" href="#src.resolvers.protein.mdanalysis_to_protseq.cant_determine_err">cant_determine_err</a></code></li>
+<li><code><a title="src.resolvers.protein.mdanalysis_to_protseq.fragment_to_protein_sequence" href="#src.resolvers.protein.mdanalysis_to_protseq.fragment_to_protein_sequence">fragment_to_protein_sequence</a></code></li>
+<li><code><a title="src.resolvers.protein.mdanalysis_to_protseq.fragment_to_protein_sequence_residue_based" href="#src.resolvers.protein.mdanalysis_to_protseq.fragment_to_protein_sequence_residue_based">fragment_to_protein_sequence_residue_based</a></code></li>
+<li><code><a title="src.resolvers.protein.mdanalysis_to_protseq.fragment_to_protein_sequences_unsafe" href="#src.resolvers.protein.mdanalysis_to_protseq.fragment_to_protein_sequences_unsafe">fragment_to_protein_sequences_unsafe</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

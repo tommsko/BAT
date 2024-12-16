@@ -1,0 +1,107 @@
+{
+    "name": "7533587_c36_clust5_2",
+    "atoms": 170210,
+    "residues": 55329,
+    "segments": 4,
+    "fragments": 55005,
+    "segment_resolution": {
+        "seg_2_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_Protein_chain_B": {
+            "resolver_generated_signature": [
+                "protein-struct"
+            ],
+            "resolver": "protein-struct",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "2V8E"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein-struct"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_3_CLA": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "CL"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_Protein_chain_A": {
+            "resolver_generated_signature": [
+                "protein"
+            ],
+            "resolver": "protein",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "1le2_A",
+                "1nfo_A",
+                "1lpe_A",
+                "1bz4_A",
+                "1or3_A",
+                "1or2_A",
+                "2kc3_A",
+                "1nfn_A",
+                "2l7b_A",
+                "1h7i_A",
+                "1ea8_A",
+                "6nco_A",
+                "6ncn_A",
+                "8grx_C",
+                "8grx_A",
+                "1le4_A",
+                "7fcs_A",
+                "7fcr_A",
+                "1gs9_A",
+                "1b68_A",
+                "7uvj_B",
+                "7uvj_A",
+                "8ce0_A",
+                "8cdy_A",
+                "8ax9_A",
+                "8ax8_A",
+                "6cfe_A",
+                "6iwb_C",
+                "6iwb_A",
+                "1ya9_A",
+                "6v7m_B",
+                "6v7m_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

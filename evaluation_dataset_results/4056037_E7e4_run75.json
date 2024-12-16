@@ -1,0 +1,33 @@
+{
+    "name": "4056037_E7e4_run75",
+    "atoms": 1238,
+    "residues": 76,
+    "segments": 1,
+    "fragments": 1,
+    "segment_resolution": {
+        "seg_0_Protein": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint"
+            ],
+            "resolver": "fingerprint",
+            "ident_type": "hash",
+            "resolved_idents": [
+                "PDB:1UBQ"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "fingerprint"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "3756664_md_noSOL",
+    "atoms": 4079,
+    "residues": 256,
+    "segments": 1,
+    "fragments": 1,
+    "segment_resolution": {
+        "seg_0_Protein": {
+            "resolver_generated_signature": [
+                "protein"
+            ],
+            "resolver": "protein",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "6sly_A",
+                "5lw8_A",
+                "6i97_E",
+                "6i97_D",
+                "6fip_A",
+                "2k9k_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>src.utils.file_loader API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.utils.file_loader</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="src.utils.file_loader.load_simulations_in_directory"><code class="name flex">
+<span>def <span class="ident">load_simulations_in_directory</span></span>(<span>directory: str, config: configparser.ConfigParser) ‑> list[<a title="src.utils.file_loader.SimulationFile" href="#src.utils.file_loader.SimulationFile">SimulationFile</a>]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_simulations_in_directory(
+    directory: str, config: configparser.ConfigParser
+) -&gt; list[SimulationFile]:
+    &#34;&#34;&#34;
+    Finds all simulation input files (.tpr) incl. associated files in directory and loads them into SimulationFile
+    :param directory: path to the directory with simulations
+    :param config: main configuration
+    :return: list of SimulationFiles
+    &#34;&#34;&#34;
+
+    all_files: list[str] = [
+        os.path.abspath(join(directory, path))
+        for path in listdir(directory)
+        if isfile(join(directory, path))
+    ]
+
+    tpr_paths: list[str] = [path for path in all_files if path.lower().endswith(&#34;.tpr&#34;)]
+    return [
+        SimulationFile(path, config, files_in_directory=all_files) for path in tpr_paths
+    ]</code></pre>
+</details>
+<div class="desc"><p>Finds all simulation input files (.tpr) incl. associated files in directory and loads them into SimulationFile
+:param directory: path to the directory with simulations
+:param config: main configuration
+:return: list of SimulationFiles</p></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="src.utils.file_loader.SimulationFile"><code class="flex name class">
+<span>class <span class="ident">SimulationFile</span></span>
+<span>(</span><span>tpr_path: str,<br>config: configparser.ConfigParser,<br>files_in_directory: list[str] | None = None)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SimulationFile:
+    &#34;&#34;&#34;
+    SimulationFile represents one GROMACS simulation, which might consist
+    of multiple files (e.g. trajectory, atomic information, parameters etc...).
+    Workflow:
+      ctor ~&gt; initialize simulation file(s) by tpr simulation parameters
+      load_simulation() ~&gt; load simulation file into RAM (expensive)
+      ... do whatever you want to do
+      unload_simulation() ~&gt; unload simulation file
+    &#34;&#34;&#34;
+
+    OTHER_SUPPORTED_FORMATS: set[str] | None = None  # to be loaded from configuration
+
+    def __init__(
+        self,
+        tpr_path: str,
+        config: configparser.ConfigParser,
+        files_in_directory: list[str] | None = None,
+    ) -&gt; None:
+        &#34;&#34;&#34;
+        Initializes the simulation file with GROMACS Input File (.tpr) and other related files from lookup
+        .tpr path has to be provided, other extension are scanned in the same directory, given same basename of file
+        :param tpr_path: path to the simulation input file
+        :param config: configuration
+        :param files_in_directory: other files in directory related to lookup (to not list files multiple times)
+        &#34;&#34;&#34;
+        self.config: configparser.ConfigParser = config
+        SimulationFile._init_supported_formats(self.config)
+
+        self.paths: list[str] = [
+            os.path.abspath(tpr_path)
+        ]  # of files related to the simulation
+        self.simulation_name: str = &#34;&#34;  # basename of GROMACS input file w/o extension
+        self._lookup_related_files(tpr_path, files_in_directory)
+
+        self.universe: Universe | None = (
+            None  # managed with load_simulation() and unload_simulation()
+        )
+
+        self.segments: list[str] = (
+            []
+        )  # names of segments (molecule types) in the simulation
+        self._segment_supports_atomic_elements: dict[str, bool] = defaultdict(
+            lambda: False
+        )
+        self._segment_supports_atomic_masses: dict[str, bool] = defaultdict(
+            lambda: False
+        )
+        self._segment_supports_atomic_positions: dict[str, bool] = defaultdict(
+            lambda: False
+        )
+        self._segment_supports_atomic_names: dict[str, bool] = defaultdict(
+            lambda: False
+        )
+
+        self.filter_molecules: set[str] = (
+            set()
+        )  # if not empty, only these segments will be reported
+
+    @staticmethod
+    def _init_supported_formats(config: configparser.ConfigParser) -&gt; None:
+        &#34;&#34;&#34;
+        Lists all supported input formats from configuration (except .tpr input files) and saves them as static variable
+        On subsequent calls does nothing
+        :param config: main configuration
+        :return: None
+        :raises RuntimeError: if such list does not contain tpr
+        &#34;&#34;&#34;
+        if SimulationFile.OTHER_SUPPORTED_FORMATS is not None:
+            return
+
+        supported_formats: set[str] = set()
+        for fmt_suffix, enable in config.items(&#34;supported_input_formats&#34;):
+            if enable:
+                supported_formats.add(&#34;.&#34; + fmt_suffix.upper())
+        if &#34;.TPR&#34; not in supported_formats:
+            raise RuntimeError(
+                &#34;configuration: .tpr is not listed in supported formats, not proceeding&#34;
+            )
+        supported_formats.remove(&#34;.TPR&#34;)
+        SimulationFile.OTHER_SUPPORTED_FORMATS = supported_formats
+
+    def _lookup_related_files(
+        self, tpr_path: str, files_in_directory: list[str] | None
+    ) -&gt; None:
+        &#34;&#34;&#34;
+        Finds all associated files of the simulation (defined by .tpr) in the directory of tpr file.
+        Updates simulation_name.
+        Please see &lt;&lt;supported_input_formats&gt;&gt; section of configuration
+        :param tpr_path: path to the simulation parameters file
+        :param files_in_directory: other files in directory related to lookup (to skip listing files)
+        :return: None (modifies stored paths)
+        &#34;&#34;&#34;
+        working_directory: str = os.path.dirname(tpr_path)
+
+        if files_in_directory is None:
+            files_in_directory: list[str] = [
+                os.path.abspath(join(working_directory, path))
+                for path in listdir(working_directory)
+                if isfile(join(working_directory, path))
+            ]
+
+        self.simulation_name = os.path.basename(tpr_path).split(&#34;.&#34;)[0]
+
+        do_lookup: bool = self.config.getboolean(&#34;input_lookup&#34;, &#34;perform_lookup&#34;)
+        relaxed_include: bool = self.config.getboolean(
+            &#34;input_lookup&#34;, &#34;input_lookup_relaxed_name_requirements&#34;
+        )
+
+        if not do_lookup:
+            return
+
+        def _include_condition(_path: str, _extension: str) -&gt; bool:
+            &#34;&#34;&#34;
+            :param path: of the possibly associated file
+            :param extension: of the possibly associated file
+            :return: True if the file is associated by name, False otherwise
+            &#34;&#34;&#34;
+            if (
+                os.path.basename(_path).upper()
+                == f&#34;{self.simulation_name}{_extension}&#34;.upper()
+            ):
+                return True
+            if (
+                relaxed_include
+                and os.path.basename(_path)
+                .upper()
+                .startswith(self.simulation_name.upper())
+                and os.path.basename(_path).upper().endswith(_extension.upper())
+            ):
+                return True
+            return False
+
+        for extension in SimulationFile.OTHER_SUPPORTED_FORMATS:
+            files: list[str] = [
+                path
+                for path in files_in_directory
+                if _include_condition(path, extension)
+            ]
+            self.paths.extend(files)
+
+    def _load_simulation_metadata(self) -&gt; None:
+        &#34;&#34;&#34;
+        Determines simulation name and values for the flags of the simulation and its segments (molecules)
+        :return: None
+        &#34;&#34;&#34;
+        if self.filter_molecules:
+            self.segments = list(
+                set(self.universe.segments.segids).intersection(
+                    set(self.filter_molecules)
+                )
+            )
+        else:
+            self.segments = list(set(self.universe.segments.segids))
+
+        for segment in self.list_segments():
+            self._load_flag_supports_atomic_elements(segment)
+            self._load_flag_supports_atomic_masses(segment)
+            self._load_flag_supports_atomic_positions(segment)
+            self._load_flag_supports_atomic_names(segment)
+
+    def load_simulation(self) -&gt; bool:
+        &#34;&#34;&#34;
+        Attempts to load the simulation into the memory
+        :return: True if successful, False otherwise
+        &#34;&#34;&#34;
+        try:
+            with warnings.catch_warnings(action=&#34;ignore&#34;):
+                self.universe = Universe(*self.paths, tpr_resid_from_one=True, in_memory=True)
+                self._load_simulation_metadata()
+                return True
+        except Exception as exc:
+            log.warning(
+                f&#34;unable to load simulation {self.simulation_name} (at {self.paths}): {exc}&#34;
+            )
+            log.warning(exc, exc_info=True)
+            return False
+
+    def get_simulation(self) -&gt; Universe:
+        &#34;&#34;&#34;
+        Returns simulation loaded by this SimulationFile
+        :return: None
+        :raises RuntimeError: if load_simulation() wasn&#39;t called before and the loading failed
+        &#34;&#34;&#34;
+        if self.universe is None and not self.load_simulation():
+            raise RuntimeError(ERROR_SIM_NOT_LOADED_MSG)
+        return self.universe  # not None here
+
+    def unload_simulation(self) -&gt; None:
+        &#34;&#34;&#34;
+        Unloads the simulation from the memory (makes it available for garbage collector)
+        :return: None
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        self.universe = None
+
+    def _load_flag_supports_atomic_positions(self, segment_name: str) -&gt; None:
+        &#34;&#34;&#34;
+        Checks whether the given segment (molecule) contains positions of the atoms
+        and updates internal flags accordingly
+        :param segment_name: to check for
+        :return: None
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        self._segment_supports_atomic_positions[segment_name] = hasattr(
+            self.get_molecule(segment_name).atoms, &#34;positions&#34;
+        )
+
+    def supports_atomic_positions(self, segment_name: str) -&gt; bool:
+        &#34;&#34;&#34;
+        Checks whether the segment contains atomic positions information
+        :param segment_name: to check for
+        :return: True if simulation does provide positions of atoms
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        return self._segment_supports_atomic_positions[segment_name]
+
+    def _load_flag_supports_atomic_elements(self, segment_name: str) -&gt; None:
+        &#34;&#34;&#34;
+        Checks whether the given segment (molecule) contains elements of the atoms
+        and updates internal flags accordingly
+        :param segment_name: to check for
+        :return: None
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        segment: MDAnalysis.AtomGroup = self.get_molecule(segment_name)
+        self._segment_supports_atomic_elements[segment_name] = hasattr(
+            segment, &#34;elements&#34;
+        ) and all(e for e in segment.elements)
+
+    def supports_atomic_elements(self, segment_name: str) -&gt; bool:
+        &#34;&#34;&#34;
+        Checks whether the segment contains atomic elements information
+        :param segment_name: to check for
+        :return: True if simulation does provide elements of atoms
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        return self._segment_supports_atomic_elements[segment_name]
+
+    def _load_flag_supports_atomic_masses(self, segment_name: str) -&gt; None:
+        &#34;&#34;&#34;
+        Checks whether the given segment (molecule) contains masses of the atoms
+        and updates internal flags accordingly
+        :param segment_name: segment to check for
+        :return: None
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        segment: MDAnalysis.AtomGroup = self.get_molecule(segment_name)
+        self._segment_supports_atomic_masses[segment_name] = hasattr(
+            segment, &#34;masses&#34;
+        ) and all(x &gt; 0 for x in segment.masses)
+
+    def supports_atomic_masses(self, segment_name: str) -&gt; bool:
+        &#34;&#34;&#34;
+        Checks whether the segment provides atomic masses information
+        :param segment_name: to check for
+        :return: True if simulation does provide masses of atoms
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        return self._segment_supports_atomic_masses[segment_name]
+
+    def _load_flag_supports_atomic_names(self, segment_name: str) -&gt; None:
+        &#34;&#34;&#34;
+        Checks whether the given segment (molecule) contains names of the atoms
+        and updates internal flags accordingly
+        :param segment_name: to check for
+        :return: None
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        segment: MDAnalysis.AtomGroup = self.get_molecule(segment_name)
+        self._segment_supports_atomic_names[segment_name] = hasattr(
+            segment.atoms, &#34;names&#34;
+        )
+
+    def supports_atomic_names(self, segment_name: str) -&gt; bool:
+        &#34;&#34;&#34;
+        Checks whether the segment provides atomic names information
+        :param segment_name: to check for
+        :return: True if simulation does provide masses of atoms
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        return self._segment_supports_atomic_names[segment_name]
+
+    def list_segments(self) -&gt; list[str]:
+        &#34;&#34;&#34;
+        :return: list of segments (molecule types) in the simulation
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        return self.segments
+
+    def atom_count(self) -&gt; int:
+        &#34;&#34;&#34;
+        :return: number of atoms in the simulation
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        return self.universe.atoms.n_atoms
+
+    def residue_count(self) -&gt; int:
+        &#34;&#34;&#34;
+        :return: number of residues in the simulation
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        return self.universe.atoms.n_residues
+
+    def segment_count(self) -&gt; int:
+        &#34;&#34;&#34;
+        :return: number of segments in the simulation
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        return self.universe.atoms.n_segments
+
+    def fragment_count(self) -&gt; int:
+        &#34;&#34;&#34;
+        :return: number of fragments in the simulation
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        return self.universe.atoms.n_fragments
+
+    def get_molecule(self, segment_name: str) -&gt; MDAnalysis.AtomGroup:
+        &#34;&#34;&#34;
+        Returns just one molecule given the segment (molecule type)
+        :param segment_name: of the molecule
+        :return: AtomGroup representing the single molecule
+        &#34;&#34;&#34;
+        assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+        return self.universe.select_atoms(f&#34;segid {segment_name}&#34;).fragments[0]
+
+    def __str__(self) -&gt; str:
+        &#34;&#34;&#34;
+        :return: basic information about SimulationFile in text format
+        &#34;&#34;&#34;
+        return f&#34;&#34;&#34;[Simulation] {self.simulation_name}\n&#34;&#34;&#34; + &#34;\n&#34;.join(
+            [f&#34;\t-&gt; {path}&#34; for path in self.paths]
+        )</code></pre>
+</details>
+<div class="desc"><p>SimulationFile represents one GROMACS simulation, which might consist
+of multiple files (e.g. trajectory, atomic information, parameters etc&hellip;).</p>
+<h2 id="workflow">Workflow</h2>
+<p>ctor ~&gt; initialize simulation file(s) by tpr simulation parameters
+load_simulation() ~&gt; load simulation file into RAM (expensive)
+&hellip; do whatever you want to do
+unload_simulation() ~&gt; unload simulation file</p>
+<p>Initializes the simulation file with GROMACS Input File (.tpr) and other related files from lookup
+.tpr path has to be provided, other extension are scanned in the same directory, given same basename of file
+:param tpr_path: path to the simulation input file
+:param config: configuration
+:param files_in_directory: other files in directory related to lookup (to not list files multiple times)</p></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="src.utils.file_loader.SimulationFile.OTHER_SUPPORTED_FORMATS"><code class="name">var <span class="ident">OTHER_SUPPORTED_FORMATS</span> : set[str] | None</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="src.utils.file_loader.SimulationFile.atom_count"><code class="name flex">
+<span>def <span class="ident">atom_count</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def atom_count(self) -&gt; int:
+    &#34;&#34;&#34;
+    :return: number of atoms in the simulation
+    &#34;&#34;&#34;
+    assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+    return self.universe.atoms.n_atoms</code></pre>
+</details>
+<div class="desc"><p>:return: number of atoms in the simulation</p></div>
+</dd>
+<dt id="src.utils.file_loader.SimulationFile.fragment_count"><code class="name flex">
+<span>def <span class="ident">fragment_count</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fragment_count(self) -&gt; int:
+    &#34;&#34;&#34;
+    :return: number of fragments in the simulation
+    &#34;&#34;&#34;
+    assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+    return self.universe.atoms.n_fragments</code></pre>
+</details>
+<div class="desc"><p>:return: number of fragments in the simulation</p></div>
+</dd>
+<dt id="src.utils.file_loader.SimulationFile.get_molecule"><code class="name flex">
+<span>def <span class="ident">get_molecule</span></span>(<span>self, segment_name: str) ‑> MDAnalysis.core.groups.AtomGroup</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_molecule(self, segment_name: str) -&gt; MDAnalysis.AtomGroup:
+    &#34;&#34;&#34;
+    Returns just one molecule given the segment (molecule type)
+    :param segment_name: of the molecule
+    :return: AtomGroup representing the single molecule
+    &#34;&#34;&#34;
+    assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+    return self.universe.select_atoms(f&#34;segid {segment_name}&#34;).fragments[0]</code></pre>
+</details>
+<div class="desc"><p>Returns just one molecule given the segment (molecule type)
+:param segment_name: of the molecule
+:return: AtomGroup representing the single molecule</p></div>
+</dd>
+<dt id="src.utils.file_loader.SimulationFile.get_simulation"><code class="name flex">
+<span>def <span class="ident">get_simulation</span></span>(<span>self) ‑> MDAnalysis.core.universe.Universe</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_simulation(self) -&gt; Universe:
+    &#34;&#34;&#34;
+    Returns simulation loaded by this SimulationFile
+    :return: None
+    :raises RuntimeError: if load_simulation() wasn&#39;t called before and the loading failed
+    &#34;&#34;&#34;
+    if self.universe is None and not self.load_simulation():
+        raise RuntimeError(ERROR_SIM_NOT_LOADED_MSG)
+    return self.universe  # not None here</code></pre>
+</details>
+<div class="desc"><p>Returns simulation loaded by this SimulationFile
+:return: None
+:raises RuntimeError: if load_simulation() wasn't called before and the loading failed</p></div>
+</dd>
+<dt id="src.utils.file_loader.SimulationFile.list_segments"><code class="name flex">
+<span>def <span class="ident">list_segments</span></span>(<span>self) ‑> list[str]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def list_segments(self) -&gt; list[str]:
+    &#34;&#34;&#34;
+    :return: list of segments (molecule types) in the simulation
+    &#34;&#34;&#34;
+    assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+    return self.segments</code></pre>
+</details>
+<div class="desc"><p>:return: list of segments (molecule types) in the simulation</p></div>
+</dd>
+<dt id="src.utils.file_loader.SimulationFile.load_simulation"><code class="name flex">
+<span>def <span class="ident">load_simulation</span></span>(<span>self) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_simulation(self) -&gt; bool:
+    &#34;&#34;&#34;
+    Attempts to load the simulation into the memory
+    :return: True if successful, False otherwise
+    &#34;&#34;&#34;
+    try:
+        with warnings.catch_warnings(action=&#34;ignore&#34;):
+            self.universe = Universe(*self.paths, tpr_resid_from_one=True, in_memory=True)
+            self._load_simulation_metadata()
+            return True
+    except Exception as exc:
+        log.warning(
+            f&#34;unable to load simulation {self.simulation_name} (at {self.paths}): {exc}&#34;
+        )
+        log.warning(exc, exc_info=True)
+        return False</code></pre>
+</details>
+<div class="desc"><p>Attempts to load the simulation into the memory
+:return: True if successful, False otherwise</p></div>
+</dd>
+<dt id="src.utils.file_loader.SimulationFile.residue_count"><code class="name flex">
+<span>def <span class="ident">residue_count</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def residue_count(self) -&gt; int:
+    &#34;&#34;&#34;
+    :return: number of residues in the simulation
+    &#34;&#34;&#34;
+    assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+    return self.universe.atoms.n_residues</code></pre>
+</details>
+<div class="desc"><p>:return: number of residues in the simulation</p></div>
+</dd>
+<dt id="src.utils.file_loader.SimulationFile.segment_count"><code class="name flex">
+<span>def <span class="ident">segment_count</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def segment_count(self) -&gt; int:
+    &#34;&#34;&#34;
+    :return: number of segments in the simulation
+    &#34;&#34;&#34;
+    assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+    return self.universe.atoms.n_segments</code></pre>
+</details>
+<div class="desc"><p>:return: number of segments in the simulation</p></div>
+</dd>
+<dt id="src.utils.file_loader.SimulationFile.supports_atomic_elements"><code class="name flex">
+<span>def <span class="ident">supports_atomic_elements</span></span>(<span>self, segment_name: str) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def supports_atomic_elements(self, segment_name: str) -&gt; bool:
+    &#34;&#34;&#34;
+    Checks whether the segment contains atomic elements information
+    :param segment_name: to check for
+    :return: True if simulation does provide elements of atoms
+    &#34;&#34;&#34;
+    assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+    return self._segment_supports_atomic_elements[segment_name]</code></pre>
+</details>
+<div class="desc"><p>Checks whether the segment contains atomic elements information
+:param segment_name: to check for
+:return: True if simulation does provide elements of atoms</p></div>
+</dd>
+<dt id="src.utils.file_loader.SimulationFile.supports_atomic_masses"><code class="name flex">
+<span>def <span class="ident">supports_atomic_masses</span></span>(<span>self, segment_name: str) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def supports_atomic_masses(self, segment_name: str) -&gt; bool:
+    &#34;&#34;&#34;
+    Checks whether the segment provides atomic masses information
+    :param segment_name: to check for
+    :return: True if simulation does provide masses of atoms
+    &#34;&#34;&#34;
+    assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+    return self._segment_supports_atomic_masses[segment_name]</code></pre>
+</details>
+<div class="desc"><p>Checks whether the segment provides atomic masses information
+:param segment_name: to check for
+:return: True if simulation does provide masses of atoms</p></div>
+</dd>
+<dt id="src.utils.file_loader.SimulationFile.supports_atomic_names"><code class="name flex">
+<span>def <span class="ident">supports_atomic_names</span></span>(<span>self, segment_name: str) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def supports_atomic_names(self, segment_name: str) -&gt; bool:
+    &#34;&#34;&#34;
+    Checks whether the segment provides atomic names information
+    :param segment_name: to check for
+    :return: True if simulation does provide masses of atoms
+    &#34;&#34;&#34;
+    assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+    return self._segment_supports_atomic_names[segment_name]</code></pre>
+</details>
+<div class="desc"><p>Checks whether the segment provides atomic names information
+:param segment_name: to check for
+:return: True if simulation does provide masses of atoms</p></div>
+</dd>
+<dt id="src.utils.file_loader.SimulationFile.supports_atomic_positions"><code class="name flex">
+<span>def <span class="ident">supports_atomic_positions</span></span>(<span>self, segment_name: str) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def supports_atomic_positions(self, segment_name: str) -&gt; bool:
+    &#34;&#34;&#34;
+    Checks whether the segment contains atomic positions information
+    :param segment_name: to check for
+    :return: True if simulation does provide positions of atoms
+    &#34;&#34;&#34;
+    assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+    return self._segment_supports_atomic_positions[segment_name]</code></pre>
+</details>
+<div class="desc"><p>Checks whether the segment contains atomic positions information
+:param segment_name: to check for
+:return: True if simulation does provide positions of atoms</p></div>
+</dd>
+<dt id="src.utils.file_loader.SimulationFile.unload_simulation"><code class="name flex">
+<span>def <span class="ident">unload_simulation</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def unload_simulation(self) -&gt; None:
+    &#34;&#34;&#34;
+    Unloads the simulation from the memory (makes it available for garbage collector)
+    :return: None
+    &#34;&#34;&#34;
+    assert self.universe is not None, ERROR_SIM_NOT_LOADED_MSG
+    self.universe = None</code></pre>
+</details>
+<div class="desc"><p>Unloads the simulation from the memory (makes it available for garbage collector)
+:return: None</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src.utils" href="index.html">src.utils</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="src.utils.file_loader.load_simulations_in_directory" href="#src.utils.file_loader.load_simulations_in_directory">load_simulations_in_directory</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="src.utils.file_loader.SimulationFile" href="#src.utils.file_loader.SimulationFile">SimulationFile</a></code></h4>
+<ul class="">
+<li><code><a title="src.utils.file_loader.SimulationFile.OTHER_SUPPORTED_FORMATS" href="#src.utils.file_loader.SimulationFile.OTHER_SUPPORTED_FORMATS">OTHER_SUPPORTED_FORMATS</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.atom_count" href="#src.utils.file_loader.SimulationFile.atom_count">atom_count</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.fragment_count" href="#src.utils.file_loader.SimulationFile.fragment_count">fragment_count</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.get_molecule" href="#src.utils.file_loader.SimulationFile.get_molecule">get_molecule</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.get_simulation" href="#src.utils.file_loader.SimulationFile.get_simulation">get_simulation</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.list_segments" href="#src.utils.file_loader.SimulationFile.list_segments">list_segments</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.load_simulation" href="#src.utils.file_loader.SimulationFile.load_simulation">load_simulation</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.residue_count" href="#src.utils.file_loader.SimulationFile.residue_count">residue_count</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.segment_count" href="#src.utils.file_loader.SimulationFile.segment_count">segment_count</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.supports_atomic_elements" href="#src.utils.file_loader.SimulationFile.supports_atomic_elements">supports_atomic_elements</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.supports_atomic_masses" href="#src.utils.file_loader.SimulationFile.supports_atomic_masses">supports_atomic_masses</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.supports_atomic_names" href="#src.utils.file_loader.SimulationFile.supports_atomic_names">supports_atomic_names</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.supports_atomic_positions" href="#src.utils.file_loader.SimulationFile.supports_atomic_positions">supports_atomic_positions</a></code></li>
+<li><code><a title="src.utils.file_loader.SimulationFile.unload_simulation" href="#src.utils.file_loader.SimulationFile.unload_simulation">unload_simulation</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

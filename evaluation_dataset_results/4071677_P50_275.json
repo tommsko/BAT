@@ -1,0 +1,391 @@
+{
+    "name": "4071677_P50_275",
+    "atoms": 302934,
+    "residues": 179744,
+    "segments": 12,
+    "fragments": 135854,
+    "segment_resolution": {
+        "seg_1_OMPA": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence"
+            ],
+            "resolver": "protein-residue-sequence",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "3nb3_C",
+                "3nb3_B",
+                "3nb3_A",
+                "1qjp_A",
+                "1bxw_A",
+                "9fzc_B",
+                "9fzc_A",
+                "1g90_A",
+                "2ge4_A",
+                "9fzd_A",
+                "2jmm_A",
+                "2k0l_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein-residue-sequence"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_8_W": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ge",
+                    99
+                ],
+                [
+                    "Ga",
+                    97
+                ],
+                [
+                    "As",
+                    96
+                ],
+                [
+                    "Zn",
+                    91
+                ],
+                [
+                    "Se",
+                    91
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_6_FOCA": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence"
+            ],
+            "resolver": "protein-residue-sequence",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "3tdr_J",
+                "3tdr_I",
+                "3tdr_H",
+                "3tdr_G",
+                "3tdr_F",
+                "3tdr_E",
+                "3tdr_D",
+                "3tdr_C",
+                "3tdr_B",
+                "3tdr_A",
+                "3tdo_E",
+                "3tdo_D",
+                "3tdo_C",
+                "3tdo_B",
+                "3tdo_A",
+                "3tdp_E",
+                "3tdp_D",
+                "3tdp_C",
+                "3tdp_B",
+                "3tdp_A",
+                "3te0_E",
+                "3te0_D",
+                "3te0_C",
+                "3te0_B",
+                "3te0_A",
+                "3tdx_E",
+                "3tdx_D",
+                "3tdx_C",
+                "3tdx_B",
+                "3tdx_A",
+                "3te1_E",
+                "3te1_D",
+                "3te1_C",
+                "3te1_B",
+                "3te1_A",
+                "3te2_E",
+                "3te2_D",
+                "3te2_C",
+                "3te2_B",
+                "3te2_A",
+                "3tds_D",
+                "3tds_C",
+                "3tds_B",
+                "3tds_A",
+                "3tds_E",
+                "4fc4_J",
+                "4fc4_I",
+                "4fc4_H",
+                "4fc4_G",
+                "4fc4_F",
+                "4fc4_E",
+                "4fc4_D",
+                "4fc4_C",
+                "4fc4_B",
+                "4fc4_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein-residue-sequence"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_10_NA+": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ge",
+                    99
+                ],
+                [
+                    "Ga",
+                    97
+                ],
+                [
+                    "As",
+                    96
+                ],
+                [
+                    "Zn",
+                    91
+                ],
+                [
+                    "Se",
+                    91
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_4_ATPS": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence"
+            ],
+            "resolver": "protein-residue-sequence",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "4bem_J"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein-residue-sequence"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_OMPG": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence"
+            ],
+            "resolver": "protein-residue-sequence",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "4ctd_B",
+                "4ctd_A",
+                "2f1c_X",
+                "2wvp_A",
+                "2x9k_A",
+                "2jqy_A",
+                "7q5c_XXX",
+                "5mwv_A",
+                "2iww_B",
+                "2iww_A",
+                "2iwv_D",
+                "2iwv_C",
+                "2iwv_B",
+                "2iwv_A",
+                "6oqh_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein-residue-sequence"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_5_GLPF": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence"
+            ],
+            "resolver": "protein-residue-sequence",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "1ldf_A",
+                "1ldi_A",
+                "1lda_A",
+                "1fx8_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein-residue-sequence"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_9_WF": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ge",
+                    99
+                ],
+                [
+                    "Ga",
+                    97
+                ],
+                [
+                    "As",
+                    96
+                ],
+                [
+                    "Zn",
+                    91
+                ],
+                [
+                    "Se",
+                    91
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_7_DPPC": {
+            "resolver_generated_signature": [
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "KILNVBDSWZSGLL-UHFFFAOYSA-O",
+                    50
+                ],
+                [
+                    "XGRJZXREYAXTGV-UHFFFAOYSA-N",
+                    50
+                ],
+                [
+                    "BHIIGRBMZRSDRI-UHFFFAOYSA-N",
+                    50
+                ],
+                [
+                    "KILNVBDSWZSGLL-KXQOOQHDSA-N",
+                    50
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem_ligand_name"
+            ]
+        },
+        "seg_11_CL-": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ge",
+                    99
+                ],
+                [
+                    "Ga",
+                    97
+                ],
+                [
+                    "As",
+                    96
+                ],
+                [
+                    "Zn",
+                    91
+                ],
+                [
+                    "Se",
+                    91
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_0_EPHA": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence"
+            ],
+            "resolver": "protein-residue-sequence",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "2k1l_B",
+                "2k1l_A",
+                "2k1k_B",
+                "2k1k_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein-residue-sequence"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_3_BTUB": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence"
+            ],
+            "resolver": "protein-residue-sequence",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "7nsu_F",
+                "2ysu_A",
+                "2guf_A",
+                "1ujw_A",
+                "1nqh_A",
+                "1nqg_A",
+                "1nqe_A",
+                "3rgm_A",
+                "2gsk_A",
+                "3m8d_A",
+                "3m8b_A",
+                "3rgn_A",
+                "1nqf_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein-residue-sequence"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

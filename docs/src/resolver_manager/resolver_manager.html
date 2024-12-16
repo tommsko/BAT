@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>src.resolver_manager.resolver_manager API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.resolver_manager.resolver_manager</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="src.resolver_manager.resolver_manager.ResolverManager"><code class="flex name class">
+<span>class <span class="ident">ResolverManager</span></span>
+<span>(</span><span>simulations: list[<a title="src.utils.file_loader.SimulationFile" href="../utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>],<br>output_directory: str,<br>threads: int,<br>configuration: configparser.ConfigParser)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ResolverManager:
+    def __init__(
+            self,
+            simulations: list[SimulationFile],
+            output_directory: str,
+            threads: int,
+            configuration: configparser.ConfigParser,
+    ) -&gt; None:
+        &#34;&#34;&#34;
+        Initializes the ResolverManager
+        :param simulations: list of simulations to resolve
+        :param output_directory: path to the directory where to save the results
+        :param threads: number of threads to use for resolving
+        &#34;&#34;&#34;
+        self.threads: int = threads
+
+        self.tasks: dict[SimulationFile, ResultsFile] = {
+            sim: ResultsFile(sim, output_directory) for sim in simulations
+        }
+        log.info(f&#34;ResolverManager loaded {len(simulations)} simulations to process...&#34;)
+
+        self.cache: ResolverCache = ResolverCache(configuration)
+        log.info(&#34;ResolverManager cache loaded...&#34;)
+
+        self.configuration: configparser.ConfigParser = configuration
+        self.resolvers: list[ResolverBase] = get_resolvers(
+            self.cache, self.configuration
+        )
+        log.info(f&#34;ResolverManager initialized {len(self.resolvers)} resolvers...&#34;)
+
+        self.SIMULATION_TIMEOUT_SEC: int = configuration.getint(&#39;resolution&#39;, &#39;timeout_sec_simulation&#39;)
+        self.RETRY_FAILED_MOLECULES: bool = configuration.getboolean(&#39;resolution&#39;, &#39;retry_failed_resolution&#39;)
+
+    def _run_multiprocess_collect(
+            self,
+            processes: list[multiprocessing.Process | None],
+            processes_started_at: list[float | None],
+            processes_simulation_tprs: list[str | None],
+    ) -&gt; None:
+        &#34;&#34;&#34;
+        Collects finished processes
+        :param processes: list of processes
+        :param processes_started_at: list of times when processes started
+        :param processes_simulation_tprs: list of paths to the tpr files being resolved per process
+        :return: None
+        &#34;&#34;&#34;
+        for i in range(self.threads):
+            if processes[i] is None:
+                continue
+            processes[i].join(timeout=0)
+            if not processes[i].is_alive():
+                processes[i] = None
+                processes_started_at[i] = 0
+                processes_simulation_tprs[i] = None
+
+    def _run_multiprocess_terminate_timeout(
+            self,
+            processes: list[multiprocessing.Process | None],
+            processes_started_at: list[float | None],
+            status_queue: StatusQueue,
+            processes_simulation_tprs: list[str | None],
+    ) -&gt; None:
+        &#34;&#34;&#34;
+        Terminate processes which have been running for too long
+        :param processes: list of processes
+        :param processes_started_at: list of times when processes started
+        :param status_queue: queue where resolution dumps status
+        :param processes_simulation_tprs: list of paths to the tpr files being resolved per process
+        :return: None
+        &#34;&#34;&#34;
+        for i in range(self.threads):
+            if (
+                    processes[i] is not None
+                    and self.SIMULATION_TIMEOUT_SEC &gt; 0
+                    and time.time() - processes_started_at[i] &gt; self.SIMULATION_TIMEOUT_SEC
+            ):
+                log.error(
+                    f&#34;Terminated resolution process (pid={processes[i].pid}). Reason: timeout&#34;
+                )
+                emit_update(status_queue.get_queue(),
+                            processes_simulation_tprs[i],
+                            StatusUpdateType.SIMULATION_RESOLUTION_TIMEOUT,
+                            &#34;&#34;)
+                processes[i].terminate()
+                processes[i] = None
+                processes_started_at[i] = 0
+                processes_simulation_tprs[i] = None
+
+    def _run_multiprocess_start(
+            self,
+            processes: list[multiprocessing.Process | None],
+            processes_started_at: list[float | None],
+            status_queue: StatusQueue,
+            processes_simulation_tprs: list[str | None],
+    ) -&gt; None:
+        &#34;&#34;&#34;
+        Starts new resolution threads given simulations to process provided in ctor
+        :param processes: list of processes
+        :param processes_started_at: list of times when processes started
+        :param status_queue: queue where resolution dumps status
+        :param processes_simulation_tprs: list of paths to the tpr files being resolved per process
+        :return: None
+        &#34;&#34;&#34;
+        for i in range(self.threads):
+            if processes[i] is None and self.tasks:
+                simulation, results = self.tasks.popitem()
+                processes[i] = multiprocessing.Process(
+                    target=self.resolve_simulation,
+                    args=(simulation, results, status_queue.get_queue()),
+                )
+                processes[i].start()
+                processes_started_at[i] = time.time()
+                processes_simulation_tprs[i] = simulation.paths[0]
+                log.debug(
+                    f&#34;Started resolution of &#39;{simulation.paths[0]}&#39; (pid={processes[i].pid})&#34;
+                )
+
+    def _run_multiprocess_emit_log(self, processes: list[multiprocessing.Process | None]) -&gt; None:
+        &#34;&#34;&#34;
+        Emits log messages with basic information about resolution status
+        :param processes: list of processes performing the resolution
+        :return: None
+        &#34;&#34;&#34;
+        workers_alive: int = sum(1 if x is not None else 0 for x in processes)
+
+        log.info(&#34;~~~ Resolution in process ~~~&#34;)
+        log.info(f&#34;current queue: {len(self.tasks)} ({workers_alive} / {self.threads} workers alive)&#34;)
+
+    def _run_multiprocess(self) -&gt; StatusQueue:
+        &#34;&#34;&#34;
+        Runs multiple concurrent processes resolving simulations provided in ctor
+        :return: StatusQueue populated during the resolution
+        &#34;&#34;&#34;
+
+        processes: list[multiprocessing.Process | None] = [
+            None for _ in range(self.threads)
+        ]
+        processes_started_at: list[float | None] = [None for _ in range(self.threads)]
+        processes_simulation_tprs: list[str | None] = [None for _ in range(self.threads)]
+        status: StatusQueue = StatusQueue(self.threads)
+
+        def signal_handler(sig, frame):
+            log.info(&#34;Recieved SIGINT, terminating all processes&#34;)
+            for i in range(self.threads):
+                if processes[i] is not None and processes[i].is_alive():
+                    processes[i].terminate()
+            sys.exit(0)
+
+        signal.signal(signal.SIGINT, signal_handler)
+
+        while any(p is not None for p in processes) or self.tasks:
+            status.process_queue()
+            self._run_multiprocess_emit_log(processes)
+            status.emit_process_log()
+            self._run_multiprocess_collect(processes, processes_started_at, processes_simulation_tprs)
+            self._run_multiprocess_terminate_timeout(processes, processes_started_at, status, processes_simulation_tprs)
+            self._run_multiprocess_start(processes, processes_started_at, status, processes_simulation_tprs)
+            time.sleep(1)  # resolutions may take minutes to finish, 1 second refresh time is good enough
+        return status
+
+    def run(self) -&gt; StatusQueue:
+        &#34;&#34;&#34;
+        Start resolution of all the simulations provided in ctor
+        :return: log of the resolution
+        &#34;&#34;&#34;
+        log.info(f&#34;ResolverManager starting with {self.threads} threads...&#34;)
+        stats: StatusQueue = self._run_multiprocess()
+        stats.update_results_files()
+        return stats
+
+    def resolve_simulation(
+            self,
+            simulation: SimulationFile,
+            results: ResultsFile,
+            status: multiprocessing.Queue,
+    ) -&gt; None:
+        &#34;&#34;&#34;
+        Attempts to resolve the molecules in simulation
+        :param simulation: to be resolved
+        :param results: ResultsFile linked to the simulation
+        :param status: queue where to put updates about the resolution
+        :return: None
+        &#34;&#34;&#34;
+        log.debug(f&#34;Trying to resolve simulation &#39;{simulation.simulation_name}&#39;&#34;)
+        simulation_tpr: str = simulation.paths[0]
+        emit_update(status, simulation_tpr, StatusUpdateType.SIMULATION_RESOLUTION_STARTED, results.path)
+
+        if simulation.load_simulation() and results.load():
+            emit_update(status, simulation_tpr, StatusUpdateType.SIMULATION_SUCCESSFULLY_LOADED, &#34;&#34;)
+        else:
+            return
+
+        if results.is_fully_resolved() or (results.is_partially_resolved() and not self.RETRY_FAILED_MOLECULES):
+            log.debug(&#34;Simulation has been already resolved, skipping!&#34;)
+            emit_update_skipped_molecules(simulation, results, status, emit_unmatched=True)
+            emit_update(status, simulation_tpr, StatusUpdateType.SIMULATION_RESOLUTION_FINISHED, &#34;&#34;)
+            simulation.unload_simulation()
+            return
+
+        # we are skipping identity and similarity matched molecules either way
+        emit_update_skipped_molecules(simulation, results, status, emit_unmatched=False)
+
+        for segment in simulation.list_segments():
+            if results.is_segment_resolved(
+                    segment
+            ):  # partial resolution is good, not overwriting existing results
+                log.debug(
+                    f&#34;[{simulation.simulation_name}/{segment}] already resolved, skipping...&#34;
+                )
+            else:
+                ResolverManager.resolve_molecule(
+                    simulation, segment, results, self.resolvers, status
+                )
+
+        emit_update(status, simulation_tpr, StatusUpdateType.SIMULATION_RESOLUTION_FINISHED, &#34;&#34;)
+        results.save()
+        simulation.unload_simulation()
+
+    @staticmethod
+    def _resolve_molecule_try_identity(
+            resolver: ResolverBase,
+            signature: str,
+            molecule_name: str,
+            molecule_results: dict,
+            results: ResultsFile,
+            simulation: SimulationFile,
+            status: multiprocessing.Queue,
+    ) -&gt; bool:
+        &#34;&#34;&#34;
+        Attempts to resolve identifiers for identity match of the molecule given
+        :param resolver: which produced signature below;
+        :param signature: of the molecule to be identified
+        :param molecule_name: of the molecule to be identified
+        :param molecule_results: sub-dict of the results for given molecule
+        :param results: ResultsFile associated with current resolution
+        :param simulation: of which the molecule is part of
+        :param status: output queue for resolution updates
+        :return: True if successful, False otherwise
+        &#34;&#34;&#34;
+
+        try:
+            identifiers = resolver.get_identifiers(signature)
+            log.debug(
+                f&#34;[{simulation.simulation_name}/{molecule_name}] &#39;{resolver.resolver_name}&#39; &#34;
+                f&#34;resolved on identity level. Identifiers: {identifiers}&#34;
+            )
+            molecule_results[&#34;resolver&#34;] = resolver.resolver_name
+            molecule_results[&#34;ident_type&#34;] = resolver.ident_name
+            molecule_results[&#34;resolved_idents&#34;] = identifiers
+            emit_update(status, simulation.paths[0], StatusUpdateType.MOLECULE_IDENTITY_MATCH,
+                        (molecule_name, resolver.resolver_name))
+            results.save()
+            return True
+        except IdentifierResolutionError as exc:
+            log.debug(
+                f&#34;[{simulation.simulation_name}/{molecule_name}] &#39;{resolver.resolver_name}&#39; &#34;
+                f&#34;no identity matches found! ({exc})&#34;
+            )
+        return False
+
+    @staticmethod
+    def _resolve_molecule_try_similarity(
+            resolver: ResolverBase,
+            signature: str,
+            molecule_name: str,
+            molecule_results: dict,
+            results: ResultsFile,
+            simulation: SimulationFile,
+            status: multiprocessing.Queue,
+    ) -&gt; bool:
+        &#34;&#34;&#34;
+        Attempts to resolve identifiers for similar matches of the molecule given
+        :param resolver: which produced fingerprint below;
+        :param signature: of the molecule to be identified
+        :param molecule_name: of the molecule to be identified
+        :param molecule_results: dictionary where to save the results
+        :param results: ResultsFile associated with current resolution
+        :param simulation: of which the molecule is part of
+        :param status: output queue for resolution updates
+        :return: True if successful, False otherwise
+        &#34;&#34;&#34;
+
+        try:
+            identifiers = resolver.get_similar_identifiers(signature)
+            log.debug(
+                f&#34;[{simulation.simulation_name}/{molecule_name}] &#39;{resolver.resolver_name}&#39; &#34;
+                f&#34;resolved on similarity level. Identifiers: {identifiers}&#34;
+            )
+            molecule_results[&#34;resolver&#34;] = resolver.resolver_name
+            molecule_results[&#34;ident_type&#34;] = resolver.ident_name
+            molecule_results[&#34;possible_idents&#34;] = identifiers
+            emit_update(status, simulation.paths[0],
+                        StatusUpdateType.MOLECULE_SIMILARITY_MATCH, (molecule_name, resolver.resolver_name))
+            results.save()
+            return True
+        except IdentifierResolutionError as exc:
+            log.debug(
+                f&#34;[{simulation.simulation_name}/{molecule_name}] &#39;{resolver.resolver_name}&#39; &#34;
+                f&#34;no similarity matches found! ({exc})&#34;
+            )
+        return False
+
+    @staticmethod
+    def _resolve_molecule_check_applicable(simulation: SimulationFile,
+                                           molecule: MDAnalysis.AtomGroup,
+                                           molecule_name: str,
+                                           resolver: ResolverBase,
+                                           status: multiprocessing.Queue) -&gt; bool:
+        &#34;&#34;&#34;
+        Checks whether resolver is applicable on given molecule, and if so, emits necessary messages
+        :param simulation: containing the molecule
+        :param molecule: to be resolved
+        :param molecule_name: of the resolved molecule
+        :param resolver: attempted for resolution
+        :param status: queue for updates
+        :return: True if resolver is applicable, False otherwise
+        &#34;&#34;&#34;
+        if not resolver.is_applicable(simulation, molecule):
+            return False
+        log.debug(
+            f&#34;[{simulation.simulation_name}/{molecule_name}] attempting resolver &#39;{resolver.resolver_name}&#39;&#34;
+        )
+        emit_update(status,
+                    simulation.paths[0],
+                    StatusUpdateType.MOLECULE_RESOLVER_APPLICABLE,
+                    (molecule_name, resolver.resolver_name))
+        return True
+
+    @staticmethod
+    def _resolve_molecule_mk_signature(simulation: SimulationFile,
+                                       molecule: MDAnalysis.AtomGroup,
+                                       molecule_name: str,
+                                       resolver: ResolverBase,
+                                       status: multiprocessing.Queue,
+                                       molecule_results: dict,
+                                       results: ResultsFile) -&gt; str | None:
+        &#34;&#34;&#34;
+        Attempts to generate signature of the molecule
+        :param simulation: containing the molecule
+        :param molecule: to be resolved
+        :param molecule_name: of the resolved molecule
+        :param resolver: attempted for resolution
+        :param status: queue for updates
+        :param molecule_results: sub-dict for results of a given molecule
+        :param results: ResultsFile associated with current resolution
+        :return: string signature
+        &#34;&#34;&#34;
+        try:
+            signature = resolver.get_signature(simulation, molecule)
+            log.debug(
+                f&#34;[{simulation.simulation_name}/{molecule_name}] &#39;{resolver.resolver_name}&#39; signature: &#34;
+                f&#34;&#39;{signature if len(signature) &lt; 20 else f&#39;{signature[:20]}...&#39;}&#39;&#34;
+            )
+            emit_update(status,
+                        simulation.paths[0],
+                        StatusUpdateType.MOLECULE_SIGNATURE_GENERATED,
+                        (molecule_name, resolver.resolver_name))
+            molecule_results[&#39;resolver_generated_signature&#39;].append(resolver.resolver_name)
+            results.save()
+            return signature
+        except SignatureGenerationError as exc:
+            log.debug(
+                f&#34;[{simulation.simulation_name}/{molecule_name}] &#39;{resolver.resolver_name}&#39; failed to create signature&#34;
+            )
+            log.debug(exc, exc_info=True)
+            return None
+
+    @staticmethod
+    def resolve_molecule(
+            simulation: SimulationFile,
+            molecule_name: str,
+            results: ResultsFile,
+            resolvers: list[ResolverBase],
+            status: multiprocessing.Queue,
+    ) -&gt; bool:
+        &#34;&#34;&#34;
+        Tries to resolve the molecule into standardized identifier(s) using resolvers
+        :param simulation: to be analysed
+        :param molecule_name: to be resolved
+        :param results: to store success/failure data
+        :param resolvers: available resolvers from get_resolvers(...)
+        :param status: queue where to put updates about the resolution
+        :return: True if successful, False otherwise
+        &#34;&#34;&#34;
+        simulation_tpr: str = simulation.paths[0]
+        emit_update(status, simulation_tpr, StatusUpdateType.MOLECULE_RESOLUTION_STARTED, molecule_name)
+        molecule_results: dict = results.data[&#34;segment_resolution&#34;][molecule_name]
+
+        for resolver in resolvers:
+            try:
+                molecule: MDAnalysis.AtomGroup = simulation.get_molecule(molecule_name)
+
+                if not ResolverManager._resolve_molecule_check_applicable(simulation, molecule, molecule_name,
+                                                                          resolver, status):
+                    continue
+
+                signature: str | None = ResolverManager._resolve_molecule_mk_signature(simulation, molecule,
+                                                                                       molecule_name, resolver, status,
+                                                                                       molecule_results, results)
+                if signature is None:
+                    continue
+
+                if ResolverManager._resolve_molecule_try_identity(resolver, signature, molecule_name, molecule_results,
+                                                                  results, simulation, status):
+                    return True
+
+                if ResolverManager._resolve_molecule_try_similarity(resolver, signature, molecule_name,
+                                                                    molecule_results, results, simulation, status):
+                    return True
+                # break is implicit here (using returns)
+            except Exception as exc:
+                log.debug(
+                    f&#34;[{simulation.simulation_name}/{molecule_name}] &#39;{resolver.resolver_name}&#39; &#34;
+                    f&#34;failed internally&#34;
+                )
+                log.debug(exc, exc_info=True)
+                continue
+
+        emit_update(status, simulation_tpr, StatusUpdateType.MOLECULE_NO_MATCH, molecule_name)
+        log.error(
+            f&#34;[{simulation.simulation_name}/{molecule_name}] resolution was not possible&#34;
+        )
+        return False</code></pre>
+</details>
+<div class="desc"><p>Initializes the ResolverManager
+:param simulations: list of simulations to resolve
+:param output_directory: path to the directory where to save the results
+:param threads: number of threads to use for resolving</p></div>
+<h3>Static methods</h3>
+<dl>
+<dt id="src.resolver_manager.resolver_manager.ResolverManager.resolve_molecule"><code class="name flex">
+<span>def <span class="ident">resolve_molecule</span></span>(<span>simulation: <a title="src.utils.file_loader.SimulationFile" href="../utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>,<br>molecule_name: str,<br>results: <a title="src.utils.results_file.ResultsFile" href="../utils/results_file.html#src.utils.results_file.ResultsFile">ResultsFile</a>,<br>resolvers: list[<a title="src.resolvers.base.fragment_resolver.ResolverBase" href="../resolvers/base/fragment_resolver.html#src.resolvers.base.fragment_resolver.ResolverBase">ResolverBase</a>],<br>status: <bound method BaseContext.Queue of <multiprocessing.context.DefaultContext object at 0x70b74cf780e0>>) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def resolve_molecule(
+        simulation: SimulationFile,
+        molecule_name: str,
+        results: ResultsFile,
+        resolvers: list[ResolverBase],
+        status: multiprocessing.Queue,
+) -&gt; bool:
+    &#34;&#34;&#34;
+    Tries to resolve the molecule into standardized identifier(s) using resolvers
+    :param simulation: to be analysed
+    :param molecule_name: to be resolved
+    :param results: to store success/failure data
+    :param resolvers: available resolvers from get_resolvers(...)
+    :param status: queue where to put updates about the resolution
+    :return: True if successful, False otherwise
+    &#34;&#34;&#34;
+    simulation_tpr: str = simulation.paths[0]
+    emit_update(status, simulation_tpr, StatusUpdateType.MOLECULE_RESOLUTION_STARTED, molecule_name)
+    molecule_results: dict = results.data[&#34;segment_resolution&#34;][molecule_name]
+
+    for resolver in resolvers:
+        try:
+            molecule: MDAnalysis.AtomGroup = simulation.get_molecule(molecule_name)
+
+            if not ResolverManager._resolve_molecule_check_applicable(simulation, molecule, molecule_name,
+                                                                      resolver, status):
+                continue
+
+            signature: str | None = ResolverManager._resolve_molecule_mk_signature(simulation, molecule,
+                                                                                   molecule_name, resolver, status,
+                                                                                   molecule_results, results)
+            if signature is None:
+                continue
+
+            if ResolverManager._resolve_molecule_try_identity(resolver, signature, molecule_name, molecule_results,
+                                                              results, simulation, status):
+                return True
+
+            if ResolverManager._resolve_molecule_try_similarity(resolver, signature, molecule_name,
+                                                                molecule_results, results, simulation, status):
+                return True
+            # break is implicit here (using returns)
+        except Exception as exc:
+            log.debug(
+                f&#34;[{simulation.simulation_name}/{molecule_name}] &#39;{resolver.resolver_name}&#39; &#34;
+                f&#34;failed internally&#34;
+            )
+            log.debug(exc, exc_info=True)
+            continue
+
+    emit_update(status, simulation_tpr, StatusUpdateType.MOLECULE_NO_MATCH, molecule_name)
+    log.error(
+        f&#34;[{simulation.simulation_name}/{molecule_name}] resolution was not possible&#34;
+    )
+    return False</code></pre>
+</details>
+<div class="desc"><p>Tries to resolve the molecule into standardized identifier(s) using resolvers
+:param simulation: to be analysed
+:param molecule_name: to be resolved
+:param results: to store success/failure data
+:param resolvers: available resolvers from get_resolvers(&hellip;)
+:param status: queue where to put updates about the resolution
+:return: True if successful, False otherwise</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="src.resolver_manager.resolver_manager.ResolverManager.resolve_simulation"><code class="name flex">
+<span>def <span class="ident">resolve_simulation</span></span>(<span>self,<br>simulation: <a title="src.utils.file_loader.SimulationFile" href="../utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>,<br>results: <a title="src.utils.results_file.ResultsFile" href="../utils/results_file.html#src.utils.results_file.ResultsFile">ResultsFile</a>,<br>status: <bound method BaseContext.Queue of <multiprocessing.context.DefaultContext object at 0x70b74cf780e0>>) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def resolve_simulation(
+        self,
+        simulation: SimulationFile,
+        results: ResultsFile,
+        status: multiprocessing.Queue,
+) -&gt; None:
+    &#34;&#34;&#34;
+    Attempts to resolve the molecules in simulation
+    :param simulation: to be resolved
+    :param results: ResultsFile linked to the simulation
+    :param status: queue where to put updates about the resolution
+    :return: None
+    &#34;&#34;&#34;
+    log.debug(f&#34;Trying to resolve simulation &#39;{simulation.simulation_name}&#39;&#34;)
+    simulation_tpr: str = simulation.paths[0]
+    emit_update(status, simulation_tpr, StatusUpdateType.SIMULATION_RESOLUTION_STARTED, results.path)
+
+    if simulation.load_simulation() and results.load():
+        emit_update(status, simulation_tpr, StatusUpdateType.SIMULATION_SUCCESSFULLY_LOADED, &#34;&#34;)
+    else:
+        return
+
+    if results.is_fully_resolved() or (results.is_partially_resolved() and not self.RETRY_FAILED_MOLECULES):
+        log.debug(&#34;Simulation has been already resolved, skipping!&#34;)
+        emit_update_skipped_molecules(simulation, results, status, emit_unmatched=True)
+        emit_update(status, simulation_tpr, StatusUpdateType.SIMULATION_RESOLUTION_FINISHED, &#34;&#34;)
+        simulation.unload_simulation()
+        return
+
+    # we are skipping identity and similarity matched molecules either way
+    emit_update_skipped_molecules(simulation, results, status, emit_unmatched=False)
+
+    for segment in simulation.list_segments():
+        if results.is_segment_resolved(
+                segment
+        ):  # partial resolution is good, not overwriting existing results
+            log.debug(
+                f&#34;[{simulation.simulation_name}/{segment}] already resolved, skipping...&#34;
+            )
+        else:
+            ResolverManager.resolve_molecule(
+                simulation, segment, results, self.resolvers, status
+            )
+
+    emit_update(status, simulation_tpr, StatusUpdateType.SIMULATION_RESOLUTION_FINISHED, &#34;&#34;)
+    results.save()
+    simulation.unload_simulation()</code></pre>
+</details>
+<div class="desc"><p>Attempts to resolve the molecules in simulation
+:param simulation: to be resolved
+:param results: ResultsFile linked to the simulation
+:param status: queue where to put updates about the resolution
+:return: None</p></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager.ResolverManager.run"><code class="name flex">
+<span>def <span class="ident">run</span></span>(<span>self) ‑> <a title="src.resolver_manager.resolver_manager_log.StatusQueue" href="resolver_manager_log.html#src.resolver_manager.resolver_manager_log.StatusQueue">StatusQueue</a></span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def run(self) -&gt; StatusQueue:
+    &#34;&#34;&#34;
+    Start resolution of all the simulations provided in ctor
+    :return: log of the resolution
+    &#34;&#34;&#34;
+    log.info(f&#34;ResolverManager starting with {self.threads} threads...&#34;)
+    stats: StatusQueue = self._run_multiprocess()
+    stats.update_results_files()
+    return stats</code></pre>
+</details>
+<div class="desc"><p>Start resolution of all the simulations provided in ctor
+:return: log of the resolution</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src.resolver_manager" href="index.html">src.resolver_manager</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="src.resolver_manager.resolver_manager.ResolverManager" href="#src.resolver_manager.resolver_manager.ResolverManager">ResolverManager</a></code></h4>
+<ul class="">
+<li><code><a title="src.resolver_manager.resolver_manager.ResolverManager.resolve_molecule" href="#src.resolver_manager.resolver_manager.ResolverManager.resolve_molecule">resolve_molecule</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager.ResolverManager.resolve_simulation" href="#src.resolver_manager.resolver_manager.ResolverManager.resolve_simulation">resolve_simulation</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager.ResolverManager.run" href="#src.resolver_manager.resolver_manager.ResolverManager.run">run</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

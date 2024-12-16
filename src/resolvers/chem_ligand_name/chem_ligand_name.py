@@ -66,6 +66,8 @@ class ChemLigandNameResolver(ResolverBase):
         :return: list of standardized InChI keys of the molecule
         :raises IdentifierResolutionError: if any search fails (finding no results is NOT considered a failure)
         """
+        if len(signature) < self.config.getint(self.resolver_name, 'minimum_name_len'):
+            return []
         return fetch_pdb_ligand_inchikey(signature, self.config)
 
     def try_fetch_identifiers_relaxed_match(
@@ -77,6 +79,8 @@ class ChemLigandNameResolver(ResolverBase):
         :return: list of standardized InChI keys of the molecule and their scores (similarity %)
         :raises IdentifierResolutionError: if any search fails (finding no results is not considered a failure)
         """
+        if len(signature) < self.config.getint(self.resolver_name, 'minimum_name_len'):
+            return []
         return fetch_pubchem_ligand_inchikey(signature, self.config)
 
     def generate_debug_data(

@@ -1,0 +1,663 @@
+{
+    "name": "8289357_TRAP",
+    "atoms": 353749,
+    "residues": 82039,
+    "segments": 13,
+    "fragments": 81345,
+    "segment_resolution": {
+        "seg_0_PROA": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem",
+                "chem",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "ASNPMKUZYKCRQR-YESIWOAJSA-N",
+                    "64.6153867244720458984375"
+                ],
+                [
+                    "JMHFFDIMOUKDCZ-XKMGUCBZSA-N",
+                    "62.23404407501220703125"
+                ],
+                [
+                    "JMHFFDIMOUKDCZ-NTXHZHDSSA-N",
+                    "62.23404407501220703125"
+                ],
+                [
+                    "BCEBLPIYXJPROM-MFQIIULBSA-N",
+                    "62.121212482452392578125"
+                ],
+                [
+                    "MGWSPJPTAQVOJD-XCVQSSOXSA-N",
+                    "62.121212482452392578125"
+                ],
+                [
+                    "KULBFCBBMSRZNX-IGNHTSOYSA-N",
+                    "61.9047641754150390625"
+                ],
+                [
+                    "QQGQCBIXVPBTKN-ZDPPTUKRSA-N",
+                    "61.7021262645721435546875"
+                ],
+                [
+                    "YWOUHVOLWUCOOL-UHLKPZGJSA-N",
+                    "61.6161644458770751953125"
+                ],
+                [
+                    "LVRVABPNVHYXRT-ZDDRDDBCSA-N",
+                    "61.4973247051239013671875"
+                ],
+                [
+                    "YIHRBRJTFIGRRV-FJGLSHCJSA-N",
+                    "61.463415622711181640625"
+                ],
+                [
+                    "UFOSAJMOMCYGOV-SXZBUJSMSA-N",
+                    "61.2244904041290283203125"
+                ],
+                [
+                    "MIQMXHBUVJQRJU-ITUCDHTQSA-N",
+                    "61.1111104488372802734375"
+                ],
+                [
+                    "IZIBPBNCTZAGAH-COWYQEPJSA-N",
+                    "61.000001430511474609375"
+                ],
+                [
+                    "HQALISCIMNBRAE-XJTHNYJFSA-N",
+                    "60.9137058258056640625"
+                ],
+                [
+                    "YPFGOUQUYJDOIC-IRNLFZNXSA-N",
+                    "60.7142865657806396484375"
+                ],
+                [
+                    "PAPSDKOFVOLMCB-JCECGMBKSA-N",
+                    "60.62176227569580078125"
+                ],
+                [
+                    "XYUPNXBTUPBQDO-OLTWCIOXSA-N",
+                    "60.606062412261962890625"
+                ],
+                [
+                    "HDYYWUUHTPVVEU-AJBJNSAWSA-N",
+                    "60.606062412261962890625"
+                ],
+                [
+                    "APYKGBJDFJTLPP-AJBJNSAWSA-N",
+                    "60.606062412261962890625"
+                ],
+                [
+                    "MJFLIKNVKBTFEM-TYXXFJLLSA-N",
+                    "60.606062412261962890625"
+                ],
+                [
+                    "VJGDQWRFKHLQDY-POEQMZABSA-N",
+                    "60.606062412261962890625"
+                ],
+                [
+                    "MMKRHRJIIWDURM-WALAHJQGSA-N",
+                    "60.606062412261962890625"
+                ],
+                [
+                    "ZPIZBWAGCHIUJU-POEQMZABSA-N",
+                    "60.606062412261962890625"
+                ],
+                [
+                    "LFOPHCOCESYEIB-JJBAINEOSA-N",
+                    "60.606062412261962890625"
+                ],
+                [
+                    "VTUILMASELQSEJ-ZPUNGBFCSA-N",
+                    "60.10100841522216796875"
+                ],
+                [
+                    "DBJOWHZUIIDRLV-TYXXFJLLSA-N",
+                    "60.10100841522216796875"
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem"
+            ]
+        },
+        "seg_7_POPC": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "WTJKGGKOPKCXLL-MRCUWXFGSA-N",
+                "WTJKGGKOPKCXLL-UHFFFAOYSA-N",
+                "SNKAWJBJQDLSFF-AOMFJDGTSA-N",
+                "RRVPPYNAZJRZFR-VYOBOKEXSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_12_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_11_CLA": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "CL"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_10_POT": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "K"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_8_POPS": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "WTBFLCSPLLEDEM-NUGHHVLWSA-N",
+                "WTBFLCSPLLEDEM-JIDRGYQWSA-N",
+                "OIWCYIUQAVBPGV-UHFFFAOYSA-M",
+                "WTBFLCSPLLEDEM-MDZJKYSESA-N",
+                "WTBFLCSPLLEDEM-AALPAEBJSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_PROB": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "BCEBLPIYXJPROM-MFQIIULBSA-N",
+                    "62.2548997402191162109375"
+                ],
+                [
+                    "MGWSPJPTAQVOJD-XCVQSSOXSA-N",
+                    "62.2548997402191162109375"
+                ],
+                [
+                    "ASNPMKUZYKCRQR-YESIWOAJSA-N",
+                    "61.463415622711181640625"
+                ],
+                [
+                    "MIQMXHBUVJQRJU-ITUCDHTQSA-N",
+                    "61.2745106220245361328125"
+                ],
+                [
+                    "QQGQCBIXVPBTKN-ZDPPTUKRSA-N",
+                    "61.02564334869384765625"
+                ],
+                [
+                    "YWOUHVOLWUCOOL-UHLKPZGJSA-N",
+                    "60.975611209869384765625"
+                ],
+                [
+                    "BNRIJKFSYFUZBJ-COWYQEPJSA-N",
+                    "60.869562625885009765625"
+                ],
+                [
+                    "VJGDQWRFKHLQDY-POEQMZABSA-N",
+                    "60.78431606292724609375"
+                ],
+                [
+                    "LFOPHCOCESYEIB-JJBAINEOSA-N",
+                    "60.78431606292724609375"
+                ],
+                [
+                    "ZPIZBWAGCHIUJU-POEQMZABSA-N",
+                    "60.78431606292724609375"
+                ],
+                [
+                    "MMKRHRJIIWDURM-WALAHJQGSA-N",
+                    "60.78431606292724609375"
+                ],
+                [
+                    "MJFLIKNVKBTFEM-TYXXFJLLSA-N",
+                    "60.78431606292724609375"
+                ],
+                [
+                    "APYKGBJDFJTLPP-AJBJNSAWSA-N",
+                    "60.78431606292724609375"
+                ],
+                [
+                    "XYUPNXBTUPBQDO-OLTWCIOXSA-N",
+                    "60.78431606292724609375"
+                ],
+                [
+                    "HDYYWUUHTPVVEU-AJBJNSAWSA-N",
+                    "60.78431606292724609375"
+                ],
+                [
+                    "JMHFFDIMOUKDCZ-NTXHZHDSSA-N",
+                    "60.7142865657806396484375"
+                ],
+                [
+                    "JMHFFDIMOUKDCZ-XKMGUCBZSA-N",
+                    "60.7142865657806396484375"
+                ],
+                [
+                    "UFOSAJMOMCYGOV-SXZBUJSMSA-N",
+                    "60.5911314487457275390625"
+                ],
+                [
+                    "KULBFCBBMSRZNX-IGNHTSOYSA-N",
+                    "60.40608882904052734375"
+                ],
+                [
+                    "XEUWJJIHLJNOPB-HGBBCANOSA-N",
+                    "60.3864729404449462890625"
+                ],
+                [
+                    "IZIBPBNCTZAGAH-COWYQEPJSA-N",
+                    "60.3864729404449462890625"
+                ],
+                [
+                    "DBJOWHZUIIDRLV-TYXXFJLLSA-N",
+                    "60.294115543365478515625"
+                ],
+                [
+                    "VTUILMASELQSEJ-ZPUNGBFCSA-N",
+                    "60.294115543365478515625"
+                ],
+                [
+                    "BIUMPZMQTPYNLJ-VWSDHPEQSA-N",
+                    "60.096156597137451171875"
+                ],
+                [
+                    "WNQWQRKIDFFVLZ-BBCPQRNRSA-N",
+                    "60.096156597137451171875"
+                ],
+                [
+                    "HCFIQPADNLDARN-HGBBCANOSA-N",
+                    "60.096156597137451171875"
+                ],
+                [
+                    "JPKGJUCQIBVGFT-VQKYMUJBSA-N",
+                    "60.096156597137451171875"
+                ],
+                [
+                    "YIHRBRJTFIGRRV-FJGLSHCJSA-N",
+                    "60.0938975811004638671875"
+                ],
+                [
+                    "LVRVABPNVHYXRT-ZDDRDDBCSA-N",
+                    "60.000002384185791015625"
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem"
+            ]
+        },
+        "seg_3_PROD": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "JMHFFDIMOUKDCZ-XKMGUCBZSA-N",
+                    "63.7837827205657958984375"
+                ],
+                [
+                    "JMHFFDIMOUKDCZ-NTXHZHDSSA-N",
+                    "63.7837827205657958984375"
+                ],
+                [
+                    "KULBFCBBMSRZNX-IGNHTSOYSA-N",
+                    "63.440859317779541015625"
+                ],
+                [
+                    "QQGQCBIXVPBTKN-ZDPPTUKRSA-N",
+                    "63.2432460784912109375"
+                ],
+                [
+                    "LVRVABPNVHYXRT-ZDDRDDBCSA-N",
+                    "63.0434811115264892578125"
+                ],
+                [
+                    "BNRIJKFSYFUZBJ-COWYQEPJSA-N",
+                    "62.121212482452392578125"
+                ],
+                [
+                    "UFOSAJMOMCYGOV-SXZBUJSMSA-N",
+                    "61.8556678295135498046875"
+                ],
+                [
+                    "GKFDSNGMGJRVCH-MVGPYTDFSA-N",
+                    "61.6161644458770751953125"
+                ],
+                [
+                    "IZIBPBNCTZAGAH-COWYQEPJSA-N",
+                    "61.6161644458770751953125"
+                ],
+                [
+                    "HQALISCIMNBRAE-XJTHNYJFSA-N",
+                    "61.5384638309478759765625"
+                ],
+                [
+                    "YWOUHVOLWUCOOL-UHLKPZGJSA-N",
+                    "61.4213168621063232421875"
+                ],
+                [
+                    "YPFGOUQUYJDOIC-IRNLFZNXSA-N",
+                    "61.3402068614959716796875"
+                ],
+                [
+                    "BIUMPZMQTPYNLJ-VWSDHPEQSA-N",
+                    "61.3065302371978759765625"
+                ],
+                [
+                    "JPKGJUCQIBVGFT-VQKYMUJBSA-N",
+                    "61.3065302371978759765625"
+                ],
+                [
+                    "WNQWQRKIDFFVLZ-BBCPQRNRSA-N",
+                    "61.3065302371978759765625"
+                ],
+                [
+                    "HCFIQPADNLDARN-HGBBCANOSA-N",
+                    "61.3065302371978759765625"
+                ],
+                [
+                    "MGWSPJPTAQVOJD-XCVQSSOXSA-N",
+                    "61.1111104488372802734375"
+                ],
+                [
+                    "BCEBLPIYXJPROM-MFQIIULBSA-N",
+                    "61.1111104488372802734375"
+                ],
+                [
+                    "XEUWJJIHLJNOPB-HGBBCANOSA-N",
+                    "60.804021358489990234375"
+                ],
+                [
+                    "XRCREFOPQOQTDB-PNQYKMJISA-N",
+                    "60.696518421173095703125"
+                ],
+                [
+                    "PLAZMVMVOCOZNO-FBANJYLRSA-N",
+                    "60.679614543914794921875"
+                ],
+                [
+                    "NKZSJXPCNXUROW-ZRSYVJPOSA-N",
+                    "60.487806797027587890625"
+                ],
+                [
+                    "PAPSDKOFVOLMCB-JCECGMBKSA-N",
+                    "60.4166686534881591796875"
+                ],
+                [
+                    "KIIQVQBWBASUFE-DLXWMNSQSA-N",
+                    "60.3174626827239990234375"
+                ],
+                [
+                    "ASNPMKUZYKCRQR-YESIWOAJSA-N",
+                    "60.301506519317626953125"
+                ],
+                [
+                    "NQSZQGPNEIAFND-VLVKAIPSSA-N",
+                    "60.1092875003814697265625"
+                ],
+                [
+                    "MIQMXHBUVJQRJU-ITUCDHTQSA-N",
+                    "60.10100841522216796875"
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem"
+            ]
+        },
+        "seg_5_POPI": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "PDLAMJKMOKWLAJ-UHFFFAOYSA-M"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_6_POPE": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "MWRBNPKJOOWZPW-XPWSMXQVSA-N",
+                "FHQVHHIBKUMWTI-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_9_PSM": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "RWKUXQNLWDTSLO-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_PROC": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "QQGQCBIXVPBTKN-ZDPPTUKRSA-N",
+                    "61.9791686534881591796875"
+                ],
+                [
+                    "BCEBLPIYXJPROM-MFQIIULBSA-N",
+                    "61.576354503631591796875"
+                ],
+                [
+                    "MGWSPJPTAQVOJD-XCVQSSOXSA-N",
+                    "61.576354503631591796875"
+                ],
+                [
+                    "ASNPMKUZYKCRQR-YESIWOAJSA-N",
+                    "61.576354503631591796875"
+                ],
+                [
+                    "UFOSAJMOMCYGOV-SXZBUJSMSA-N",
+                    "61.50000095367431640625"
+                ],
+                [
+                    "XDQBUBAUMVFYDD-XIBUDJTISA-N",
+                    "61.000001430511474609375"
+                ],
+                [
+                    "NKZSJXPCNXUROW-ZRSYVJPOSA-N",
+                    "60.9523832798004150390625"
+                ],
+                [
+                    "YIHRBRJTFIGRRV-FJGLSHCJSA-N",
+                    "60.9523832798004150390625"
+                ],
+                [
+                    "JMHFFDIMOUKDCZ-XKMGUCBZSA-N",
+                    "60.824739933013916015625"
+                ],
+                [
+                    "JMHFFDIMOUKDCZ-NTXHZHDSSA-N",
+                    "60.824739933013916015625"
+                ],
+                [
+                    "MIQMXHBUVJQRJU-ITUCDHTQSA-N",
+                    "60.5911314487457275390625"
+                ],
+                [
+                    "KULBFCBBMSRZNX-IGNHTSOYSA-N",
+                    "60.5128228664398193359375"
+                ],
+                [
+                    "PLAZMVMVOCOZNO-FBANJYLRSA-N",
+                    "60.3773593902587890625"
+                ],
+                [
+                    "YWOUHVOLWUCOOL-UHLKPZGJSA-N",
+                    "60.294115543365478515625"
+                ],
+                [
+                    "YPFGOUQUYJDOIC-IRNLFZNXSA-N",
+                    "60.1990044116973876953125"
+                ],
+                [
+                    "LVRVABPNVHYXRT-ZDDRDDBCSA-N",
+                    "60.1036250591278076171875"
+                ],
+                [
+                    "ZPIZBWAGCHIUJU-POEQMZABSA-N",
+                    "60.0985229015350341796875"
+                ],
+                [
+                    "MMKRHRJIIWDURM-WALAHJQGSA-N",
+                    "60.0985229015350341796875"
+                ],
+                [
+                    "VJGDQWRFKHLQDY-POEQMZABSA-N",
+                    "60.0985229015350341796875"
+                ],
+                [
+                    "MJFLIKNVKBTFEM-TYXXFJLLSA-N",
+                    "60.0985229015350341796875"
+                ],
+                [
+                    "APYKGBJDFJTLPP-AJBJNSAWSA-N",
+                    "60.0985229015350341796875"
+                ],
+                [
+                    "XYUPNXBTUPBQDO-OLTWCIOXSA-N",
+                    "60.0985229015350341796875"
+                ],
+                [
+                    "HDYYWUUHTPVVEU-AJBJNSAWSA-N",
+                    "60.0985229015350341796875"
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem"
+            ]
+        },
+        "seg_4_CHL1": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+                "HVYWMOMLDIMFJA-LZUCFRQPSA-N",
+                "HVYWMOMLDIMFJA-UHFFFAOYSA-N",
+                "HVYWMOMLDIMFJA-RJLWFLQPSA-N",
+                "HVYWMOMLDIMFJA-FNOPAARDSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

@@ -1,0 +1,327 @@
+{
+    "name": "10999382_EmrE-deprotE14A_NMR-cpt-samp-r1",
+    "atoms": 46646,
+    "residues": 9415,
+    "segments": 6,
+    "fragments": 9197,
+    "segment_resolution": {
+        "seg_0_PROA": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "QQGQCBIXVPBTKN-ZDPPTUKRSA-N",
+                    "64.3243253231048583984375"
+                ],
+                [
+                    "JMHFFDIMOUKDCZ-XKMGUCBZSA-N",
+                    "63.978493213653564453125"
+                ],
+                [
+                    "JMHFFDIMOUKDCZ-NTXHZHDSSA-N",
+                    "63.978493213653564453125"
+                ],
+                [
+                    "KULBFCBBMSRZNX-IGNHTSOYSA-N",
+                    "63.636362552642822265625"
+                ],
+                [
+                    "PLAZMVMVOCOZNO-FBANJYLRSA-N",
+                    "63.235294818878173828125"
+                ],
+                [
+                    "XDQBUBAUMVFYDD-XIBUDJTISA-N",
+                    "63.2124364376068115234375"
+                ],
+                [
+                    "NKZSJXPCNXUROW-ZRSYVJPOSA-N",
+                    "63.0541861057281494140625"
+                ],
+                [
+                    "UOQYFNWHBKLVED-INDGOHPFSA-N",
+                    "62.694299221038818359375"
+                ],
+                [
+                    "LVRVABPNVHYXRT-ZDDRDDBCSA-N",
+                    "62.365591526031494140625"
+                ],
+                [
+                    "UFOSAJMOMCYGOV-SXZBUJSMSA-N",
+                    "62.051284313201904296875"
+                ],
+                [
+                    "HQALISCIMNBRAE-XJTHNYJFSA-N",
+                    "61.7346942424774169921875"
+                ],
+                [
+                    "GUGRJKUKAAIFNS-ITQSQEEJSA-N",
+                    "61.6580307483673095703125"
+                ],
+                [
+                    "LHKCIEAVJUMENU-LTFZDLSNSA-N",
+                    "61.6504848003387451171875"
+                ],
+                [
+                    "YPFGOUQUYJDOIC-IRNLFZNXSA-N",
+                    "61.5384638309478759765625"
+                ],
+                [
+                    "IZIBPBNCTZAGAH-COWYQEPJSA-N",
+                    "61.000001430511474609375"
+                ],
+                [
+                    "KFBHCJODIZYIQM-UVNOFZHHSA-N",
+                    "60.7142865657806396484375"
+                ],
+                [
+                    "BNRIJKFSYFUZBJ-COWYQEPJSA-N",
+                    "60.696518421173095703125"
+                ],
+                [
+                    "AOWMPTIHOFAYOZ-FKQUAWHESA-N",
+                    "60.62176227569580078125"
+                ],
+                [
+                    "CPHCWHZPLYDASW-MJAYVFGTSA-N",
+                    "60.62176227569580078125"
+                ],
+                [
+                    "WGFFHCHNXKRRRU-AJNVYSMDSA-N",
+                    "60.5128228664398193359375"
+                ],
+                [
+                    "AJCMEMYQDXJTLA-KNWJWMDGSA-N",
+                    "60.309278964996337890625"
+                ],
+                [
+                    "GKFDSNGMGJRVCH-MVGPYTDFSA-N",
+                    "60.1990044116973876953125"
+                ],
+                [
+                    "WUYRHUFIUFJVQU-XJUNAYMOSA-N",
+                    "60.1036250591278076171875"
+                ],
+                [
+                    "HFYXIJPNTYGTQI-ZKZAADFESA-N",
+                    "60.000002384185791015625"
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem"
+            ]
+        },
+        "seg_4_CLA": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "CL"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_5_TIP3": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_3_SOD": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "NA"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_PROB": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "QQGQCBIXVPBTKN-ZDPPTUKRSA-N",
+                    "64.3243253231048583984375"
+                ],
+                [
+                    "JMHFFDIMOUKDCZ-XKMGUCBZSA-N",
+                    "63.978493213653564453125"
+                ],
+                [
+                    "JMHFFDIMOUKDCZ-NTXHZHDSSA-N",
+                    "63.978493213653564453125"
+                ],
+                [
+                    "KULBFCBBMSRZNX-IGNHTSOYSA-N",
+                    "63.636362552642822265625"
+                ],
+                [
+                    "PLAZMVMVOCOZNO-FBANJYLRSA-N",
+                    "63.235294818878173828125"
+                ],
+                [
+                    "XDQBUBAUMVFYDD-XIBUDJTISA-N",
+                    "63.2124364376068115234375"
+                ],
+                [
+                    "NKZSJXPCNXUROW-ZRSYVJPOSA-N",
+                    "63.0541861057281494140625"
+                ],
+                [
+                    "UOQYFNWHBKLVED-INDGOHPFSA-N",
+                    "62.694299221038818359375"
+                ],
+                [
+                    "LVRVABPNVHYXRT-ZDDRDDBCSA-N",
+                    "62.365591526031494140625"
+                ],
+                [
+                    "UFOSAJMOMCYGOV-SXZBUJSMSA-N",
+                    "62.051284313201904296875"
+                ],
+                [
+                    "HQALISCIMNBRAE-XJTHNYJFSA-N",
+                    "61.7346942424774169921875"
+                ],
+                [
+                    "GUGRJKUKAAIFNS-ITQSQEEJSA-N",
+                    "61.6580307483673095703125"
+                ],
+                [
+                    "LHKCIEAVJUMENU-LTFZDLSNSA-N",
+                    "61.6504848003387451171875"
+                ],
+                [
+                    "YPFGOUQUYJDOIC-IRNLFZNXSA-N",
+                    "61.5384638309478759765625"
+                ],
+                [
+                    "IZIBPBNCTZAGAH-COWYQEPJSA-N",
+                    "61.000001430511474609375"
+                ],
+                [
+                    "KFBHCJODIZYIQM-UVNOFZHHSA-N",
+                    "60.7142865657806396484375"
+                ],
+                [
+                    "BNRIJKFSYFUZBJ-COWYQEPJSA-N",
+                    "60.696518421173095703125"
+                ],
+                [
+                    "AOWMPTIHOFAYOZ-FKQUAWHESA-N",
+                    "60.62176227569580078125"
+                ],
+                [
+                    "CPHCWHZPLYDASW-MJAYVFGTSA-N",
+                    "60.62176227569580078125"
+                ],
+                [
+                    "WGFFHCHNXKRRRU-AJNVYSMDSA-N",
+                    "60.5128228664398193359375"
+                ],
+                [
+                    "AJCMEMYQDXJTLA-KNWJWMDGSA-N",
+                    "60.309278964996337890625"
+                ],
+                [
+                    "GKFDSNGMGJRVCH-MVGPYTDFSA-N",
+                    "60.1990044116973876953125"
+                ],
+                [
+                    "WUYRHUFIUFJVQU-XJUNAYMOSA-N",
+                    "60.1036250591278076171875"
+                ],
+                [
+                    "HFYXIJPNTYGTQI-ZKZAADFESA-N",
+                    "60.000002384185791015625"
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem"
+            ]
+        },
+        "seg_2_DMPC": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "KILNVBDSWZSGLL-KXQOOQHDSA-N",
+                "KILNVBDSWZSGLL-LHEWISCISA-N",
+                "NRJAVPSFFCBXDT-UHFFFAOYSA-N",
+                "MLKLDGSYMHFAOC-UHFFFAOYSA-N",
+                "IJFVSSZAOYLHEE-SSEXGKCCSA-N",
+                "ZJDHNOMEMNFHIF-UHFFFAOYSA-N",
+                "CITHEXJVPOWHKC-UHFFFAOYSA-N",
+                "CITHEXJVPOWHKC-UUWRZZSWSA-N",
+                "YHIXRNNWDBPKPW-JOCHJYFZSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

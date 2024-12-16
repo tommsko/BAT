@@ -1,0 +1,544 @@
+{
+    "name": "4627963_bpga55",
+    "atoms": 147370,
+    "residues": 27534,
+    "segments": 8,
+    "fragments": 54574,
+    "segment_resolution": {
+        "seg_5_NA": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "NA"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_POPC": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "WTJKGGKOPKCXLL-MRCUWXFGSA-N",
+                "WTJKGGKOPKCXLL-UHFFFAOYSA-N",
+                "SNKAWJBJQDLSFF-AOMFJDGTSA-N",
+                "RRVPPYNAZJRZFR-VYOBOKEXSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_3_POPG": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "PAZGBAOHGQRCBP-UHFFFAOYSA-M"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_6_CL": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "CL"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_DPPC": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "NRJAVPSFFCBXDT-UHFFFAOYSA-N",
+                "ZJDHNOMEMNFHIF-UHFFFAOYSA-N",
+                "CITHEXJVPOWHKC-UUWRZZSWSA-N",
+                "CITHEXJVPOWHKC-UHFFFAOYSA-N",
+                "YHIXRNNWDBPKPW-JOCHJYFZSA-N",
+                "KILNVBDSWZSGLL-LHEWISCISA-N",
+                "KILNVBDSWZSGLL-KXQOOQHDSA-N",
+                "KILNVBDSWZSGLL-UHFFFAOYSA-N",
+                "IJFVSSZAOYLHEE-SSEXGKCCSA-N",
+                "MLKLDGSYMHFAOC-UHFFFAOYSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_7_bpga": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "FJCXCMWNVJCQIE-GDPRMGEGSA-N",
+                    "62.5"
+                ],
+                [
+                    "FJCXCMWNVJCQIE-JMJZKYOTSA-N",
+                    "62.5"
+                ],
+                [
+                    "FJCXCMWNVJCQIE-IEBDPFPHSA-N",
+                    "62.5"
+                ],
+                [
+                    "KNJHGAIWASQHSB-UHFFFAOYSA-N",
+                    "57.1428596973419189453125"
+                ],
+                [
+                    "NVEGGHPETXMRSV-UHFFFAOYSA-N",
+                    "56.25"
+                ],
+                [
+                    "XXLVLPPHZWTLGD-MGCOHNPYSA-N",
+                    "53.3333361148834228515625"
+                ],
+                [
+                    "XXLVLPPHZWTLGD-AOOOYVTPSA-N",
+                    "53.3333361148834228515625"
+                ],
+                [
+                    "DZQLZCHEALBORZ-UHFFFAOYSA-N",
+                    "50"
+                ],
+                [
+                    "RWAOABYFTHPWDP-UPJWGTAASA-N",
+                    "50"
+                ],
+                [
+                    "CRZDEJKBLBCLAU-UHFFFAOYSA-N",
+                    "50"
+                ],
+                [
+                    "PVDCCKRWIUPZAF-FDQGKXFDSA-N",
+                    "48.7804889678955078125"
+                ],
+                [
+                    "PVDCCKRWIUPZAF-XCRHUMRWSA-N",
+                    "48.7804889678955078125"
+                ],
+                [
+                    "ZIGZMEZHXMZEPZ-ZWJPJJENSA-N",
+                    "47.49999940395355224609375"
+                ],
+                [
+                    "ZIGZMEZHXMZEPZ-WCAYHLDQSA-N",
+                    "47.49999940395355224609375"
+                ],
+                [
+                    "ZIGZMEZHXMZEPZ-OWQNAKTJSA-N",
+                    "47.49999940395355224609375"
+                ],
+                [
+                    "ZIGZMEZHXMZEPZ-SJFWLOONSA-N",
+                    "47.49999940395355224609375"
+                ],
+                [
+                    "HQTCRHINASMQOA-UHFFFAOYSA-N",
+                    "47.49999940395355224609375"
+                ],
+                [
+                    "VGLOFWHLPMVSBF-UHFFFAOYSA-N",
+                    "47.49999940395355224609375"
+                ],
+                [
+                    "FOLRUCXBTYDAQK-UHFFFAOYSA-N",
+                    "47.36842215061187744140625"
+                ],
+                [
+                    "FOLRUCXBTYDAQK-DCBHJKAQSA-N",
+                    "47.36842215061187744140625"
+                ],
+                [
+                    "QGYLMLWUTVPNDK-XWIASGKRSA-N",
+                    "46.51162922382354736328125"
+                ],
+                [
+                    "CUVZTQHYVRVAIP-POZUXBRTSA-N",
+                    "46.51162922382354736328125"
+                ],
+                [
+                    "CUVZTQHYVRVAIP-YJLNNSPDSA-N",
+                    "46.51162922382354736328125"
+                ],
+                [
+                    "AWMVMTVKBNGEAK-QMMMGPOBSA-N",
+                    "46.42857015132904052734375"
+                ],
+                [
+                    "AWMVMTVKBNGEAK-UHFFFAOYSA-N",
+                    "46.42857015132904052734375"
+                ],
+                [
+                    "UUNOJMADDVNEMA-UHFFFAOYSA-N",
+                    "45.2380955219268798828125"
+                ],
+                [
+                    "DHICYDCVZJTOAV-UHFFFAOYSA-N",
+                    "45.2380955219268798828125"
+                ],
+                [
+                    "VVSWDMJYIDBTMV-UHFFFAOYSA-N",
+                    "45.2380955219268798828125"
+                ],
+                [
+                    "APHZFPITYCSKIN-HUFQQLBRSA-N",
+                    "45.2380955219268798828125"
+                ],
+                [
+                    "XKGUUISNOPCNKA-MJBXVCDLSA-N",
+                    "44.9999988079071044921875"
+                ],
+                [
+                    "FGRMUZCQGRXUEH-APAFKAMOSA-N",
+                    "44.9999988079071044921875"
+                ],
+                [
+                    "YTUICHKHZZLYFO-UHFFFAOYSA-N",
+                    "44.9999988079071044921875"
+                ],
+                [
+                    "SWTGJCNCBUCXSS-GUFVNPKRSA-N",
+                    "44.9999988079071044921875"
+                ],
+                [
+                    "SWTGJCNCBUCXSS-ISUZDFFFSA-N",
+                    "44.9999988079071044921875"
+                ],
+                [
+                    "YKVVUUIZTXGPQL-HDJSIYSDSA-N",
+                    "44.44444477558135986328125"
+                ],
+                [
+                    "ULUMZSNULNTRHL-LAAXVVMPSA-N",
+                    "44.18604671955108642578125"
+                ],
+                [
+                    "ULUMZSNULNTRHL-LLFXUEIYSA-N",
+                    "44.18604671955108642578125"
+                ],
+                [
+                    "YHLKFUVZZXJDKE-UHFFFAOYSA-N",
+                    "44.18604671955108642578125"
+                ],
+                [
+                    "SPYXDUGGONAFPO-UHFFFAOYSA-N",
+                    "44.1176474094390869140625"
+                ],
+                [
+                    "PZTLPZINAMKJJU-JLLWLGSASA-N",
+                    "43.24324429035186767578125"
+                ],
+                [
+                    "PZTLPZINAMKJJU-MVWJERBFSA-N",
+                    "43.24324429035186767578125"
+                ],
+                [
+                    "PZTLPZINAMKJJU-WCQGTBRESA-N",
+                    "43.24324429035186767578125"
+                ],
+                [
+                    "KCXVHILKGUDBTH-TUDOHOOCSA-N",
+                    "43.1818187236785888671875"
+                ],
+                [
+                    "VHEJDDOCBQFZMX-PROFCWERSA-N",
+                    "43.1818187236785888671875"
+                ],
+                [
+                    "VHEJDDOCBQFZMX-MBJZRRMBSA-N",
+                    "43.1818187236785888671875"
+                ],
+                [
+                    "CBRMMZGPGUJWQX-NPQLIOMISA-N",
+                    "43.1818187236785888671875"
+                ],
+                [
+                    "KEWKRPQCPUGVGD-UHFFFAOYSA-N",
+                    "42.5000011920928955078125"
+                ],
+                [
+                    "LDBUJIGWHJRDNE-OQEHDIDLSA-N",
+                    "42.22222268581390380859375"
+                ],
+                [
+                    "ZVPSUEFQWUNIMY-XNTDXEJSSA-N",
+                    "42.22222268581390380859375"
+                ],
+                [
+                    "HIBAJFZGXFZFAE-UHFFFAOYSA-N",
+                    "42.22222268581390380859375"
+                ],
+                [
+                    "GQJOKDVZCWTBHR-UHFFFAOYSA-N",
+                    "42.22222268581390380859375"
+                ],
+                [
+                    "LMKHVCQVRQNKDH-UBMUWRQFSA-N",
+                    "42.22222268581390380859375"
+                ],
+                [
+                    "VEOQWQJENTZERU-WHGOUJPWSA-N",
+                    "42.1052634716033935546875"
+                ],
+                [
+                    "VEOQWQJENTZERU-ONOSFVFSSA-N",
+                    "42.1052634716033935546875"
+                ],
+                [
+                    "SFMOMCUGUPBYFM-WOVMCDHWSA-N",
+                    "42.1052634716033935546875"
+                ],
+                [
+                    "SFMOMCUGUPBYFM-JCNLHEQBSA-N",
+                    "42.1052634716033935546875"
+                ],
+                [
+                    "VEOQWQJENTZERU-XROYCOCOSA-N",
+                    "42.1052634716033935546875"
+                ],
+                [
+                    "VEKQPQPMWRIWRO-SZOUEMSFSA-N",
+                    "41.86046421527862548828125"
+                ],
+                [
+                    "VEKQPQPMWRIWRO-MVFUPKDGSA-N",
+                    "41.86046421527862548828125"
+                ],
+                [
+                    "SBYUKHBAZJUFBU-ZVAWYAOSSA-N",
+                    "41.86046421527862548828125"
+                ],
+                [
+                    "SBYUKHBAZJUFBU-QRWMCTBCSA-N",
+                    "41.86046421527862548828125"
+                ],
+                [
+                    "FIBSFHHWOVCYJJ-YJUWBKPTSA-N",
+                    "41.86046421527862548828125"
+                ],
+                [
+                    "FIBSFHHWOVCYJJ-UHFFFAOYSA-N",
+                    "41.86046421527862548828125"
+                ],
+                [
+                    "XOUAHCDKUNMPLM-OLZOCXBDSA-N",
+                    "41.46341383457183837890625"
+                ],
+                [
+                    "IGVOGMNWIBGCRX-KGLIPLIRSA-N",
+                    "41.46341383457183837890625"
+                ],
+                [
+                    "DWHKTDOLMBTITG-HUUCEWRRSA-N",
+                    "41.37931168079376220703125"
+                ],
+                [
+                    "LQPNKTSVPKKUOH-NPQLIOMISA-N",
+                    "41.30434691905975341796875"
+                ],
+                [
+                    "DGUOKZVYZOMYSI-UBMUWRQFSA-N",
+                    "41.30434691905975341796875"
+                ],
+                [
+                    "HQOWMCCPRKODPK-IQKWJPHWSA-N",
+                    "41.30434691905975341796875"
+                ],
+                [
+                    "BTJYYEQOWMIFLV-POZUXBRTSA-N",
+                    "41.30434691905975341796875"
+                ],
+                [
+                    "BTJYYEQOWMIFLV-YJLNNSPDSA-N",
+                    "41.30434691905975341796875"
+                ],
+                [
+                    "WVLTVAJDQCMVOR-ZWJPJJENSA-N",
+                    "41.30434691905975341796875"
+                ],
+                [
+                    "HQOWMCCPRKODPK-UBMUWRQFSA-N",
+                    "41.30434691905975341796875"
+                ],
+                [
+                    "FAZKIZKVCQWHFT-NXOOKBFXSA-N",
+                    "41.30434691905975341796875"
+                ],
+                [
+                    "RSNUMYSIXPOBFI-ZWJPJJENSA-N",
+                    "41.30434691905975341796875"
+                ],
+                [
+                    "DGUOKZVYZOMYSI-IQKWJPHWSA-N",
+                    "41.30434691905975341796875"
+                ],
+                [
+                    "FEIBYZJEXHBJBC-QOXFPCGXSA-N",
+                    "41.30434691905975341796875"
+                ],
+                [
+                    "LJKUWGLQYXGUBX-NWDGAFQWSA-N",
+                    "41.02564156055450439453125"
+                ],
+                [
+                    "LJKUWGLQYXGUBX-UHFFFAOYSA-N",
+                    "41.02564156055450439453125"
+                ],
+                [
+                    "LJKUWGLQYXGUBX-NEPJUHHUSA-N",
+                    "41.02564156055450439453125"
+                ],
+                [
+                    "AFHSKLXOUIJSRM-UHFFFAOYSA-N",
+                    "41.02564156055450439453125"
+                ],
+                [
+                    "CYFASGUCMZTGOB-WVXCVLBUSA-N",
+                    "40.90909063816070556640625"
+                ],
+                [
+                    "ARCJQKUWGAZPFX-ZIAGYGMSSA-N",
+                    "40.740740299224853515625"
+                ],
+                [
+                    "SRQMLYORHLABQH-UHFFFAOYSA-N",
+                    "40.625"
+                ],
+                [
+                    "LBYUXBNZVNHBRV-XZOAIXRZSA-N",
+                    "40.4255330562591552734375"
+                ],
+                [
+                    "RSGKWGOWPCVURQ-MUJROARDSA-N",
+                    "40.4255330562591552734375"
+                ],
+                [
+                    "LBYUXBNZVNHBRV-BJOOFOGMSA-N",
+                    "40.4255330562591552734375"
+                ],
+                [
+                    "RSGKWGOWPCVURQ-OCUKGZNPSA-N",
+                    "40.4255330562591552734375"
+                ],
+                [
+                    "CLQUQVJTVGTXRN-KLPPZKSPSA-N",
+                    "40.00000059604644775390625"
+                ],
+                [
+                    "KMTALARKPHLHPH-SAABIXHNSA-N",
+                    "40.00000059604644775390625"
+                ],
+                [
+                    "KMTALARKPHLHPH-MAEOIBBWSA-N",
+                    "40.00000059604644775390625"
+                ],
+                [
+                    "ROAGGVYFIYBKOY-UHFFFAOYSA-N",
+                    "40.00000059604644775390625"
+                ],
+                [
+                    "ZKTQNVXLUVNDFA-UHFFFAOYSA-N",
+                    "40.00000059604644775390625"
+                ],
+                [
+                    "IOFHOXKTMNJFLC-WGNKJVRNSA-N",
+                    "40.00000059604644775390625"
+                ],
+                [
+                    "IOFHOXKTMNJFLC-VZKXKASWSA-N",
+                    "40.00000059604644775390625"
+                ],
+                [
+                    "BQRJKBFGRQFFMF-IYBDPMFKSA-N",
+                    "40.00000059604644775390625"
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem"
+            ]
+        },
+        "seg_4_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_CHL1": {
+            "resolver_generated_signature": [
+                "chem_ligand_name",
+                "fingerprint",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "HVYWMOMLDIMFJA-DPAQBDIFSA-N",
+                "HVYWMOMLDIMFJA-LZUCFRQPSA-N",
+                "HVYWMOMLDIMFJA-UHFFFAOYSA-N",
+                "HVYWMOMLDIMFJA-RJLWFLQPSA-N",
+                "HVYWMOMLDIMFJA-FNOPAARDSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

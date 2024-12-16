@@ -55,6 +55,7 @@ class ChemResolver(ResolverBase):
         configuration: configparser.ConfigParser,
         try_fix_elements: bool = False,
         try_approximate_bonds: bool = False,
+        use_rdkit_bond_determination: bool = False
     ) -> None:
         """
         Initializes the ChemResolver
@@ -62,6 +63,7 @@ class ChemResolver(ResolverBase):
         :param configuration: main configuration
         :param try_fix_elements: if element information is not present, try to figure it out using atomic masses
         :param try_approximate_bonds: if positions of atoms are present, it will try to approximate connectivity (bonds)
+        :param use_rdkit_bond_determination: uses internal bond order determination by rdkit
         """
         super().__init__(
             ChemResolver.RESOLVER_NAME if not try_approximate_bonds else ChemResolver.RESOLVER_NAME_APPROX,
@@ -73,6 +75,7 @@ class ChemResolver(ResolverBase):
 
         self.try_fix_missing_elements: bool = try_fix_elements
         self.try_fix_bonds: bool = try_approximate_bonds
+        self.use_rdkit_bond_determination: bool = use_rdkit_bond_determination
 
     def _is_applicable(
         self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
@@ -125,7 +128,9 @@ class ChemResolver(ResolverBase):
         :return: SMILES sequence of the fragment
         :raises: SignatureGenerationError if fingerprint cannot be created
         """
-        return fragment_to_smiles(fragment, try_fix_bonds=self.try_fix_bonds)
+        return fragment_to_smiles(fragment,
+                                  try_fix_bonds=self.try_fix_bonds,
+                                  try_fix_bonds_alt=self.use_rdkit_bond_determination)
 
     def try_fetch_identifiers_exact_match(self, signature: str) -> list[str]:
         """

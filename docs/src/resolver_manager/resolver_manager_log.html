@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>src.resolver_manager.resolver_manager_log API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.resolver_manager.resolver_manager_log</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="src.resolver_manager.resolver_manager_log.emit_update"><code class="name flex">
+<span>def <span class="ident">emit_update</span></span>(<span>queue: <bound method BaseContext.Queue of <multiprocessing.context.DefaultContext object at 0x70b74cf780e0>>,<br>source_tpr: str,<br>update_type: <a title="src.resolver_manager.resolver_manager_log.StatusUpdateType" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType">StatusUpdateType</a>,<br>value: Any) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def emit_update(queue: multiprocessing.Queue,
+                source_tpr: str,
+                update_type: StatusUpdateType,
+                value: Any) -&gt; None:
+    &#34;&#34;&#34;
+    Simple wrapper for emitting to status queue
+    :param queue: to be emitted to
+    :param source_tpr: source file being resolved
+    :param update_type: kind of the update
+    :param value: associated with the status update
+    :return: None
+    &#34;&#34;&#34;
+    queue.put((source_tpr, update_type, value))</code></pre>
+</details>
+<div class="desc"><p>Simple wrapper for emitting to status queue
+:param queue: to be emitted to
+:param source_tpr: source file being resolved
+:param update_type: kind of the update
+:param value: associated with the status update
+:return: None</p></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.emit_update_skipped_molecules"><code class="name flex">
+<span>def <span class="ident">emit_update_skipped_molecules</span></span>(<span>simulation: <a title="src.utils.file_loader.SimulationFile" href="../utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>,<br>results: <a title="src.utils.results_file.ResultsFile" href="../utils/results_file.html#src.utils.results_file.ResultsFile">ResultsFile</a>,<br>status: <bound method BaseContext.Queue of <multiprocessing.context.DefaultContext object at 0x70b74cf780e0>>,<br>emit_unmatched: bool = True)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def emit_update_skipped_molecules(
+        simulation: SimulationFile,
+        results: ResultsFile,
+        status: multiprocessing.Queue,
+        emit_unmatched: bool = True,
+):
+    &#34;&#34;&#34;
+    Emits update messages for already resolved (skipped) molecules
+    :param simulation: to be resolved
+    :param results: ResultsFile linked to the simulation
+    :param status: queue where to put updates about the resolution
+    :param emit_unmatched: emit messages for so-far unmatched molecules too (skipping whole simulation)
+    :return: None
+    &#34;&#34;&#34;
+    simulation_tpr: str = simulation.paths[0]
+
+    for segment in simulation.list_segments():
+        if results.is_segment_resolved(segment, only_identity_resolved=True):
+            resolver: str = results.get_segment_resolver(segment)
+            emit_update(status, simulation_tpr, StatusUpdateType.MOLECULE_RESOLUTION_STARTED, segment)
+            emit_update(status, simulation_tpr, StatusUpdateType.MOLECULE_SIGNATURE_GENERATED, (segment, resolver))
+            emit_update(status, simulation_tpr, StatusUpdateType.MOLECULE_IDENTITY_MATCH, (segment, resolver))
+            continue
+
+        if results.is_segment_resolved(segment, only_similarity_resolved=True):
+            resolver: str = results.get_segment_resolver(segment)
+            emit_update(status, simulation_tpr, StatusUpdateType.MOLECULE_RESOLUTION_STARTED, segment)
+            emit_update(status, simulation_tpr, StatusUpdateType.MOLECULE_SIGNATURE_GENERATED, (segment, resolver))
+            emit_update(status, simulation_tpr, StatusUpdateType.MOLECULE_SIMILARITY_MATCH, (segment, resolver))
+            continue
+
+        if emit_unmatched:
+            emit_update(status, simulation_tpr, StatusUpdateType.MOLECULE_RESOLUTION_STARTED, segment)
+            emit_update(status, simulation_tpr, StatusUpdateType.MOLECULE_NO_MATCH, segment)
+            continue</code></pre>
+</details>
+<div class="desc"><p>Emits update messages for already resolved (skipped) molecules
+:param simulation: to be resolved
+:param results: ResultsFile linked to the simulation
+:param status: queue where to put updates about the resolution
+:param emit_unmatched: emit messages for so-far unmatched molecules too (skipping whole simulation)
+:return: None</p></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="src.resolver_manager.resolver_manager_log.LogError"><code class="flex name class">
+<span>class <span class="ident">LogError</span></span>
+<span>(</span><span>*args, **kwds)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class LogError(Enum):
+    ERROR_NO_LOAD = &#39;ERROR_NO_LOAD&#39;
+    ERROR_TIMEOUT = &#39;ERROR_TIMEOUT&#39;
+    ERROR_NOT_FINISHED = &#39;ERROR_NOT_FINISHED&#39;
+    ERROR_RESOLUTION_NOT_STARTED = &#39;ERROR_RESOLUTION_NOT_STARTED&#39;
+    ERROR_NO_MATCH = &#39;ERROR_NO_MATCH&#39;</code></pre>
+</details>
+<div class="desc"><p>Create a collection of name/value pairs.</p>
+<p>Example enumeration:</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; class Color(Enum):
+...     RED = 1
+...     BLUE = 2
+...     GREEN = 3
+</code></pre>
+<p>Access them by:</p>
+<ul>
+<li>attribute access:</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Color.RED
+<Color.RED: 1></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>value lookup:</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Color(1)
+<Color.RED: 1></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>name lookup:</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Color['RED']
+<Color.RED: 1></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Enumerations can be iterated over, and know how many members they have:</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; len(Color)
+3
+</code></pre>
+<pre><code class="language-python-repl">&gt;&gt;&gt; list(Color)
+[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]
+</code></pre>
+<p>Methods can be added to enumerations, and members can have their own
+attributes &ndash; see the documentation for details.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="src.resolver_manager.resolver_manager_log.LogError.ERROR_NOT_FINISHED"><code class="name">var <span class="ident">ERROR_NOT_FINISHED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.LogError.ERROR_NO_LOAD"><code class="name">var <span class="ident">ERROR_NO_LOAD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.LogError.ERROR_NO_MATCH"><code class="name">var <span class="ident">ERROR_NO_MATCH</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.LogError.ERROR_RESOLUTION_NOT_STARTED"><code class="name">var <span class="ident">ERROR_RESOLUTION_NOT_STARTED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.LogError.ERROR_TIMEOUT"><code class="name">var <span class="ident">ERROR_TIMEOUT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus"><code class="flex name class">
+<span>class <span class="ident">SimulationResolutionStatus</span></span>
+<span>(</span><span>tpr_path: str,<br>results_path: str,<br>loaded: bool,<br>finished_successfully: bool,<br>finished_timeout: bool,<br>molecules: collections.defaultdict[str, dict[<a title="src.resolver_manager.resolver_manager_log.StatusUpdateType" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType">StatusUpdateType</a>, list | bool]])</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@dataclass
+class SimulationResolutionStatus:
+    tpr_path: str
+    results_path: str
+    loaded: bool
+    finished_successfully: bool
+    finished_timeout: bool
+    molecules: defaultdict[str, dict[StatusUpdateType, list | bool]]</code></pre>
+</details>
+<div class="desc"><p>SimulationResolutionStatus(tpr_path: str, results_path: str, loaded: bool, finished_successfully: bool, finished_timeout: bool, molecules: collections.defaultdict[str, dict[src.resolver_manager.resolver_manager_log.StatusUpdateType, list | bool]])</p></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.finished_successfully"><code class="name">var <span class="ident">finished_successfully</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.finished_timeout"><code class="name">var <span class="ident">finished_timeout</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.loaded"><code class="name">var <span class="ident">loaded</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.molecules"><code class="name">var <span class="ident">molecules</span> : collections.defaultdict[str, dict[<a title="src.resolver_manager.resolver_manager_log.StatusUpdateType" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType">StatusUpdateType</a>, list | bool]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.results_path"><code class="name">var <span class="ident">results_path</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.tpr_path"><code class="name">var <span class="ident">tpr_path</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusQueue"><code class="flex name class">
+<span>class <span class="ident">StatusQueue</span></span>
+<span>(</span><span>workers_cnt: int)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class StatusQueue:
+    &#34;&#34;&#34;
+    StatusQueue provides aggregated log for a multithreaded resolution process
+    &#34;&#34;&#34;
+
+    def __init__(self, workers_cnt: int) -&gt; None:
+        &#34;&#34;&#34;
+        Initializes the status queue
+        :param workers_cnt: number of threads expected to be run
+        &#34;&#34;&#34;
+        self._queue: multiprocessing.Queue = multiprocessing.Queue(maxsize=workers_cnt * 10)
+        self._current_status: dict[str, Any] = {}
+        self._status: dict[str, SimulationResolutionStatus] = {}
+
+    def get_queue(self) -&gt; multiprocessing.Queue:
+        &#34;&#34;&#34;
+        :return: the queue object bound by this instance
+        &#34;&#34;&#34;
+        return self._queue
+
+    def process_queue(self) -&gt; None:
+        &#34;&#34;&#34;
+        Reads all incoming status updates from the queue
+        :return: None
+        &#34;&#34;&#34;
+        while not self.get_queue().empty():
+            simulation_file, update_type, update_data = self.get_queue().get()
+            match update_type:
+                case StatusUpdateType.SIMULATION_RESOLUTION_STARTED:
+                    self._status[simulation_file] = SimulationResolutionStatus(
+                        tpr_path=simulation_file,
+                        results_path=update_data,
+                        loaded=False,
+                        finished_successfully=False,
+                        finished_timeout=False,
+                        molecules=defaultdict(lambda: {
+                            StatusUpdateType.MOLECULE_RESOLUTION_STARTED: False,
+                            StatusUpdateType.MOLECULE_RESOLVER_APPLICABLE: [],
+                            StatusUpdateType.MOLECULE_SIGNATURE_GENERATED: [],
+                            StatusUpdateType.MOLECULE_IDENTITY_MATCH: [],
+                            StatusUpdateType.MOLECULE_SIMILARITY_MATCH: [],
+                            StatusUpdateType.MOLECULE_NO_MATCH: False
+                        })
+                    )
+                case StatusUpdateType.SIMULATION_SUCCESSFULLY_LOADED:
+                    self._status[simulation_file].loaded = True
+                case StatusUpdateType.SIMULATION_RESOLUTION_FINISHED:
+                    self._status[simulation_file].finished_successfully = True
+                case StatusUpdateType.SIMULATION_RESOLUTION_TIMEOUT:
+                    self._status[simulation_file].finished_timeout = True
+                case StatusUpdateType.MOLECULE_RESOLUTION_STARTED:
+                    self._status[simulation_file].molecules[update_data][
+                        StatusUpdateType.MOLECULE_RESOLUTION_STARTED] = True
+                case StatusUpdateType.MOLECULE_RESOLVER_APPLICABLE:
+                    molecule_name, resolver_name = update_data
+                    self._status[simulation_file].molecules[molecule_name][
+                        StatusUpdateType.MOLECULE_RESOLVER_APPLICABLE].append(resolver_name)
+                case StatusUpdateType.MOLECULE_SIGNATURE_GENERATED:
+                    molecule_name, resolver_name = update_data
+                    self._status[simulation_file].molecules[molecule_name][
+                        StatusUpdateType.MOLECULE_SIGNATURE_GENERATED].append(resolver_name)
+                case StatusUpdateType.MOLECULE_IDENTITY_MATCH:
+                    molecule_name, resolver_name = update_data
+                    self._status[simulation_file].molecules[molecule_name][
+                        StatusUpdateType.MOLECULE_IDENTITY_MATCH].append(resolver_name)
+                case StatusUpdateType.MOLECULE_SIMILARITY_MATCH:
+                    molecule_name, resolver_name = update_data
+                    self._status[simulation_file].molecules[molecule_name][
+                        StatusUpdateType.MOLECULE_SIMILARITY_MATCH].append(resolver_name)
+                case StatusUpdateType.MOLECULE_NO_MATCH:
+                    self._status[simulation_file].molecules[update_data][StatusUpdateType.MOLECULE_NO_MATCH] = True
+                case _:
+                    log.error(
+                        &#34;ResolverManager encountered unexpected resolution update message: &#34;
+                        f&#34;origin=&#39;{simulation_file}&#39;, kind=&#39;{update_type}&#39;, data=&#39;{update_data}&#39;&#34;
+                    )
+
+    @staticmethod
+    def _update_results_file_molecule(data: dict, update: SimulationResolutionStatus, molecule_name: str):
+        &#34;&#34;&#34;
+        Includes molecular resolution log in results file
+        :param data: currently open results file
+        :param update: log of processed simulation
+        :param molecule_name: of interest
+        :return: None
+        &#34;&#34;&#34;
+        if molecule_name not in data[&#39;segment_resolution&#39;]:
+            data[&#39;segment_resolution&#39;][molecule_name] = {&#39;errors&#39;: [LogError.ERROR_RESOLUTION_NOT_STARTED.value]}
+            return
+
+        if not update.molecules[molecule_name][StatusUpdateType.MOLECULE_RESOLUTION_STARTED] \
+                and data[&#39;segment_resolution&#39;][molecule_name][&#39;resolver&#39;] is None:
+            data[&#39;segment_resolution&#39;][molecule_name][&#39;errors&#39;].append(LogError.ERROR_RESOLUTION_NOT_STARTED.value)
+            return
+
+        data[&#39;segment_resolution&#39;][molecule_name][&#39;resolvers_attempted&#39;] = update.molecules[molecule_name][
+            StatusUpdateType.MOLECULE_RESOLVER_APPLICABLE]
+        # data[&#39;segment_resolution&#39;][molecule_name][&#39;resolvers_signatured&#39;] = update.molecules[molecule_name][
+        #     StatusUpdateType.MOLECULE_SIGNATURE_GENERATED]
+        data[&#39;segment_resolution&#39;][molecule_name][&#39;resolvers_identity&#39;] = update.molecules[molecule_name][
+            StatusUpdateType.MOLECULE_IDENTITY_MATCH]
+        data[&#39;segment_resolution&#39;][molecule_name][&#39;resolvers_similarity&#39;] = update.molecules[molecule_name][
+            StatusUpdateType.MOLECULE_SIMILARITY_MATCH]
+
+        if update.molecules[molecule_name][StatusUpdateType.MOLECULE_NO_MATCH]:
+            data[&#39;segment_resolution&#39;][molecule_name][&#39;errors&#39;].append(LogError.ERROR_NO_MATCH.value)
+
+    def update_results_files(self) -&gt; None:
+        &#34;&#34;&#34;
+        Includes resolution log in results files
+        :return: None
+        &#34;&#34;&#34;
+        for update in self._status.values():
+            if not os.path.exists(update.results_path):
+                with open(update.results_path, &#39;w&#39;) as fd:
+                    json.dump({&#39;errors&#39;: [LogError.ERROR_NO_LOAD.value]}, fd)
+            with open(update.results_path, &#39;r&#39;) as fd:
+                data: dict = json.load(fd)
+
+            if not update.loaded: data[&#39;errors&#39;].append(LogError.ERROR_NO_LOAD.value)
+            if update.finished_timeout: data[&#39;errors&#39;].append(LogError.ERROR_TIMEOUT.value)
+            if not update.finished_successfully: data[&#39;errors&#39;].append(LogError.ERROR_NOT_FINISHED.value)
+
+            for molecule_name in update.molecules:
+                StatusQueue._update_results_file_molecule(data, update, molecule_name)
+
+            with open(update.results_path, &#39;w&#39;) as fd:
+                json.dump(data, fd, indent=4)
+
+    def _aggregate_log(self) -&gt; tuple:
+        &#34;&#34;&#34;
+        Aggregates basic counts from the log
+        :return: please see source code and return statement
+        &#34;&#34;&#34;
+        sim_started = sim_loaded = sim_finished = sim_timeout = 0
+        mol_started = mol_signatured = mol_matched = mol_partilly_matched = mol_unmatched = 0
+        for update in self._status.values():
+            sim_started += 1
+            if update.loaded: sim_loaded += 1
+            if update.finished_timeout or update.finished_successfully or not update.loaded: sim_finished += 1
+            if update.finished_timeout: sim_timeout += 1
+            for molecule in update.molecules:
+                if update.molecules[molecule][StatusUpdateType.MOLECULE_RESOLUTION_STARTED]: mol_started += 1
+                if update.molecules[molecule][StatusUpdateType.MOLECULE_SIGNATURE_GENERATED]: mol_signatured += 1
+                if update.molecules[molecule][StatusUpdateType.MOLECULE_IDENTITY_MATCH]: mol_matched += 1
+                if update.molecules[molecule][StatusUpdateType.MOLECULE_SIMILARITY_MATCH]: mol_partilly_matched += 1
+                if update.molecules[molecule][StatusUpdateType.MOLECULE_NO_MATCH]: mol_unmatched += 1
+        return sim_started, sim_loaded, sim_finished, sim_timeout, mol_started, mol_signatured, mol_matched, \
+            mol_partilly_matched, mol_unmatched
+
+    def emit_process_log(self) -&gt; None:
+        sim_started, sim_loaded, sim_finished, sim_timeout, \
+            mol_started, mol_signatured, mol_matched, mol_partilly_matched, mol_unmatched = self._aggregate_log()
+        log.info(f&#34;simulations: {sim_started} started -&gt; {sim_loaded} loaded -&gt; {sim_finished} finished &#34;
+                 f&#34;(of which {sim_timeout} timeouted)&#34;)
+        log.info(f&#34;molecules: {mol_started} loaded -&gt; {mol_signatured} generated signature -&gt; &#34;
+                 f&#34;{mol_matched} identity / {mol_partilly_matched} similarity / {mol_unmatched} no hit&#34;)</code></pre>
+</details>
+<div class="desc"><p>StatusQueue provides aggregated log for a multithreaded resolution process</p>
+<p>Initializes the status queue
+:param workers_cnt: number of threads expected to be run</p></div>
+<h3>Methods</h3>
+<dl>
+<dt id="src.resolver_manager.resolver_manager_log.StatusQueue.emit_process_log"><code class="name flex">
+<span>def <span class="ident">emit_process_log</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def emit_process_log(self) -&gt; None:
+    sim_started, sim_loaded, sim_finished, sim_timeout, \
+        mol_started, mol_signatured, mol_matched, mol_partilly_matched, mol_unmatched = self._aggregate_log()
+    log.info(f&#34;simulations: {sim_started} started -&gt; {sim_loaded} loaded -&gt; {sim_finished} finished &#34;
+             f&#34;(of which {sim_timeout} timeouted)&#34;)
+    log.info(f&#34;molecules: {mol_started} loaded -&gt; {mol_signatured} generated signature -&gt; &#34;
+             f&#34;{mol_matched} identity / {mol_partilly_matched} similarity / {mol_unmatched} no hit&#34;)</code></pre>
+</details>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusQueue.get_queue"><code class="name flex">
+<span>def <span class="ident">get_queue</span></span>(<span>self) ‑> <bound method BaseContext.Queue of <multiprocessing.context.DefaultContext object at 0x70b74cf780e0>></span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_queue(self) -&gt; multiprocessing.Queue:
+    &#34;&#34;&#34;
+    :return: the queue object bound by this instance
+    &#34;&#34;&#34;
+    return self._queue</code></pre>
+</details>
+<div class="desc"><p>:return: the queue object bound by this instance</p></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusQueue.process_queue"><code class="name flex">
+<span>def <span class="ident">process_queue</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def process_queue(self) -&gt; None:
+    &#34;&#34;&#34;
+    Reads all incoming status updates from the queue
+    :return: None
+    &#34;&#34;&#34;
+    while not self.get_queue().empty():
+        simulation_file, update_type, update_data = self.get_queue().get()
+        match update_type:
+            case StatusUpdateType.SIMULATION_RESOLUTION_STARTED:
+                self._status[simulation_file] = SimulationResolutionStatus(
+                    tpr_path=simulation_file,
+                    results_path=update_data,
+                    loaded=False,
+                    finished_successfully=False,
+                    finished_timeout=False,
+                    molecules=defaultdict(lambda: {
+                        StatusUpdateType.MOLECULE_RESOLUTION_STARTED: False,
+                        StatusUpdateType.MOLECULE_RESOLVER_APPLICABLE: [],
+                        StatusUpdateType.MOLECULE_SIGNATURE_GENERATED: [],
+                        StatusUpdateType.MOLECULE_IDENTITY_MATCH: [],
+                        StatusUpdateType.MOLECULE_SIMILARITY_MATCH: [],
+                        StatusUpdateType.MOLECULE_NO_MATCH: False
+                    })
+                )
+            case StatusUpdateType.SIMULATION_SUCCESSFULLY_LOADED:
+                self._status[simulation_file].loaded = True
+            case StatusUpdateType.SIMULATION_RESOLUTION_FINISHED:
+                self._status[simulation_file].finished_successfully = True
+            case StatusUpdateType.SIMULATION_RESOLUTION_TIMEOUT:
+                self._status[simulation_file].finished_timeout = True
+            case StatusUpdateType.MOLECULE_RESOLUTION_STARTED:
+                self._status[simulation_file].molecules[update_data][
+                    StatusUpdateType.MOLECULE_RESOLUTION_STARTED] = True
+            case StatusUpdateType.MOLECULE_RESOLVER_APPLICABLE:
+                molecule_name, resolver_name = update_data
+                self._status[simulation_file].molecules[molecule_name][
+                    StatusUpdateType.MOLECULE_RESOLVER_APPLICABLE].append(resolver_name)
+            case StatusUpdateType.MOLECULE_SIGNATURE_GENERATED:
+                molecule_name, resolver_name = update_data
+                self._status[simulation_file].molecules[molecule_name][
+                    StatusUpdateType.MOLECULE_SIGNATURE_GENERATED].append(resolver_name)
+            case StatusUpdateType.MOLECULE_IDENTITY_MATCH:
+                molecule_name, resolver_name = update_data
+                self._status[simulation_file].molecules[molecule_name][
+                    StatusUpdateType.MOLECULE_IDENTITY_MATCH].append(resolver_name)
+            case StatusUpdateType.MOLECULE_SIMILARITY_MATCH:
+                molecule_name, resolver_name = update_data
+                self._status[simulation_file].molecules[molecule_name][
+                    StatusUpdateType.MOLECULE_SIMILARITY_MATCH].append(resolver_name)
+            case StatusUpdateType.MOLECULE_NO_MATCH:
+                self._status[simulation_file].molecules[update_data][StatusUpdateType.MOLECULE_NO_MATCH] = True
+            case _:
+                log.error(
+                    &#34;ResolverManager encountered unexpected resolution update message: &#34;
+                    f&#34;origin=&#39;{simulation_file}&#39;, kind=&#39;{update_type}&#39;, data=&#39;{update_data}&#39;&#34;
+                )</code></pre>
+</details>
+<div class="desc"><p>Reads all incoming status updates from the queue
+:return: None</p></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusQueue.update_results_files"><code class="name flex">
+<span>def <span class="ident">update_results_files</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def update_results_files(self) -&gt; None:
+    &#34;&#34;&#34;
+    Includes resolution log in results files
+    :return: None
+    &#34;&#34;&#34;
+    for update in self._status.values():
+        if not os.path.exists(update.results_path):
+            with open(update.results_path, &#39;w&#39;) as fd:
+                json.dump({&#39;errors&#39;: [LogError.ERROR_NO_LOAD.value]}, fd)
+        with open(update.results_path, &#39;r&#39;) as fd:
+            data: dict = json.load(fd)
+
+        if not update.loaded: data[&#39;errors&#39;].append(LogError.ERROR_NO_LOAD.value)
+        if update.finished_timeout: data[&#39;errors&#39;].append(LogError.ERROR_TIMEOUT.value)
+        if not update.finished_successfully: data[&#39;errors&#39;].append(LogError.ERROR_NOT_FINISHED.value)
+
+        for molecule_name in update.molecules:
+            StatusQueue._update_results_file_molecule(data, update, molecule_name)
+
+        with open(update.results_path, &#39;w&#39;) as fd:
+            json.dump(data, fd, indent=4)</code></pre>
+</details>
+<div class="desc"><p>Includes resolution log in results files
+:return: None</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusUpdateType"><code class="flex name class">
+<span>class <span class="ident">StatusUpdateType</span></span>
+<span>(</span><span>*args, **kwds)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class StatusUpdateType(Enum):
+    SIMULATION_RESOLUTION_STARTED = 0  # value ~&gt; results file location
+    SIMULATION_SUCCESSFULLY_LOADED = 1  # value ~&gt; UNUSED
+    SIMULATION_RESOLUTION_FINISHED = 2  # value ~&gt; UNUSED
+    SIMULATION_RESOLUTION_TIMEOUT = 3  # value ~&gt; UNUSED
+    MOLECULE_RESOLUTION_STARTED = 4  # value ~&gt; molecule name
+    MOLECULE_RESOLVER_APPLICABLE = 5  # value ~&gt; (molecule name, resolver name)
+    MOLECULE_SIGNATURE_GENERATED = 6  # value ~&gt; (molecule name, resolver name)
+    MOLECULE_IDENTITY_MATCH = 7  # value ~&gt; molecule name
+    MOLECULE_SIMILARITY_MATCH = 8  # value ~&gt; molecule name
+    MOLECULE_NO_MATCH = 9  # value ~&gt; molecule name</code></pre>
+</details>
+<div class="desc"><p>Create a collection of name/value pairs.</p>
+<p>Example enumeration:</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; class Color(Enum):
+...     RED = 1
+...     BLUE = 2
+...     GREEN = 3
+</code></pre>
+<p>Access them by:</p>
+<ul>
+<li>attribute access:</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Color.RED
+<Color.RED: 1></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>value lookup:</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Color(1)
+<Color.RED: 1></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>name lookup:</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Color['RED']
+<Color.RED: 1></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Enumerations can be iterated over, and know how many members they have:</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; len(Color)
+3
+</code></pre>
+<pre><code class="language-python-repl">&gt;&gt;&gt; list(Color)
+[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]
+</code></pre>
+<p>Methods can be added to enumerations, and members can have their own
+attributes &ndash; see the documentation for details.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_IDENTITY_MATCH"><code class="name">var <span class="ident">MOLECULE_IDENTITY_MATCH</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_NO_MATCH"><code class="name">var <span class="ident">MOLECULE_NO_MATCH</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_RESOLUTION_STARTED"><code class="name">var <span class="ident">MOLECULE_RESOLUTION_STARTED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_RESOLVER_APPLICABLE"><code class="name">var <span class="ident">MOLECULE_RESOLVER_APPLICABLE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_SIGNATURE_GENERATED"><code class="name">var <span class="ident">MOLECULE_SIGNATURE_GENERATED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_SIMILARITY_MATCH"><code class="name">var <span class="ident">MOLECULE_SIMILARITY_MATCH</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusUpdateType.SIMULATION_RESOLUTION_FINISHED"><code class="name">var <span class="ident">SIMULATION_RESOLUTION_FINISHED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusUpdateType.SIMULATION_RESOLUTION_STARTED"><code class="name">var <span class="ident">SIMULATION_RESOLUTION_STARTED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusUpdateType.SIMULATION_RESOLUTION_TIMEOUT"><code class="name">var <span class="ident">SIMULATION_RESOLUTION_TIMEOUT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolver_manager.resolver_manager_log.StatusUpdateType.SIMULATION_SUCCESSFULLY_LOADED"><code class="name">var <span class="ident">SIMULATION_SUCCESSFULLY_LOADED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src.resolver_manager" href="index.html">src.resolver_manager</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="src.resolver_manager.resolver_manager_log.emit_update" href="#src.resolver_manager.resolver_manager_log.emit_update">emit_update</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.emit_update_skipped_molecules" href="#src.resolver_manager.resolver_manager_log.emit_update_skipped_molecules">emit_update_skipped_molecules</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="src.resolver_manager.resolver_manager_log.LogError" href="#src.resolver_manager.resolver_manager_log.LogError">LogError</a></code></h4>
+<ul class="">
+<li><code><a title="src.resolver_manager.resolver_manager_log.LogError.ERROR_NOT_FINISHED" href="#src.resolver_manager.resolver_manager_log.LogError.ERROR_NOT_FINISHED">ERROR_NOT_FINISHED</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.LogError.ERROR_NO_LOAD" href="#src.resolver_manager.resolver_manager_log.LogError.ERROR_NO_LOAD">ERROR_NO_LOAD</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.LogError.ERROR_NO_MATCH" href="#src.resolver_manager.resolver_manager_log.LogError.ERROR_NO_MATCH">ERROR_NO_MATCH</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.LogError.ERROR_RESOLUTION_NOT_STARTED" href="#src.resolver_manager.resolver_manager_log.LogError.ERROR_RESOLUTION_NOT_STARTED">ERROR_RESOLUTION_NOT_STARTED</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.LogError.ERROR_TIMEOUT" href="#src.resolver_manager.resolver_manager_log.LogError.ERROR_TIMEOUT">ERROR_TIMEOUT</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus" href="#src.resolver_manager.resolver_manager_log.SimulationResolutionStatus">SimulationResolutionStatus</a></code></h4>
+<ul class="">
+<li><code><a title="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.finished_successfully" href="#src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.finished_successfully">finished_successfully</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.finished_timeout" href="#src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.finished_timeout">finished_timeout</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.loaded" href="#src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.loaded">loaded</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.molecules" href="#src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.molecules">molecules</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.results_path" href="#src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.results_path">results_path</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.tpr_path" href="#src.resolver_manager.resolver_manager_log.SimulationResolutionStatus.tpr_path">tpr_path</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="src.resolver_manager.resolver_manager_log.StatusQueue" href="#src.resolver_manager.resolver_manager_log.StatusQueue">StatusQueue</a></code></h4>
+<ul class="">
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusQueue.emit_process_log" href="#src.resolver_manager.resolver_manager_log.StatusQueue.emit_process_log">emit_process_log</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusQueue.get_queue" href="#src.resolver_manager.resolver_manager_log.StatusQueue.get_queue">get_queue</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusQueue.process_queue" href="#src.resolver_manager.resolver_manager_log.StatusQueue.process_queue">process_queue</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusQueue.update_results_files" href="#src.resolver_manager.resolver_manager_log.StatusQueue.update_results_files">update_results_files</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="src.resolver_manager.resolver_manager_log.StatusUpdateType" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType">StatusUpdateType</a></code></h4>
+<ul class="">
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_IDENTITY_MATCH" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_IDENTITY_MATCH">MOLECULE_IDENTITY_MATCH</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_NO_MATCH" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_NO_MATCH">MOLECULE_NO_MATCH</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_RESOLUTION_STARTED" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_RESOLUTION_STARTED">MOLECULE_RESOLUTION_STARTED</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_RESOLVER_APPLICABLE" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_RESOLVER_APPLICABLE">MOLECULE_RESOLVER_APPLICABLE</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_SIGNATURE_GENERATED" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_SIGNATURE_GENERATED">MOLECULE_SIGNATURE_GENERATED</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_SIMILARITY_MATCH" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType.MOLECULE_SIMILARITY_MATCH">MOLECULE_SIMILARITY_MATCH</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusUpdateType.SIMULATION_RESOLUTION_FINISHED" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType.SIMULATION_RESOLUTION_FINISHED">SIMULATION_RESOLUTION_FINISHED</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusUpdateType.SIMULATION_RESOLUTION_STARTED" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType.SIMULATION_RESOLUTION_STARTED">SIMULATION_RESOLUTION_STARTED</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusUpdateType.SIMULATION_RESOLUTION_TIMEOUT" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType.SIMULATION_RESOLUTION_TIMEOUT">SIMULATION_RESOLUTION_TIMEOUT</a></code></li>
+<li><code><a title="src.resolver_manager.resolver_manager_log.StatusUpdateType.SIMULATION_SUCCESSFULLY_LOADED" href="#src.resolver_manager.resolver_manager_log.StatusUpdateType.SIMULATION_SUCCESSFULLY_LOADED">SIMULATION_SUCCESSFULLY_LOADED</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

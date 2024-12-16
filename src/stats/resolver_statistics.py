@@ -135,6 +135,8 @@ class ResolutionStatistics:
         cache: ResolverCache = ResolverCache(configuration)
         resolvers: list[ResolverBase] = get_resolvers(cache, configuration)
         for resolver in resolvers:
+            if resolver.resolver_name in self._all_resolvers:
+                continue  # same resolver but different settings
             self._all_resolvers.append(resolver.resolver_name)  # order is important here
             if resolver.resolver_kind == ResolverKind.PRIMARY:
                 self._primary_resolvers.add(resolver.resolver_name)

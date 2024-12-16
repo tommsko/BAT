@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>src.resolvers.atom.atom_resolver API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.resolvers.atom.atom_resolver</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="src.resolvers.atom.atom_resolver.AtomResolver"><code class="flex name class">
+<span>class <span class="ident">AtomResolver</span></span>
+<span>(</span><span>cache: <a title="src.resolvers.base.resolver_database.ResolverCache" href="../base/resolver_database.html#src.resolvers.base.resolver_database.ResolverCache">ResolverCache</a>,<br>configuration: configparser.ConfigParser,<br>try_fix_elements: bool = False,<br>allow_undetermined_elements: bool = False)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AtomResolver(ResolverBase):
+    &#34;&#34;&#34;
+    AtomResolver looks at the molecule as a single atom (possibly ion)
+    &#34;&#34;&#34;
+
+    RESOLVER_NAME, RESOLVER_NAME_UNDETERMINED = &#34;atom&#34;, &#34;atom_aprox&#34;
+    RESOLVER_IDENT, RESOLVER_IDENT_UNDETERMINED = &#34;ELEMENT&#34;, &#34;ELEMENT_APROX&#34;
+
+    def __init__(
+        self,
+        cache: ResolverCache,
+        configuration: configparser.ConfigParser,
+        try_fix_elements: bool = False,
+        allow_undetermined_elements: bool = False,
+    ) -&gt; None:
+        &#34;&#34;&#34;
+        Initializes the resolver of atomic elements
+        :param cache: resolver cache
+        :param configuration: for the resolver
+        :param try_fix_elements: if atomic elements are not present, try to fix them using atomic masses
+        :param allow_undetermined_elements: ignore atomic element and only predict possible elements given the mass
+        &#34;&#34;&#34;
+        super().__init__(
+            (
+                AtomResolver.RESOLVER_NAME
+                if not allow_undetermined_elements
+                else AtomResolver.RESOLVER_NAME_UNDETERMINED
+            ),
+            ResolverKind.PRIMARY,
+            (
+                AtomResolver.RESOLVER_IDENT
+                if not allow_undetermined_elements
+                else AtomResolver.RESOLVER_IDENT_UNDETERMINED
+            ),
+            cache,
+            configuration,
+        )
+
+        self.try_fix_elements: bool = try_fix_elements
+        self.allow_undetermined_elements: bool = allow_undetermined_elements
+
+    def _is_applicable(
+        self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
+    ) -&gt; bool:
+        &#34;&#34;&#34;
+        Decides whether the AtomResolver can be used on the given fragment
+        :param fragment: AtomGroup representing a fragment (single atom)
+        :param simulation: of which fragment is part of
+        :return: True if resolver can be used on a given fragment
+        &#34;&#34;&#34;
+
+        fragment_name: str = fragment.segids[0]
+
+        # in order to resolve fragment as atomic element, it requires to have element information
+        # as well as be a single atom. If undetermined element information is allowed, it requires only atomic mass
+
+        if not self.allow_undetermined_elements:
+            # firstly, atom element information must be present or determined
+            if not simulation.supports_atomic_elements(fragment_name):
+                if (
+                    simulation.supports_atomic_masses(fragment_name)
+                    and self.try_fix_elements
+                    and fix_missing_elements(simulation, fragment)
+                ):
+                    ...  # ok!
+                else:
+                    return False
+        else:
+            if not simulation.supports_atomic_masses(fragment_name):
+                return False
+
+        # secondly, it must be only one atom (otherwise chem resolver is applicable)
+        return fragment.n_atoms == 1
+
+    def get_signature(
+        self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
+    ) -&gt; str:
+        &#34;&#34;&#34;
+        Translates fragment into element name or element mass (see .allow_undetermined_elements)
+        :param simulation: of which the fragment is part of
+        :param fragment: AtomGroup representing a single atom
+        :return: element of the atom
+        :raises: SignatureGenerationError if fingerprint cannot be created
+        &#34;&#34;&#34;
+
+        if not self.allow_undetermined_elements:
+            element_code: str = fragment.elements[0].upper()
+            if element_code not in [x.upper() for x in ATOMTABLE_ELEMENTS_MASSES]:
+                raise SignatureGenerationError(
+                    &#34;extracting atom element&#34;,
+                    f&#34;atom element is invalid: &#39;{element_code}&#39;&#34;,
+                )
+            return element_code
+        else:
+            element_mass: str = str(fragment.masses[0])
+            return element_mass
+
+    def try_fetch_identifiers_exact_match(self, signature: str) -&gt; list[str]:
+        &#34;&#34;&#34;
+        Just returns the signature of element from get_signature(...).
+        :param signature: to be translated into standardized element name
+        :return: list of exactly one element name, given in the fingerprint
+        :raises IdentifierResolutionError: if allow_undetermined_elements is True (no identity match in that mode)
+        &#34;&#34;&#34;
+        if not self.allow_undetermined_elements:
+            return [signature]
+        else:
+            raise IdentifierResolutionError(
+                &#34;resolving ATOM identity match&#34;,
+                &#34;not supported with .allow_undetermined_elements&#34;,
+            )
+
+    def try_fetch_identifiers_relaxed_match(
+        self, signature: str
+    ) -&gt; list[tuple[str, float]]:
+        &#34;&#34;&#34;
+        If allow_undetermined_elements is False, returns fingerprint and 100% confidence.
+        Otherwise, tries to find similar elements given atomic mass.
+        :param signature: to be translated into standardized element name
+        :return: list of elements with similarity
+        &#34;&#34;&#34;
+
+        if not self.allow_undetermined_elements:
+            return [(signature, 100)]
+
+        atomic_mass: float = float(signature)
+        mass_differences: list[tuple[str, float, float]] = [
+            (element, abs(atomic_mass - element_mass), element_mass)
+            for element, element_mass in ATOMTABLE_ELEMENTS_MASSES.items()
+        ]
+        mass_differences.sort(key=lambda x: x[1])
+
+        results: list[tuple[str, float]] = []
+        for elem, _, mass in mass_differences[:RESOLVER_ATOM_APPROX_FIND_SIMILAR_N_MASSES]:
+            similarity: float = atomic_mass / mass
+            if similarity &gt; 1:
+                similarity = 1 / similarity  # symmetric
+            results.append((elem, round(similarity * 100)))
+        return results
+
+    def generate_debug_data(
+        self,
+        simulation: SimulationFile,
+        fragment: MDAnalysis.AtomGroup,
+        out_path: str,
+        out_name: str,
+    ) -&gt; bool:
+        &#34;&#34;&#34;
+        Generates very basic information about the atom in the simulation
+        :param out_path: directory where to save generated representations
+        :param out_name: basename of the file to save representations to (will be suffixed with kind of export)
+        :param simulation: of which fragment is part of
+        :param fragment: AtomGroup representing a molecule
+        :return: True if export went without problems
+        &#34;&#34;&#34;
+        with open(os.path.join(out_path, f&#34;{out_name}_ATOM_desc.json&#34;), &#34;w&#34;) as fd:
+            json.dump(
+                {
+                    &#34;atom_element&#34;: (
+                        fragment.elements[0]
+                        if hasattr(fragment, &#34;elements&#34;) and len(fragment.elements) &gt; 0
+                        else None
+                    ),
+                    &#34;atom_name&#34;: (
+                        fragment.names[0]
+                        if hasattr(fragment, &#34;names&#34;) and len(fragment.names) &gt; 0
+                        else None
+                    ),
+                    &#34;atom_mass&#34;: (
+                        fragment.masses[0]
+                        if hasattr(fragment, &#34;masses&#34;) and len(fragment.masses) &gt; 0
+                        else None
+                    ),
+                    &#34;atom_charge&#34;: (
+                        fragment.charges[0]
+                        if hasattr(fragment, &#34;charges&#34;) and len(fragment.charges) &gt; 0
+                        else None
+                    ),
+                },
+                fd,
+            )
+        return True</code></pre>
+</details>
+<div class="desc"><p>AtomResolver looks at the molecule as a single atom (possibly ion)</p>
+<p>Initializes the resolver of atomic elements
+:param cache: resolver cache
+:param configuration: for the resolver
+:param try_fix_elements: if atomic elements are not present, try to fix them using atomic masses
+:param allow_undetermined_elements: ignore atomic element and only predict possible elements given the mass</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="src.resolvers.base.fragment_resolver.ResolverBase" href="../base/fragment_resolver.html#src.resolvers.base.fragment_resolver.ResolverBase">ResolverBase</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="src.resolvers.atom.atom_resolver.AtomResolver.RESOLVER_IDENT"><code class="name">var <span class="ident">RESOLVER_IDENT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolvers.atom.atom_resolver.AtomResolver.RESOLVER_IDENT_UNDETERMINED"><code class="name">var <span class="ident">RESOLVER_IDENT_UNDETERMINED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolvers.atom.atom_resolver.AtomResolver.RESOLVER_NAME"><code class="name">var <span class="ident">RESOLVER_NAME</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="src.resolvers.atom.atom_resolver.AtomResolver.RESOLVER_NAME_UNDETERMINED"><code class="name">var <span class="ident">RESOLVER_NAME_UNDETERMINED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="src.resolvers.atom.atom_resolver.AtomResolver.generate_debug_data"><code class="name flex">
+<span>def <span class="ident">generate_debug_data</span></span>(<span>self,<br>simulation: <a title="src.utils.file_loader.SimulationFile" href="../../utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>,<br>fragment: MDAnalysis.core.groups.AtomGroup,<br>out_path: str,<br>out_name: str) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate_debug_data(
+    self,
+    simulation: SimulationFile,
+    fragment: MDAnalysis.AtomGroup,
+    out_path: str,
+    out_name: str,
+) -&gt; bool:
+    &#34;&#34;&#34;
+    Generates very basic information about the atom in the simulation
+    :param out_path: directory where to save generated representations
+    :param out_name: basename of the file to save representations to (will be suffixed with kind of export)
+    :param simulation: of which fragment is part of
+    :param fragment: AtomGroup representing a molecule
+    :return: True if export went without problems
+    &#34;&#34;&#34;
+    with open(os.path.join(out_path, f&#34;{out_name}_ATOM_desc.json&#34;), &#34;w&#34;) as fd:
+        json.dump(
+            {
+                &#34;atom_element&#34;: (
+                    fragment.elements[0]
+                    if hasattr(fragment, &#34;elements&#34;) and len(fragment.elements) &gt; 0
+                    else None
+                ),
+                &#34;atom_name&#34;: (
+                    fragment.names[0]
+                    if hasattr(fragment, &#34;names&#34;) and len(fragment.names) &gt; 0
+                    else None
+                ),
+                &#34;atom_mass&#34;: (
+                    fragment.masses[0]
+                    if hasattr(fragment, &#34;masses&#34;) and len(fragment.masses) &gt; 0
+                    else None
+                ),
+                &#34;atom_charge&#34;: (
+                    fragment.charges[0]
+                    if hasattr(fragment, &#34;charges&#34;) and len(fragment.charges) &gt; 0
+                    else None
+                ),
+            },
+            fd,
+        )
+    return True</code></pre>
+</details>
+<div class="desc"><p>Generates very basic information about the atom in the simulation
+:param out_path: directory where to save generated representations
+:param out_name: basename of the file to save representations to (will be suffixed with kind of export)
+:param simulation: of which fragment is part of
+:param fragment: AtomGroup representing a molecule
+:return: True if export went without problems</p></div>
+</dd>
+<dt id="src.resolvers.atom.atom_resolver.AtomResolver.get_signature"><code class="name flex">
+<span>def <span class="ident">get_signature</span></span>(<span>self,<br>simulation: <a title="src.utils.file_loader.SimulationFile" href="../../utils/file_loader.html#src.utils.file_loader.SimulationFile">SimulationFile</a>,<br>fragment: MDAnalysis.core.groups.AtomGroup) ‑> str</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_signature(
+    self, simulation: SimulationFile, fragment: MDAnalysis.AtomGroup
+) -&gt; str:
+    &#34;&#34;&#34;
+    Translates fragment into element name or element mass (see .allow_undetermined_elements)
+    :param simulation: of which the fragment is part of
+    :param fragment: AtomGroup representing a single atom
+    :return: element of the atom
+    :raises: SignatureGenerationError if fingerprint cannot be created
+    &#34;&#34;&#34;
+
+    if not self.allow_undetermined_elements:
+        element_code: str = fragment.elements[0].upper()
+        if element_code not in [x.upper() for x in ATOMTABLE_ELEMENTS_MASSES]:
+            raise SignatureGenerationError(
+                &#34;extracting atom element&#34;,
+                f&#34;atom element is invalid: &#39;{element_code}&#39;&#34;,
+            )
+        return element_code
+    else:
+        element_mass: str = str(fragment.masses[0])
+        return element_mass</code></pre>
+</details>
+<div class="desc"><p>Translates fragment into element name or element mass (see .allow_undetermined_elements)
+:param simulation: of which the fragment is part of
+:param fragment: AtomGroup representing a single atom
+:return: element of the atom
+:raises: SignatureGenerationError if fingerprint cannot be created</p></div>
+</dd>
+<dt id="src.resolvers.atom.atom_resolver.AtomResolver.try_fetch_identifiers_exact_match"><code class="name flex">
+<span>def <span class="ident">try_fetch_identifiers_exact_match</span></span>(<span>self, signature: str) ‑> list[str]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def try_fetch_identifiers_exact_match(self, signature: str) -&gt; list[str]:
+    &#34;&#34;&#34;
+    Just returns the signature of element from get_signature(...).
+    :param signature: to be translated into standardized element name
+    :return: list of exactly one element name, given in the fingerprint
+    :raises IdentifierResolutionError: if allow_undetermined_elements is True (no identity match in that mode)
+    &#34;&#34;&#34;
+    if not self.allow_undetermined_elements:
+        return [signature]
+    else:
+        raise IdentifierResolutionError(
+            &#34;resolving ATOM identity match&#34;,
+            &#34;not supported with .allow_undetermined_elements&#34;,
+        )</code></pre>
+</details>
+<div class="desc"><p>Just returns the signature of element from get_signature(&hellip;).
+:param signature: to be translated into standardized element name
+:return: list of exactly one element name, given in the fingerprint
+:raises IdentifierResolutionError: if allow_undetermined_elements is True (no identity match in that mode)</p></div>
+</dd>
+<dt id="src.resolvers.atom.atom_resolver.AtomResolver.try_fetch_identifiers_relaxed_match"><code class="name flex">
+<span>def <span class="ident">try_fetch_identifiers_relaxed_match</span></span>(<span>self, signature: str) ‑> list[tuple[str, float]]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def try_fetch_identifiers_relaxed_match(
+    self, signature: str
+) -&gt; list[tuple[str, float]]:
+    &#34;&#34;&#34;
+    If allow_undetermined_elements is False, returns fingerprint and 100% confidence.
+    Otherwise, tries to find similar elements given atomic mass.
+    :param signature: to be translated into standardized element name
+    :return: list of elements with similarity
+    &#34;&#34;&#34;
+
+    if not self.allow_undetermined_elements:
+        return [(signature, 100)]
+
+    atomic_mass: float = float(signature)
+    mass_differences: list[tuple[str, float, float]] = [
+        (element, abs(atomic_mass - element_mass), element_mass)
+        for element, element_mass in ATOMTABLE_ELEMENTS_MASSES.items()
+    ]
+    mass_differences.sort(key=lambda x: x[1])
+
+    results: list[tuple[str, float]] = []
+    for elem, _, mass in mass_differences[:RESOLVER_ATOM_APPROX_FIND_SIMILAR_N_MASSES]:
+        similarity: float = atomic_mass / mass
+        if similarity &gt; 1:
+            similarity = 1 / similarity  # symmetric
+        results.append((elem, round(similarity * 100)))
+    return results</code></pre>
+</details>
+<div class="desc"><p>If allow_undetermined_elements is False, returns fingerprint and 100% confidence.
+Otherwise, tries to find similar elements given atomic mass.
+:param signature: to be translated into standardized element name
+:return: list of elements with similarity</p></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="src.resolvers.base.fragment_resolver.ResolverBase" href="../base/fragment_resolver.html#src.resolvers.base.fragment_resolver.ResolverBase">ResolverBase</a></b></code>:
+<ul class="hlist">
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.get_identifiers" href="../base/fragment_resolver.html#src.resolvers.base.fragment_resolver.ResolverBase.get_identifiers">get_identifiers</a></code></li>
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.get_similar_identifiers" href="../base/fragment_resolver.html#src.resolvers.base.fragment_resolver.ResolverBase.get_similar_identifiers">get_similar_identifiers</a></code></li>
+<li><code><a title="src.resolvers.base.fragment_resolver.ResolverBase.is_applicable" href="../base/fragment_resolver.html#src.resolvers.base.fragment_resolver.ResolverBase.is_applicable">is_applicable</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src.resolvers.atom" href="index.html">src.resolvers.atom</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="src.resolvers.atom.atom_resolver.AtomResolver" href="#src.resolvers.atom.atom_resolver.AtomResolver">AtomResolver</a></code></h4>
+<ul class="">
+<li><code><a title="src.resolvers.atom.atom_resolver.AtomResolver.RESOLVER_IDENT" href="#src.resolvers.atom.atom_resolver.AtomResolver.RESOLVER_IDENT">RESOLVER_IDENT</a></code></li>
+<li><code><a title="src.resolvers.atom.atom_resolver.AtomResolver.RESOLVER_IDENT_UNDETERMINED" href="#src.resolvers.atom.atom_resolver.AtomResolver.RESOLVER_IDENT_UNDETERMINED">RESOLVER_IDENT_UNDETERMINED</a></code></li>
+<li><code><a title="src.resolvers.atom.atom_resolver.AtomResolver.RESOLVER_NAME" href="#src.resolvers.atom.atom_resolver.AtomResolver.RESOLVER_NAME">RESOLVER_NAME</a></code></li>
+<li><code><a title="src.resolvers.atom.atom_resolver.AtomResolver.RESOLVER_NAME_UNDETERMINED" href="#src.resolvers.atom.atom_resolver.AtomResolver.RESOLVER_NAME_UNDETERMINED">RESOLVER_NAME_UNDETERMINED</a></code></li>
+<li><code><a title="src.resolvers.atom.atom_resolver.AtomResolver.generate_debug_data" href="#src.resolvers.atom.atom_resolver.AtomResolver.generate_debug_data">generate_debug_data</a></code></li>
+<li><code><a title="src.resolvers.atom.atom_resolver.AtomResolver.get_signature" href="#src.resolvers.atom.atom_resolver.AtomResolver.get_signature">get_signature</a></code></li>
+<li><code><a title="src.resolvers.atom.atom_resolver.AtomResolver.try_fetch_identifiers_exact_match" href="#src.resolvers.atom.atom_resolver.AtomResolver.try_fetch_identifiers_exact_match">try_fetch_identifiers_exact_match</a></code></li>
+<li><code><a title="src.resolvers.atom.atom_resolver.AtomResolver.try_fetch_identifiers_relaxed_match" href="#src.resolvers.atom.atom_resolver.AtomResolver.try_fetch_identifiers_relaxed_match">try_fetch_identifiers_relaxed_match</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

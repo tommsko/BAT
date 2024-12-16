@@ -182,7 +182,7 @@ class SimulationFile:
         """
         try:
             with warnings.catch_warnings(action="ignore"):
-                self.universe = Universe(*self.paths, tpr_resid_from_one=True)
+                self.universe = Universe(*self.paths, tpr_resid_from_one=True, in_memory=True)
                 self._load_simulation_metadata()
                 return True
         except Exception as exc:

@@ -1,0 +1,153 @@
+{
+    "name": "10647894_RNA_md_prod",
+    "atoms": 80257,
+    "residues": 26523,
+    "segments": 5,
+    "fragments": 26489,
+    "segment_resolution": {
+        "seg_1_RNA_chain_B": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid"
+            ],
+            "resolver": "nucleic_acid",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "7BHP_B",
+                "8RXK_Z",
+                "8RXD_Z",
+                "8RXC_H",
+                "8GBJ_G",
+                "7Y01_B",
+                "8E70_8",
+                "8GXS_NX",
+                "8GXQ_NX",
+                "7T3L_T",
+                "7T3L_Q",
+                "7T3L_P",
+                "7WVJ_E",
+                "7WVF_E",
+                "7WVE_E",
+                "7WV5_E",
+                "7WV4_E",
+                "7WV3_E",
+                "9BDP_MRNA",
+                "9BDN_MRNA",
+                "9BDL_MRNA",
+                "7TOR_MRNA",
+                "8OP2_C",
+                "8OP2_U",
+                "8OOU_e",
+                "8OOU_U",
+                "4V5V_BX",
+                "4V5V_BR",
+                "4V5V_AM",
+                "4V5V_AK",
+                "7PMN_J",
+                "7PMK_J",
+                "5FVC_K",
+                "4WZW_C",
+                "4BKK_A",
+                "2YHM_K",
+                "3PU0_R",
+                "3A5U_C",
+                "1EYG_R",
+                "1EYG_Q",
+                "8GXS_NY",
+                "8GXQ_NY",
+                "7T3L_S",
+                "7T3L_R",
+                "7T3L_O",
+                "7PMN_I",
+                "7PMK_I",
+                "2MB2_A",
+                "3PU1_R"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "nucleic_acid"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_RNA_chain_A": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "UDMBCSSLTHHNCD-KQYNXXCUSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem_ligand_name"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_4_CL": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "CL"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_3_K": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "K"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

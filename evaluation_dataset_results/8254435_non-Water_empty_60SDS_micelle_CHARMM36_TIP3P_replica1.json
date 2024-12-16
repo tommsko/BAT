@@ -1,0 +1,37 @@
+{
+    "name": "8254435_non-Water_empty_60SDS_micelle_CHARMM36_TIP3P_replica1",
+    "atoms": 2520,
+    "residues": 60,
+    "segments": 1,
+    "fragments": 60,
+    "segment_resolution": {
+        "seg_0_Title": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "XMUXLTVCCYXQRO-SJMIEQRSSA-G",
+                    50
+                ],
+                [
+                    "GHPFXERUUHDYJH-UHFFFAOYSA-A",
+                    50
+                ],
+                [
+                    "SIFZSWJSBDBNBP-UHFFFAOYSA-A",
+                    50
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem_ligand_name"
+            ]
+        }
+    }
+}

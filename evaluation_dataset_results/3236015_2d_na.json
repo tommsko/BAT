@@ -1,0 +1,43 @@
+{
+    "name": "3236015_2d_na",
+    "atoms": 3000,
+    "residues": 3000,
+    "segments": 2,
+    "fragments": 3000,
+    "segment_resolution": {
+        "seg_0_ArC": {
+            "resolver_generated_signature": [
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "AR"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_Arg": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence",
+                "protein-residue-struct",
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "AR"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

@@ -1,0 +1,459 @@
+{
+    "name": "2646049_A2AR_PUFA16_EQ",
+    "atoms": 13393,
+    "residues": 7135,
+    "segments": 10,
+    "fragments": 6841,
+    "segment_resolution": {
+        "seg_3_CHOL": {
+            "resolver_generated_signature": [
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint"
+            ],
+            "resolver": null,
+            "ident_type": null,
+            "resolved_idents": [],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint"
+            ],
+            "resolvers_identity": [],
+            "resolvers_similarity": []
+        },
+        "seg_6_CHOL": {
+            "resolver_generated_signature": [
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint"
+            ],
+            "resolver": null,
+            "ident_type": null,
+            "resolved_idents": [],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint"
+            ],
+            "resolvers_identity": [],
+            "resolvers_similarity": []
+        },
+        "seg_1_DSPC": {
+            "resolver_generated_signature": [
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "NRJAVPSFFCBXDT-UHFFFAOYSA-N",
+                    50
+                ],
+                [
+                    "NRJAVPSFFCBXDT-WVJSMUSESA-N",
+                    50
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem_ligand_name"
+            ]
+        },
+        "seg_9_CL-": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ge",
+                    99
+                ],
+                [
+                    "Ga",
+                    97
+                ],
+                [
+                    "As",
+                    96
+                ],
+                [
+                    "Zn",
+                    91
+                ],
+                [
+                    "Se",
+                    91
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_5_PUFX": {
+            "resolver_generated_signature": [
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint"
+            ],
+            "resolver": null,
+            "ident_type": null,
+            "resolved_idents": [],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint"
+            ],
+            "resolvers_identity": [],
+            "resolvers_similarity": []
+        },
+        "seg_2_PUFX": {
+            "resolver_generated_signature": [
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint"
+            ],
+            "resolver": null,
+            "ident_type": null,
+            "resolved_idents": [],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "nucleic_acid",
+                "chem_ligand_name",
+                "fingerprint"
+            ],
+            "resolvers_identity": [],
+            "resolvers_similarity": []
+        },
+        "seg_8_NA+": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ge",
+                    99
+                ],
+                [
+                    "Ga",
+                    97
+                ],
+                [
+                    "As",
+                    96
+                ],
+                [
+                    "Zn",
+                    91
+                ],
+                [
+                    "Se",
+                    91
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_7_W": {
+            "resolver_generated_signature": [
+                "atom_aprox"
+            ],
+            "resolver": "atom_aprox",
+            "ident_type": "ELEMENT_APROX",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "Ge",
+                    99
+                ],
+                [
+                    "Ga",
+                    97
+                ],
+                [
+                    "As",
+                    96
+                ],
+                [
+                    "Zn",
+                    91
+                ],
+                [
+                    "Se",
+                    91
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "atom_aprox"
+            ]
+        },
+        "seg_4_DSPC": {
+            "resolver_generated_signature": [
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem_ligand_name",
+                "fingerprint",
+                "nucleic_acid",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "NRJAVPSFFCBXDT-UHFFFAOYSA-N",
+                    50
+                ],
+                [
+                    "NRJAVPSFFCBXDT-HUESYALOSA-N",
+                    50
+                ],
+                [
+                    "NRJAVPSFFCBXDT-WBCKFURZSA-O",
+                    50
+                ],
+                [
+                    "NRJAVPSFFCBXDT-WBCKFURZSA-N",
+                    50
+                ],
+                [
+                    "NRJAVPSFFCBXDT-WVJSMUSESA-N",
+                    50
+                ],
+                [
+                    "MPARAOBCZMXIRB-VQJSHJPSSA-N",
+                    50
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem_ligand_name"
+            ]
+        },
+        "seg_0_A2A": {
+            "resolver_generated_signature": [
+                "protein-residue-sequence"
+            ],
+            "resolver": "protein-residue-sequence",
+            "ident_type": "PDB",
+            "resolved_idents": [
+                "3vga_A",
+                "3vg9_A",
+                "6gdg_A",
+                "5g53_B",
+                "5g53_A",
+                "8gng_X",
+                "8gng_A",
+                "4uhr_A",
+                "4ug2_B",
+                "4ug2_A",
+                "2ydv_A",
+                "2ydo_A",
+                "8wdt_A",
+                "3uzc_A",
+                "3uza_A",
+                "3rfm_A",
+                "3rey_A",
+                "3pwh_A",
+                "6aqf_A",
+                "5uig_A",
+                "6ps7_A",
+                "8rqq_A",
+                "8fyn_A",
+                "7rm5_A",
+                "6wqa_A",
+                "6mh8_A",
+                "6lpl_A",
+                "6lpk_A",
+                "6lpj_A",
+                "5vra_A",
+                "5uvi_A",
+                "5k2d_A",
+                "5k2c_A",
+                "5k2b_A",
+                "5k2a_A",
+                "5jtb_A",
+                "4eiy_A",
+                "8gne_A",
+                "7pyr_A",
+                "7px4_A",
+                "7ezc_B",
+                "7ezc_A",
+                "6jzh_A",
+                "8jwz_A",
+                "8jwy_A",
+                "3qak_A",
+                "3eml_A",
+                "8rln_A",
+                "8c9w_A",
+                "5wf6_A",
+                "5wf5_A",
+                "7t32_A",
+                "8pwn_A",
+                "7aro_A",
+                "6zdv_A",
+                "6zdr_A",
+                "6s0q_A",
+                "6s0l_A",
+                "6gt3_A",
+                "5nm4_A",
+                "5nm2_A",
+                "5nlx_A",
+                "5n2r_A",
+                "5mzp_A",
+                "5iub_A",
+                "5iua_A",
+                "5iu8_A",
+                "5iu7_A",
+                "5iu4_A",
+                "8cic_A",
+                "5om4_A",
+                "5om1_A",
+                "5olz_A",
+                "5olv_A",
+                "5olo_A",
+                "5olh_A",
+                "5olg_A",
+                "5mzj_A",
+                "8a2p_A",
+                "8a2o_A",
+                "8cu6_A",
+                "8du3_A",
+                "8cu7_A",
+                "8hdp_R",
+                "8hdo_R",
+                "7xy7_R",
+                "7xy6_R",
+                "5n2s_A",
+                "7ld4_R",
+                "7ld3_R",
+                "6d9h_R",
+                "8x17_R",
+                "8x16_R",
+                "5uen_B",
+                "5uen_A"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "protein-residue-sequence"
+            ],
+            "resolvers_similarity": []
+        }
+    }
+}

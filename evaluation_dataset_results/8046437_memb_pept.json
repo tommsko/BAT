@@ -1,0 +1,121 @@
+{
+    "name": "8046437_memb_pept",
+    "atoms": 18727,
+    "residues": 4361,
+    "segments": 3,
+    "fragments": 4343,
+    "segment_resolution": {
+        "seg_2_SOL": {
+            "resolver_generated_signature": [
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_DMPC": {
+            "resolver_generated_signature": [
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "chem",
+                "chem_ligand_name"
+            ],
+            "resolver": "chem_ligand_name",
+            "ident_type": "InChI",
+            "resolved_idents": [],
+            "possible_idents": [
+                [
+                    "BDCFWIDZNLCTMF-UHFFFAOYSA-N",
+                    50
+                ],
+                [
+                    "CITHEXJVPOWHKC-UHFFFAOYSA-N",
+                    50
+                ]
+            ],
+            "resolvers_attempted": [],
+            "resolvers_identity": [],
+            "resolvers_similarity": [
+                "chem_ligand_name"
+            ]
+        },
+        "seg_0_Protein": {
+            "resolver_generated_signature": [
+                "protein",
+                "protein-residue-sequence",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "protein",
+                "protein-residue-sequence",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "protein",
+                "protein-residue-sequence",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "protein",
+                "protein-residue-sequence",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "protein",
+                "protein-residue-sequence",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "protein",
+                "protein-residue-sequence",
+                "nucleic_acid",
+                "chem",
+                "chem_ligand_name",
+                "fingerprint",
+                "protein",
+                "protein-residue-sequence",
+                "protein",
+                "protein-residue-sequence",
+                "nucleic_acid",
+                "chem",
+                "protein",
+                "protein-residue-sequence",
+                "nucleic_acid",
+                "chem"
+            ],
+            "resolver": null,
+            "ident_type": null,
+            "resolved_idents": [],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "protein",
+                "protein-residue-sequence",
+                "nucleic_acid",
+                "chem"
+            ],
+            "resolvers_identity": [],
+            "resolvers_similarity": []
+        }
+    }
+}

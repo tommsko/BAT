@@ -1,0 +1,101 @@
+{
+    "name": "4625519_rot",
+    "atoms": 9826,
+    "residues": 3226,
+    "segments": 4,
+    "fragments": 3208,
+    "segment_resolution": {
+        "seg_3_CL": {
+            "resolver_generated_signature": [
+                "nucleic_acid",
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "CL"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "nucleic_acid",
+                "atom"
+            ],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_Protein_chain_A": {
+            "resolver_generated_signature": [
+                "protein",
+                "protein-residue-sequence",
+                "nucleic_acid",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "CXPNEAUBELIKSL-VOCJQFPDSA-N",
+                "HHYYYMQIVVSGPX-ZTUVTAGNSA-N",
+                "UOQZKPDZJQALKK-FLFZXROJSA-N",
+                "CCBDPUUSQDGSQS-ZTUVTAGNSA-N",
+                "IJJKNHJDPSFLTM-RPJCOWQOSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "protein",
+                "protein-residue-sequence",
+                "nucleic_acid",
+                "chem"
+            ],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_1_SOL": {
+            "resolver_generated_signature": [
+                "nucleic_acid",
+                "chem"
+            ],
+            "resolver": "chem",
+            "ident_type": "InChI",
+            "resolved_idents": [
+                "XLYOFNOQVPJJNP-PWCQTSIFSA-N",
+                "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+                "XLYOFNOQVPJJNP-ZSJDYOACSA-N",
+                "XLYOFNOQVPJJNP-BJUDXGSMSA-N"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "nucleic_acid",
+                "chem"
+            ],
+            "resolvers_identity": [
+                "chem"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_2_K": {
+            "resolver_generated_signature": [
+                "nucleic_acid",
+                "atom"
+            ],
+            "resolver": "atom",
+            "ident_type": "ELEMENT",
+            "resolved_idents": [
+                "K"
+            ],
+            "possible_idents": [],
+            "resolvers_attempted": [
+                "nucleic_acid",
+                "atom"
+            ],
+            "resolvers_identity": [
+                "atom"
+            ],
+            "resolvers_similarity": []
+        },
+        "seg_0_Protein_chain_X": {}
+    }
+}
